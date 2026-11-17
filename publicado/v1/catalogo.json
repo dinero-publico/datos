@@ -1,0 +1,62 @@
+{
+ "version": 1,
+ "proyecto": "https://dinero-publico.github.io/",
+ "ficheros": {
+  "estado": {
+   "fichero": "estado.json",
+   "url": "https://dinero-publico.github.io/datos/v1/estado.json",
+   "descripcion": "Ejecución mensual del Estado en contabilidad nacional (IGAE)",
+   "bytes": 204732,
+   "sha256": "d41791c17169ca99d8656b5638c5162bfe4622b2b728982c68bf1d6d2f54e72d",
+   "actualizado": "2026-11-16T21:26:15+00:00",
+   "ultimo_error": null
+  },
+  "pge": {
+   "fichero": "pge.json",
+   "url": "https://dinero-publico.github.io/datos/v1/pge.json",
+   "descripcion": "Presupuestos Generales del Estado consolidados por política y programa (SEPG)",
+   "bytes": 166033,
+   "sha256": "48e2498133eaa4d6869162677487d23cab3475c622aa87863b079b9ee4b03762",
+   "actualizado": "2026-11-16T20:26:44+00:00",
+   "ultimo_error": null
+  },
+  "entregas": {
+   "fichero": "entregas.json",
+   "url": "https://dinero-publico.github.io/datos/v1/entregas.json",
+   "descripcion": "Entregas a cuenta del sistema de financiación autonómica (SGFAL)",
+   "bytes": 34094,
+   "sha256": "7aa276e7652abce59cd4b61ff0468f82cd88907900d609be8c5cdf35584e3f9a",
+   "actualizado": "2026-11-16T21:26:15+00:00",
+   "ultimo_error": "2026-11-17T16:54:17+00:00"
+  },
+  "ccaa": {
+   "fichero": "ccaa.json",
+   "url": "https://dinero-publico.github.io/datos/v1/ccaa.json",
+   "descripcion": "Presupuestos iniciales de las comunidades por política, capítulo y clasificación económica (SGCIEF)",
+   "bytes": 1479307,
+   "sha256": "182b0b1736c79bc4888c42d0d69707f8060634997417dd7c3dff7c180be14eaa",
+   "actualizado": "2026-11-17T13:17:57+00:00",
+   "ultimo_error": null
+  },
+  "cofog": {
+   "fichero": "cofog.json",
+   "url": "https://dinero-publico.github.io/datos/v1/cofog.json",
+   "descripcion": "Gasto ejecutado por función (COFOG) de cada administración y comunidad (IGAE)",
+   "bytes": 72771,
+   "sha256": "a7b2ef2bd04771a5c5b0d21907336b63ee6764053c11937b3c934f50b661a6c4",
+   "actualizado": "2026-11-16T21:26:15+00:00",
+   "ultimo_error": null
+  },
+  "poblacion": {
+   "fichero": "poblacion.json",
+   "url": "https://dinero-publico.github.io/datos/v1/poblacion.json",
+   "descripcion": "Población residente a 1 de enero por comunidad (INE)",
+   "bytes": 5700,
+   "sha256": "a4e04129d8f98403dd344c61ad041cca8d44bfd3d5a4d57d11808bf43e8fb06d",
+   "actualizado": "2026-11-17T13:57:25+00:00",
+   "ultimo_error": null
+  }
+ },
+ "informe": "https://dinero-publico.github.io/datos/v1/informe.json",
+ "meta": "https://dinero-publico.github.io/datos/v1/meta.json"
+}

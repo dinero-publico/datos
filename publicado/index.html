@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datos · Dinero Público</title>
+<meta name="description" content="Datos abiertos de Dinero Público: presupuestos y gasto público de España normalizados a JSON a partir de Hacienda e INE.">
+<style>
+:root{--bg:#fbfaf7;--fg:#1d1d1b;--muted:#6b6a65;--line:#e4e1d8;--a:#2f6db5;color-scheme:light dark;font-family:system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root{--bg:#161614;--fg:#ecebe6;--muted:#a3a29b;--line:#34332f;--a:#6aa1e0}}
+body{margin:0;background:var(--bg);color:var(--fg);line-height:1.5}main{max-width:960px;margin:0 auto;padding:24px 16px}
+a{color:var(--a)}h1{font-family:Georgia,serif;font-weight:400}.muted{color:var(--muted)}
+.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.92rem}td,th{text-align:left;padding:7px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:500}code{font-size:.9em}
+</style></head><body><main>
+<h1>Datos de Dinero Público</h1>
+<p>Presupuestos y gasto público de España, descargados cada día de las fuentes oficiales (Ministerio de Hacienda e INE), comprobados y normalizados a JSON. Son los datos que usa <a href="https://dinero-publico.github.io/">dinero-publico.github.io</a>.</p>
+<p class="muted">13 de 13 comprobaciones de coherencia correctas · <a href="v1/informe.json">informe</a> · <a href="v1/catalogo.json">catálogo</a> · <a href="v1/meta.json">estado de las descargas</a> · <a href="https://github.com/dinero-publico/datos">código de la herramienta</a></p>
+<div class="scroll"><table><thead><tr><th>Fichero</th><th>Contenido</th><th>Actualizado</th><th>Tamaño</th></tr></thead><tbody><tr><td><a href="v1/estado.json">estado.json</a></td><td>Ejecución mensual del Estado en contabilidad nacional (IGAE)</td><td>2026-11-16</td><td>199 kB</td></tr><tr><td><a href="v1/pge.json">pge.json</a></td><td>Presupuestos Generales del Estado consolidados por política y programa (SEPG)</td><td>2026-11-16</td><td>162 kB</td></tr><tr><td><a href="v1/entregas.json">entregas.json</a></td><td>Entregas a cuenta del sistema de financiación autonómica (SGFAL)</td><td>2026-11-16</td><td>33 kB</td></tr><tr><td><a href="v1/ccaa.json">ccaa.json</a></td><td>Presupuestos iniciales de las comunidades por política, capítulo y clasificación económica (SGCIEF)</td><td>2026-11-17</td><td>1444 kB</td></tr><tr><td><a href="v1/cofog.json">cofog.json</a></td><td>Gasto ejecutado por función (COFOG) de cada administración y comunidad (IGAE)</td><td>2026-11-16</td><td>71 kB</td></tr><tr><td><a href="v1/poblacion.json">poblacion.json</a></td><td>Población residente a 1 de enero por comunidad (INE)</td><td>2026-11-17</td><td>5 kB</td></tr></tbody></table></div>
+<p class="muted">Formato estable bajo <code>/datos/v1/</code>. Los datos proceden del Ministerio de Hacienda y del INE y se reutilizan según sus condiciones. Detalle de cada fuente en <a href="https://dinero-publico.github.io/fuentes.html">Fuentes y metodología</a>.</p>
+</main></body></html>

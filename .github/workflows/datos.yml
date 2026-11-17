@@ -1,0 +1,74 @@
+name: Descargar, analizar y publicar datos
+
+on:
+  schedule:
+    # Todos los días a las 07:17 UTC (Hacienda publica en horario de mañana).
+    - cron: "17 7 * * *"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths: ["dinero_datos/**", "tests/**", "publicado/**", ".github/workflows/**"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: datos
+  cancel-in-progress: false
+
+jobs:
+  datos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Tests
+        run: python -m pytest -q
+
+      - name: Descargar y transformar
+        if: github.event_name != 'push'
+        run: python -m dinero_datos descargar
+
+      - name: Analizar y comprobar
+        run: python -m dinero_datos analizar
+
+      - name: Catálogo
+        run: python -m dinero_datos publicar
+
+      - name: Guardar cambios en el repositorio
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add publicado/
+          if git diff --cached --quiet; then
+            echo "Sin datos nuevos."
+          else
+            git commit -m "Datos actualizados $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - run: touch publicado/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: publicado
+
+  publicar:
+    needs: datos
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

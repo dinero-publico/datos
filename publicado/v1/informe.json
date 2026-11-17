@@ -1,0 +1,126 @@
+{
+ "generado": "2026-11-17T19:41:41+00:00",
+ "resumen": {
+  "pruebas": 13,
+  "correctas": 13,
+  "con_fallos": 0
+ },
+ "pruebas": [
+  {
+   "fuente": "estado",
+   "prueba": "Cada partida tiene un valor por mes publicado y existe el saldo B.9",
+   "ok": true,
+   "casos": 11,
+   "fallos": [],
+   "n_fallos": 0
+  },
+  {
+   "fuente": "estado",
+   "prueba": "Serie de años sin huecos",
+   "ok": true,
+   "casos": 11,
+   "fallos": [],
+   "n_fallos": 0
+  },
+  {
+   "fuente": "pge",
+   "prueba": "La suma de las políticas coincide con el total de cada ejercicio",
+   "ok": true,
+   "casos": 10,
+   "fallos": [],
+   "n_fallos": 0,
+   "avisos": [
+    "2017: el total no incluye 28 (475.66 M€, sin programas en ese año)",
+    "2018: el total no incluye 28 (482.72 M€, sin programas en ese año)",
+    "2018-P: el total no incluye 28 (482.72 M€, sin programas en ese año)",
+    "2019-P: el total no incluye 28 (482.72 M€, sin programas en ese año)"
+   ]
+  },
+  {
+   "fuente": "pge",
+   "prueba": "La suma de los programas coincide con su política",
+   "ok": true,
+   "casos": 270,
+   "fallos": [],
+   "n_fallos": 0,
+   "avisos": [
+    "28 2017: programas 0.00 ≠ política 475.66",
+    "28 2018: programas 0.00 ≠ política 482.72",
+    "28 2018-P: programas 0.00 ≠ política 482.72",
+    "28 2019-P: programas 0.00 ≠ política 482.72"
+   ]
+  },
+  {
+   "fuente": "pge",
+   "prueba": "Cada ejercicio corresponde a un año distinto",
+   "ok": true,
+   "casos": 10,
+   "fallos": [],
+   "n_fallos": 0
+  },
+  {
+   "fuente": "entregas",
+   "prueba": "Los conceptos de cada comunidad suman su total",
+   "ok": true,
+   "casos": 153,
+   "fallos": [],
+   "n_fallos": 0
+  },
+  {
+   "fuente": "entregas",
+   "prueba": "Cada año tiene las 15 comunidades de régimen común más Ceuta y Melilla",
+   "ok": true,
+   "casos": 9,
+   "fallos": [],
+   "n_fallos": 0
+  },
+  {
+   "fuente": "ccaa",
+   "prueba": "Las políticas de cada comunidad suman su presupuesto",
+   "ok": true,
+   "casos": 187,
+   "fallos": [],
+   "n_fallos": 0
+  },
+  {
+   "fuente": "ccaa",
+   "prueba": "Los capítulos de cada política suman su importe",
+   "ok": true,
+   "casos": 4028,
+   "fallos": [],
+   "n_fallos": 0
+  },
+  {
+   "fuente": "ccaa",
+   "prueba": "La clasificación económica suma el presupuesto",
+   "ok": true,
+   "casos": 187,
+   "fallos": [],
+   "n_fallos": 0
+  },
+  {
+   "fuente": "ccaa",
+   "prueba": "Cada año tiene las 17 comunidades",
+   "ok": true,
+   "casos": 11,
+   "fallos": [],
+   "n_fallos": 0
+  },
+  {
+   "fuente": "cofog",
+   "prueba": "Las diez divisiones suman el total de cada administración y comunidad",
+   "ok": true,
+   "casos": 231,
+   "fallos": [],
+   "n_fallos": 0
+  },
+  {
+   "fuente": "poblacion",
+   "prueba": "Comunidades, Ceuta y Melilla suman la población de España",
+   "ok": true,
+   "casos": 13,
+   "fallos": [],
+   "n_fallos": 0
+  }
+ ]
+}
