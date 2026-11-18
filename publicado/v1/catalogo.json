@@ -60,8 +60,8 @@
    "fichero": "subvenciones.json",
    "url": "https://dinero-publico.github.io/datos/v1/subvenciones.json",
    "descripcion": "Grandes beneficiarios de subvenciones y ayudas (100.000 € o más en el año) y subvenciones a partidos políticos (BDNS, IGAE)",
-   "bytes": 311476,
-   "sha256": "257f97440114bdbd95e5d72f5560d89eae158f4e48f3e78395740439f17dfe57",
+   "bytes": 311581,
+   "sha256": "11f37be7d6f14042e3b5111ff099f895e22c1446834808350a8f05548fc75a4a",
    "actualizado": "2026-11-18T15:39:02+00:00",
    "ultimo_error": null
   },

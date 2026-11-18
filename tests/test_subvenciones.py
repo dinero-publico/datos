@@ -90,6 +90,7 @@ def test_resumen_motivos():
                "P1": {"total": 900, "c": [["1", "PRÉSTAMO", 900, 1]]}}
     r = f.resumen_motivos(motivos, convs, 10_000)
     assert r["importe"] == 1900 and r["cobertura"] == 0.19 and r["mrr"] == 1800
+    assert r["puestos"] == f.BDNS_TOP_MOTIVOS
     assert r["por_finalidad"] == {"Sanidad": 1800, f.SIN_CLASIFICAR: 100}
     assert r["por_procedimiento"] == {"Concesión directa": 1800, f.SIN_CLASIFICAR: 100}
     assert r["por_administracion"] == {"ESTADO": 1800, "LOCAL": 100}

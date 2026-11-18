@@ -13603,6 +13603,7 @@
    "motivos": {
     "fichero": "subvenciones-motivos-2026.json",
     "beneficiarios": 1000,
+    "puestos": 1000,
     "importe": 11208420913.06,
     "cobertura": 0.591,
     "por_finalidad": {
@@ -14414,6 +14415,7 @@
    "motivos": {
     "fichero": "subvenciones-motivos-2025.json",
     "beneficiarios": 995,
+    "puestos": 1000,
     "importe": 21871673616.75,
     "cobertura": 0.564,
     "por_finalidad": {
@@ -15225,6 +15227,7 @@
    "motivos": {
     "fichero": "subvenciones-motivos-2024.json",
     "beneficiarios": 997,
+    "puestos": 1000,
     "importe": 16870652361.5,
     "cobertura": 0.5013,
     "por_finalidad": {
@@ -16032,6 +16035,7 @@
    "motivos": {
     "fichero": "subvenciones-motivos-2023.json",
     "beneficiarios": 996,
+    "puestos": 1000,
     "importe": 19492374092.32,
     "cobertura": 0.523,
     "por_finalidad": {
@@ -16843,6 +16847,7 @@
    "motivos": {
     "fichero": "subvenciones-motivos-2022.json",
     "beneficiarios": 999,
+    "puestos": 1000,
     "importe": 21710970014.78,
     "cobertura": 0.593,
     "por_finalidad": {

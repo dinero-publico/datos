@@ -1288,6 +1288,8 @@ def resumen_motivos(motivos: dict, convocatorias: dict, total_anio: float) -> di
     top = sorted(conv.values(), key=lambda x: -x[1])[:30]
     return {
         "beneficiarios": len(motivos),
+        # Puestos de la lista del año cuyo desglose se consulta (la web solo ofrece el desglose para ellos).
+        "puestos": BDNS_TOP_MOTIVOS,
         "importe": r2(importe),
         "cobertura": round(importe / total_anio, 4) if total_anio else None,
         **{k: {n: r2(v) for n, v in sorted(s.items(), key=lambda kv: -kv[1])} for k, s in sumas.items()},
