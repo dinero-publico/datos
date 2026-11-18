@@ -245,6 +245,19 @@ def comprobar_subvenciones(d: dict, inf: Informe):
         if n != x["concesiones"] or not _casi(s, x["total"], 1.0):
             fallos.append(f"{a}: beneficiarios {n} / {s:.0f} € ≠ {x['concesiones']} / {x['total']:.0f} €")
     inf.prueba("subvenciones", "Las subvenciones a partidos por beneficiario suman el total", fallos, len(d["partidos"]))
+    fallos, n = [], 0
+    for a, x in g.items():
+        m = x.get("motivos")
+        if not m:
+            continue
+        n += 1
+        for k in ("por_finalidad", "por_instrumento", "por_administracion", "por_procedimiento"):
+            if not _casi(sum(m[k].values()), m["importe"], 1.0):
+                fallos.append(f"{a}: {k} suma {sum(m[k].values()):.0f} € ≠ {m['importe']:.0f} €")
+        if m["cobertura"] is not None and not 0 < m["cobertura"] <= 1.01:
+            fallos.append(f"{a}: cobertura {m['cobertura']}")
+    if n:
+        inf.prueba("subvenciones", "Los motivos (finalidad, instrumento, administración, procedimiento) suman lo consultado", fallos, n)
 
 
 COMPROBACIONES = {

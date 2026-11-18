@@ -47,7 +47,9 @@ FUENTES = {
     "subvenciones": ("subvenciones.json", "Grandes beneficiarios de subvenciones y ayudas (100.000 € o más en el año) y subvenciones a partidos políticos (BDNS, IGAE)"),
 }
 # Fuentes que se publican en varios ficheros: el principal más «<nombre>-<parte>.json».
-LISTAS = {"subvenciones": "Lista completa de grandes beneficiarios de {parte} (BDNS, IGAE)"}
+LISTAS = {"subvenciones": lambda parte: (
+    f"Concesiones de los mayores beneficiarios de {parte.split('-')[-1]}, agrupadas por convocatoria, con su finalidad (BDNS, IGAE)"
+    if parte.startswith("motivos-") else f"Lista completa de grandes beneficiarios de {parte} (BDNS, IGAE)")}
 
 
 def digest(obj) -> str:
@@ -61,12 +63,18 @@ def leer(nombre: str) -> dict | None:
 
 def escribir(nombre: str, obj) -> None:
     SALIDA.mkdir(parents=True, exist_ok=True)
-    filas = obj.get("beneficiarios") if isinstance(obj, dict) and nombre.startswith("subvenciones-") else None
-    if filas is not None:
-        # Listas largas: una fila por línea (diffs legibles y ficheros pequeños).
-        cab = json.dumps({k: v for k, v in obj.items() if k != "beneficiarios"}, ensure_ascii=False)[:-1]
-        cuerpo = ",\n".join(json.dumps(b, ensure_ascii=False) for b in filas)
-        texto = f'{cab}, "beneficiarios": [\n{cuerpo}\n]}}'
+    if isinstance(obj, dict) and nombre.startswith("subvenciones-"):
+        # Ficheros largos: un elemento por línea (diffs legibles y ficheros pequeños).
+        d = lambda x: json.dumps(x, ensure_ascii=False)
+        partes = []
+        for k, v in obj.items():
+            if isinstance(v, list) and len(v) > 50:
+                partes.append(f"{d(k)}: [\n" + ",\n".join(d(x) for x in v) + "\n]")
+            elif isinstance(v, dict) and len(v) > 50:
+                partes.append(f"{d(k)}: {{\n" + ",\n".join(f"{d(i)}: {d(x)}" for i, x in v.items()) + "\n}")
+            else:
+                partes.append(f"{d(k)}: {d(v)}")
+        texto = "{" + ",\n".join(partes) + "}"
     else:
         texto = json.dumps(obj, ensure_ascii=False, indent=1)
     (SALIDA / nombre).write_text(texto + "\n", encoding="utf-8")
@@ -79,7 +87,7 @@ def ahora() -> str:
 # --------------------------------------------------------------------------- #
 # Descarga y transformación
 # --------------------------------------------------------------------------- #
-def descargar(only: list[str] | None, offline: Path | None, year: int, delay: float) -> int:
+def descargar(only: list[str] | None, offline: Path | None, year: int, delay: float, max_peticiones: int = f.BDNS_MAX_PETICIONES) -> int:
     dl = f.Downloader(offline, delay=0 if offline else delay)
     anios = list(range(year, year - f.YEARS_BACK - 1, -1))  # el año en curso y los diez anteriores
 
@@ -94,7 +102,7 @@ def descargar(only: list[str] | None, offline: Path | None, year: int, delay: fl
         "ccaa": lambda: f.fetch_ccaa(dl, anios, previo("ccaa.json"), reuse_before=year - 1),
         "cofog": lambda: f.fetch_cofog(dl, desde=year - f.YEARS_BACK - 2),
         "poblacion": lambda: f.fetch_poblacion(dl, desde=year - f.YEARS_BACK - 2),
-        "subvenciones": lambda: f.fetch_subvenciones(dl, f.unir_subvenciones(leer("subvenciones.json"), leer), year),
+        "subvenciones": lambda: f.fetch_subvenciones(dl, f.unir_subvenciones(leer("subvenciones.json"), leer), year, max_peticiones),
     }
     meta = leer("meta.json") or {}
     meta.setdefault("fuentes", {})
@@ -176,7 +184,7 @@ def publicar() -> int:
             stem = Path(nombre).stem
             for q in sorted(SALIDA.glob(f"{stem}-*.json"), reverse=True):
                 parte = q.stem[len(stem) + 1:]
-                partes.append((f"{clave}-{parte}", q, LISTAS[clave].format(parte=parte)))
+                partes.append((f"{clave}-{parte}", q, LISTAS[clave](parte)))
         for k, q, d in partes:
             ficheros[k] = {
                 "fichero": q.name, "url": URL_PUBLICA + q.name, "descripcion": d, "bytes": q.stat().st_size,
@@ -225,18 +233,20 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--only", choices=list(FUENTES), action="append", help="procesar solo estas fuentes (descargar/transformar/todo)")
     ap.add_argument("--year", type=int, default=dt.date.today().year, help="año de referencia (por defecto, el actual)")
     ap.add_argument("--delay", type=float, default=1.0, help="segundos de espera entre peticiones")
+    ap.add_argument("--max-peticiones", type=int, default=f.BDNS_MAX_PETICIONES,
+                    help="consultas a la BDNS por ejecución para los motivos de las subvenciones")
     ap.add_argument("--raw", type=Path, default=f.RAW_DIR, help="carpeta de originales para «transformar» (por defecto raw/)")
     a = ap.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(message)s")
     if a.paso == "descargar":
-        return descargar(a.only, None, a.year, a.delay)
+        return descargar(a.only, None, a.year, a.delay, a.max_peticiones)
     if a.paso == "transformar":
         return descargar(a.only, a.raw, a.year, a.delay)
     if a.paso == "analizar":
         return analizar()
     if a.paso == "publicar":
         return publicar()
-    rc = descargar(a.only, None, a.year, a.delay)
+    rc = descargar(a.only, None, a.year, a.delay, a.max_peticiones)
     analizar()
     publicar()
     return rc

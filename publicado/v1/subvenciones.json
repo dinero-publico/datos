@@ -13599,7 +13599,235 @@
      "CASTROMIL SAU, ALCALABUS SL Y LA HISPANO",
      19668935.62
     ]
-   ]
+   ],
+   "motivos": {
+    "fichero": "subvenciones-motivos-2026.json",
+    "beneficiarios": 1000,
+    "importe": 11208420913.06,
+    "cobertura": 0.591,
+    "por_finalidad": {
+     "Industria y Energía": 3650115587.19,
+     "Infraestructuras": 1791509765.79,
+     "Educación": 1759444566.03,
+     "Investigación, desarrollo e innovación": 872876856.32,
+     "Otras actuaciones de carácter económico": 650012409.46,
+     "Subvenciones al transporte": 409920456.71,
+     "Fomento del Empleo": 405392852.36,
+     "Servicios Sociales y Promoción Social": 271988054.02,
+     "Otras Prestaciones económicas": 234096115.81,
+     "Justicia": 220286428.4,
+     "Agricultura, Pesca y Alimentación": 211335278.69,
+     "Comercio, Turismo y Pymes": 185226360.31,
+     "Sanidad": 169323592.49,
+     "Cultura": 155719001.02,
+     "Acceso a la vivienda y fomento de la edificación": 69660059.02,
+     "Cooperación internacional para el desarrollo y cultural": 52176356.26,
+     "Sin clasificar (convocatorias pequeñas)": 40883654.28,
+     "Seguridad Ciudadana e Instituciones Penitenciarias": 31744990.31,
+     "Desempleo": 26708528.59
+    },
+    "por_instrumento": {
+     "SUBVENCIÓN y ENTREGA DINERARIA SIN CONTRAPRESTACIÓN": 11106733765.5,
+     "PRÉSTAMO": 98393639.79,
+     "OTROS INSTRUMENTOS DE AYUDA": 1710429.97,
+     "GARANTÍA": 1315451.65,
+     "VENTAJA FISCAL": 267626.15
+    },
+    "por_administracion": {
+     "ESTADO": 6530283505.08,
+     "AUTONOMICA": 3964776688.05,
+     "LOCAL": 712843894.59,
+     "OTROS": 516825.34
+    },
+    "por_procedimiento": {
+     "Concesión directa": 7577873102.16,
+     "Concurrencia competitiva": 3589664156.62,
+     "Sin clasificar (convocatorias pequeñas)": 40883654.28
+    },
+    "mrr": 3648289665.12,
+    "convocatorias": [
+     [
+      "896524",
+      "Extracto de la Resolución de 31 de marzo de 2026 de la Secretaría de Estado de Política Territorial que regula el régimen de ayudas a entidades locales previstas en el artículo 7 del Real Decreto-ley 5/2026, de 17 de febrero",
+      1644811057.55,
+      191
+     ],
+     [
+      "905813",
+      "RESOLUCIÓN POR LA CUAL SE EFECTÚA UNA TRANSFERENCIA A LAS UNIVERSIDADES PÚBLICAS DE LA COMUNITAT VALENCIANA PARA FINANCIAR SUS GASTOS DE PERSONAL Y FUNCIONAMIENTO EN EL EJERCICIO 2026. CAPÍTULO 4. LÍNEA T0002.",
+      949054360.0,
+      5
+     ],
+     [
+      "877748",
+      "Segunda convocatoria de los Programas “Repotenciación Circular” Programa 1 de ayudas a la inversión en la repotenciación de instalaciones eólicas en el marco del Plan de Recuperación, Transformación y Resiliencia – Financiado por la Unión Europea.",
+      538222177.0,
+      41
+     ],
+     [
+      "879883",
+      "Resolución de 5 de enero de 2026 de SEPIDES, EPE, que efectúa convocatoria de ayudas de actuación integral para la descarbonización de la industria manufacturera como parte del PERTE de descarbonización industrial en el marco del PRTR del año 2026.",
+      514246285.5,
+      17
+     ],
+     [
+      "778417",
+      "Primera convocatoria del Programa de incentivos para proyectos de producción y consumo de hidrógeno renovable (CLUSTERES O VALLES) en el Marco del Plan de Recuperación, transformación y Resiliencia-Financiado por la Unión Europea- NextGenerationEU",
+      303750000.0,
+      1
+     ],
+     [
+      "894205",
+      "Segunda convocatoria para la concesión directa de ayudas a Proyectos Españoles por su participación en el esquema “Subasta como Servicio” del Banco Europeo del Hidrógeno seleccionados por la Agencia Ejecutiva Europea (CINEA) dentro del PRTR.",
+      274298434.0,
+      3
+     ],
+     [
+      "300692",
+      "Incentivos Regionales para la corrección de los desequilibrios económicos interterritoriales",
+      226378072.69,
+      29
+     ],
+     [
+      "877815",
+      "Primera convocatoria de ayudas a proyectos de inversión para la adaptación física de la infraestructura portuaria nacional en puertos de interés general destinada al despliegue de la eólica marina y otras renovables marinas en España, en el marco del PRTR",
+      209449679.0,
+      5
+     ],
+     [
+      "897920",
+      "SUBV. C.DIRECT A LA UNIVERSIDAD DE MURCIA para contribuir a su funcionamiento general durante el ejercicio presupuestario del año 2026.",
+      192476798.0,
+      1
+     ],
+     [
+      "877068",
+      "Segunda convocatoria del programa de incentivos de proyectos innovadores de energías renovables y almacenamiento, así como la implantación de sistemas térmicos renovables (energías renovables innovadoras).Programa 1: instalaciones agrivoltaicas con almace",
+      168987492.52,
+      24
+     ],
+     [
+      "877869",
+      "Segunda convocatoria de ayudas para proyectos innovadores de almacenamiento energético mediante bombeo reversible en el marco del Plan de Recuperación, Transformación y Resiliencia – Financiado por la Unión Europea – Next GenerationEU.",
+      165000000.0,
+      7
+     ],
+     [
+      "859556",
+      "Resolución de SEPIDES E.P.E. por la que se efectúa la convocatoria de concesión de ayudas a proyectos para el impulso a la cadena de valor del vehículo eléctrico y conectado dentro del PERTE VEC, en el marco del PRTR en el año 2025.",
+      157974687.45,
+      19
+     ],
+     [
+      "893994",
+      "Resolución de 18 de marzo de 2026 de SEPIDES EPE por la que se efectúa la convocatoria de concesión de ayudas a proyectos de producción de baterías y pilas de combustible de hidrógeno del vehículo eléctrico en el marco del PRTR en el año 2026",
+      146219778.52,
+      2
+     ],
+     [
+      "890844",
+      "Convocatoria instrumental Fondo Global 2026- 2028",
+      145000000.0,
+      1
+     ],
+     [
+      "877803",
+      "Primera convocatoria de ayudas a proyectos para reforzar la Cadena de valor industrial de tecnologías limpias y sus componentes clave, en el Marco del PRTR, Financiado por la Unión Europea – NextGenerationEU y del pacto por una industria limpia.",
+      132662879.0,
+      11
+     ],
+     [
+      "907162",
+      "Orden Aportación dineraria mensual ULL 2026",
+      130600414.0,
+      1
+     ],
+     [
+      "886379",
+      "Orden aportación dineraria mensual ULPGC 2026",
+      114696670.0,
+      1
+     ],
+     [
+      "866756",
+      "Resolución de SEPIDES E.P.E. por la que se efectúa la convocatoria de concesión de ayudas para el desarrollo de instalaciones manufactureras altamente eficientes y descarbonizadas, PERTE de Descarbonización Industrial, en el marco del PRTR en el año 2025.",
+      100000000.0,
+      5
+     ],
+     [
+      "844627",
+      "Primera convocatoria para la concesión directa de ayudas a proyectos españoles por su participación en el esquema «Subasta como Servicio» del Banco Europeo del Hidrógeno seleccionados por la Agencia Ejecutiva Europea (CINEA) dentro del PRTR.",
+      93584353.42,
+      1
+     ],
+     [
+      "768798",
+      "CONVOCATORIA DE SUBVENCIONES, EN RÉGIMEN DE CONCURRENCIA COMPETITIVA, PARA EL IMPULSO DE LA ECONOMÍA CIRCULAR EN EL SECTOR DEL PLÁSTICO, EN EL MARCO DEL PLAN DE RECUPERACIÓN, TRANSFORMACIÓN Y RESILIENCIA, PARA EL AÑO 2024.",
+      89202101.29,
+      19
+     ],
+     [
+      "880353",
+      "CONVOCATORIA INSTRUMENTAL 2026. ACCIÓN DE COOPERACIÓN LOCAL",
+      88673203.2,
+      40
+     ],
+     [
+      "876660",
+      "Primera convocatoria del programa de incentivos a la instalación de infraestructura de recarga pública de vehículos eléctricos en España (Programa MOVES CORREDORES DE RECARGA), en el marco del Plan de Recuperación, Transformación y Resiliencia, financiado",
+      83654781.16,
+      12
+     ],
+     [
+      "877310",
+      "Resolución de SEPIDES E.P.E por la que se efectúa la convocatoria de concesión de ayudas a proyectos de impulso de la cadena de valor industrial (CVI 2025) en el marco del Plan de Recuperación, Transformación y Resiliencia.",
+      82119665.0,
+      23
+     ],
+     [
+      "844319",
+      "Orden de 3 de septiembre de 2025 por la que se aprueba la convocatoria 2025 de ayudas para la adquisición de equipamiento científico-técnico.",
+      77689149.19,
+      48
+     ],
+     [
+      "823506",
+      "Resolución de 23 de abril de 2025 de la Presidencia de la Agencia Estatal de Investigación, por la que se aprueba la convocatoria 2025 de ayudas a «Centros de Excelencia Severo Ochoa» y «Unidades de Excelencia María de Maeztu».",
+      77556400.0,
+      14
+     ],
+     [
+      "878797",
+      "Actuaciones del turno de oficio de abogados",
+      68287934.25,
+      1
+     ],
+     [
+      "906039",
+      "Resolución de 14 de mayo de 2026 de la Secretaría General de Administración Local, por la que se convocan para el año 2026 las subvenciones previstas en la Orden de 14 de junio de 2016, del Programa de Fomento de Empleo Agrario",
+      65754790.88,
+      8
+     ],
+     [
+      "928250",
+      "Real Decreto 637/2026, de 29 de julio, por el que se regula la concesión directa de subvenciones a las federaciones deportivas españolas, al Comité Olímpico Español y al Comité Paralímpico Español para el año 2026.",
+      64405569.65,
+      19
+     ],
+     [
+      "839514",
+      "Resolución de 11 de junio de 2025, del Consejo de Administración de E.P.E. Instituto para la Diversificación y Ahorro de la Energía (IDAE), M.P. por la que se aprueba la primera convocatoria de ayudas al impulso de la economía circular de bienes de equipo",
+      59550879.0,
+      14
+     ],
+     [
+      "940259",
+      "Aportación dineraria Tenerife para gratuidad transporte terrestre público colectivo 2026",
+      56872596.39,
+      1
+     ]
+    ]
+   }
   },
   "2025": {
    "total_fuente": 33380,
@@ -14182,7 +14410,235 @@
      "AYUNTAMIENTO DE CHIVA",
      43532721.98
     ]
-   ]
+   ],
+   "motivos": {
+    "fichero": "subvenciones-motivos-2025.json",
+    "beneficiarios": 995,
+    "importe": 21871673616.75,
+    "cobertura": 0.564,
+    "por_finalidad": {
+     "Industria y Energía": 6596338348.95,
+     "Infraestructuras": 3265423053.83,
+     "Investigación, desarrollo e innovación": 2544954978.09,
+     "Educación": 1919729736.68,
+     "Servicios Sociales y Promoción Social": 1897002236.82,
+     "Otras actuaciones de carácter económico": 1616983360.14,
+     "Subvenciones al transporte": 1204190083.81,
+     "Fomento del Empleo": 797803466.28,
+     "Cultura": 344739654.26,
+     "Agricultura, Pesca y Alimentación": 301559083.61,
+     "Otras Prestaciones económicas": 289062254.25,
+     "Acceso a la vivienda y fomento de la edificación": 231118513.02,
+     "Justicia": 230505705.74,
+     "Cooperación internacional para el desarrollo y cultural": 199683942.29,
+     "Comercio, Turismo y Pymes": 195492013.82,
+     "Sin clasificar (convocatorias pequeñas)": 87317766.4,
+     "Sanidad": 64681566.27,
+     "Seguridad Ciudadana e Instituciones Penitenciarias": 51926204.03,
+     "Desempleo": 33161648.46
+    },
+    "por_instrumento": {
+     "SUBVENCIÓN y ENTREGA DINERARIA SIN CONTRAPRESTACIÓN": 20977475983.27,
+     "VENTAJA FISCAL": 609675373.16,
+     "PRÉSTAMO": 268193965.44,
+     "OTROS INSTRUMENTOS DE AYUDA": 15698126.53,
+     "GARANTÍA": 630168.35
+    },
+    "por_administracion": {
+     "ESTADO": 14146337240.64,
+     "AUTONOMICA": 6718030827.86,
+     "LOCAL": 1005024003.05,
+     "OTROS": 2281545.2
+    },
+    "por_procedimiento": {
+     "Concesión directa": 14823521546.06,
+     "Concurrencia competitiva": 6960834304.29,
+     "Sin clasificar (convocatorias pequeñas)": 87317766.4
+    },
+    "mrr": 5145671652.75,
+    "convocatorias": [
+     [
+      "813044",
+      "Concesión directa de subvenciones a ayuntamientos y diputaciones provinciales por los daños causados por la Depresión Aislada en Niveles Altos (DANA) entre el 28 de octubre y el 4 de noviembre de 2024, al amparo del artículo 5 del Real Decreto-ley 6/2024",
+      1727177251.8,
+      65
+     ],
+     [
+      "778417",
+      "Primera convocatoria del Programa de incentivos para proyectos de producción y consumo de hidrógeno renovable (CLUSTERES O VALLES) en el Marco del Plan de Recuperación, transformación y Resiliencia-Financiado por la Unión Europea- NextGenerationEU",
+      917044261.83,
+      9
+     ],
+     [
+      "822230",
+      "TRANSFERENCIA A LAS UNIVERSIDADES PÚBLICAS DE LA COMUNITAT VALENCIANA PARA FINANCIAR SUS GASTOS DE PERSONAL Y FUNCIONAMIENTO EN EL EJERCICIO 2025. LÍNEA T0002.",
+      886577105.2,
+      5
+     ],
+     [
+      "829090",
+      "Programa de incentivos ligados a la movilidad eléctrica (MOVES III) para el año 2025",
+      781768018.12,
+      19
+     ],
+     [
+      "774226",
+      "Concesión directa de subvenciones a los proyectos españoles por su participación en el Proyecto Importante de Interés Común Europeo de la industria del hidrógeno dentro del Componente 9 del PRTR-Financiado por la Unión Europea- Next Generation EU",
+      765508285.52,
+      6
+     ],
+     [
+      "869967",
+      "Real Decreto 534/2025, de 24 de junio, por el que se regula la concesión directa de subvenciones con cargo a los fondos del Plan de Recuperación, Transformación y Resiliencia para la realización de inversiones en la red de transporte de energía eléctrica",
+      761934122.56,
+      1
+     ],
+     [
+      "831808",
+      "T0017 \"Atención primaria de carácter básico\"",
+      667648597.4,
+      118
+     ],
+     [
+      "836311",
+      "Convocatoria de ayudas para proyectos innovadores de almacenamiento energético cofinanciada con Fondos FEDER 21-27",
+      666043954.8,
+      40
+     ],
+     [
+      "801943",
+      "Orden de 9 de diciembre de 2024 por la que se aprueba la convocatoria 2024 de ayudas a «Proyectos de Generación de Conocimiento» y a actuaciones para la formación de personal investigador predoctoral asociadas a dichos proyectos.",
+      599096796.25,
+      83
+     ],
+     [
+      "841853",
+      "Mecanismo de compensación de costes de emisiones indirectas de CO2 – 2025",
+      452018718.68,
+      36
+     ],
+     [
+      "879753",
+      "RESOLUCIÓN DE LA SEMA POR LA QUE SE CONCEDE POR CONCESIÓN DIRECTA SUBVENCIÓN PREVISTA EN EL RDL 7/2024, POR EL QUE SE ADOPTAN MEDIDAS URGENTES PARA IMPULSO DEL PLAN DE RESPUESTA INMEDIATA, RECONSTRUCCIÓN Y RELANZAMIENTO FRENTE A DAÑOS CAUSADOS POR LA DANA",
+      423271875.12,
+      31
+     ],
+     [
+      "878635",
+      "CONVENIO ENTRE EL MINISTERIO DE TRANSPORTES Y MOVILIDAD SOSTENIBLE Y LA GENERALITAT DE CATALUNYA, PARA LA EJECUCIÓN DE ACTUACIONES DE MEJORA DE LA MOVILIDAD EN EL ENTORNO DEL CORREDOR DE LA N-II Y LA C-32 EN EL ÁMBITO DEL MARESME",
+      384000000.0,
+      1
+     ],
+     [
+      "819148",
+      "Ayudas directas al transporte terrestre de viajeros, previstas en el Capítulo I del Título II del Real Decreto-ley 1/2025,de 28 de enero.",
+      338893525.41,
+      75
+     ],
+     [
+      "792592",
+      "Proyectos de inversión en rehabilitación energética de edificios e infraestructuras que permitan impulsar la transición energética en la Administración General del Estado (AGE) (FEDER 2021-2027)",
+      335005981.53,
+      11
+     ],
+     [
+      "300692",
+      "Incentivos Regionales para la corrección de los desequilibrios económicos interterritoriales",
+      298213335.29,
+      19
+     ],
+     [
+      "778566",
+      "Primera convocatoria de ayudas a proyectos para reforzar la Cadena de valor de equipos necesarios para la transición a una economía de cero emisiones netas en el Marco del PRTR, Financiado por la Unión Europea– NextGenerationEU.",
+      267745952.0,
+      7
+     ],
+     [
+      "888637",
+      "Ayudas de funcionamiento del régimen económico y fiscal de Canarias del art. 94 Ley 20/1991 y en Ley 19/1994.Año 2024.A partir 01/01/2024 se le integra Deducción por inversiones en producciones cinematográficas y series audiovisuales en CanariasSA100485",
+      260669714.62,
+      45
+     ],
+     [
+      "807475",
+      "Convocatoria instrumental 2025. Acción de cooperación local",
+      225499393.43,
+      30
+     ],
+     [
+      "735612",
+      "Convocatoria anticipada de las ayudas de actuación integral para la descarbonización de la industria manufacturera como parte del PERTE de Descarbonización Industrial en el marco del Plan de Recuperación, Transformación y Resiliencia.",
+      211699419.35,
+      23
+     ],
+     [
+      "831831",
+      "T0020 \"Atención secundaria\"",
+      208350058.44,
+      28
+     ],
+     [
+      "772204",
+      "Orden por la que se efectúa la convocatoria de concesión de ayudas a proyectos para el impulso a la cadena de valor del vehículo eléctrico y conectado dentro del PERTE VEC, en el marco del PRTR en el año 2024.",
+      205471073.35,
+      13
+     ],
+     [
+      "837749",
+      "SUBVENCIÓN C.DIRECTA UMU GASTOS FUNCIONAMIENTO GENERAL 2025",
+      186216937.0,
+      1
+     ],
+     [
+      "831828",
+      "T0019 \"Atención primaria de carácter específico competencia Generalitat Valenciana\"",
+      185750495.86,
+      67
+     ],
+     [
+      "781690",
+      "Convocatoria ayudas para provisión del conjunto de equipamiento activo e infraestr. auxiliar para provisión de servicios de com. móviles con tecnología 5G en zonas donde no existe cobertura móvil 4G con servicio mínimo de 50 Mbps (UNICO 5G Redes Activas)",
+      161050260.9,
+      2
+     ],
+     [
+      "801915",
+      "Convocatoria de Subvenciones de la Acción Estratégica en Salud 2025 (Líneas Estratégicas de Investigación en Salud 2024-2027)",
+      150428947.17,
+      44
+     ],
+     [
+      "888624",
+      "Ayudas a la inversión del régimen económico y fiscal de Canarias del art. 94 Ley 20/1991 y en Ley 19/1994. Año 2024",
+      149668324.32,
+      21
+     ],
+     [
+      "876781",
+      "Subvención de concesión directa a la Autoridad del Transporte Metropolitano de Barcelona (ATMB) para la financiación del transporte público regular de viajeros.",
+      149301520.0,
+      1
+     ],
+     [
+      "803154",
+      "Convocatoria de ayudas para el IPCEI Med4Cure",
+      126975383.48,
+      6
+     ],
+     [
+      "876782",
+      "Subvención de concesión directa al Consorcio Regional de Transportes de Madrid (CRTM) para la financiación del transporte público regular de viajeros.",
+      126894000.0,
+      1
+     ],
+     [
+      "844627",
+      "Primera convocatoria para la concesión directa de ayudas a proyectos españoles por su participación en el esquema «Subasta como Servicio» del Banco Europeo del Hidrógeno seleccionados por la Agencia Ejecutiva Europea (CINEA) dentro del PRTR.",
+      126431558.0,
+      2
+     ]
+    ]
+   }
   },
   "2024": {
    "total_fuente": 33875,
@@ -14765,7 +15221,235 @@
      "DIPUTACION DE MALAGA",
      28241294.0
     ]
-   ]
+   ],
+   "motivos": {
+    "fichero": "subvenciones-motivos-2024.json",
+    "beneficiarios": 997,
+    "importe": 16870652361.5,
+    "cobertura": 0.5013,
+    "por_finalidad": {
+     "Industria y Energía": 5128471256.49,
+     "Investigación, desarrollo e innovación": 2711464364.39,
+     "Educación": 1839246425.32,
+     "Infraestructuras": 1300487951.43,
+     "Fomento del Empleo": 1072053001.93,
+     "Otras actuaciones de carácter económico": 910615190.41,
+     "Servicios Sociales y Promoción Social": 847589001.54,
+     "Acceso a la vivienda y fomento de la edificación": 483405987.78,
+     "Comercio, Turismo y Pymes": 435432847.01,
+     "Subvenciones al transporte": 407740324.0,
+     "Cooperación internacional para el desarrollo y cultural": 312190075.31,
+     "Sanidad": 305542865.37,
+     "Justicia": 254059493.42,
+     "Otras Prestaciones económicas": 237080569.82,
+     "Agricultura, Pesca y Alimentación": 235534630.93,
+     "Cultura": 226321863.61,
+     "Sin clasificar (convocatorias pequeñas)": 82136880.79,
+     "Seguridad Ciudadana e Instituciones Penitenciarias": 45892802.87,
+     "Desempleo": 35386829.08
+    },
+    "por_instrumento": {
+     "SUBVENCIÓN y ENTREGA DINERARIA SIN CONTRAPRESTACIÓN": 16482869723.22,
+     "PRÉSTAMO": 361865026.41,
+     "OTROS INSTRUMENTOS DE AYUDA": 15107958.17,
+     "VENTAJA FISCAL": 8645566.39,
+     "GARANTÍA": 2164087.31
+    },
+    "por_administracion": {
+     "ESTADO": 9926940949.6,
+     "AUTONOMICA": 5872227897.06,
+     "LOCAL": 1068518980.98,
+     "OTROS": 2964533.86
+    },
+    "por_procedimiento": {
+     "Concesión directa": 11251611650.65,
+     "Concurrencia competitiva": 5536903830.06,
+     "Sin clasificar (convocatorias pequeñas)": 82136880.79
+    },
+    "mrr": 4597935649.66,
+    "convocatorias": [
+     [
+      "919691",
+      "Retribución especifica de los productores de energía eléctrica a partir de fuentes de energía renovables, cogeneración y residuos (RECORE 2024)",
+      2582944780.46,
+      281
+     ],
+     [
+      "750460",
+      "RESOLUCIÓ DE LA CONSELLERIA D’EDUCACIÓ, UNIVERSITATS I OCUPACIÓ, PER LA QUAL S’EFECTUA UNA TRANSFERÈNCIA A LES UNIVERSITATS PÚBLIQUES DE LA COMUNITAT VALENCIANA. LÍNIA T0002000, EXERCICI 2024.",
+      849803670.0,
+      5
+     ],
+     [
+      "732796",
+      "Orden de 27 de diciembre de 2023 por la que se aprueba la convocatoria 2023 de ayudas a «Proyectos de Generación de Conocimiento» y a actuaciones para la formación de personal investigador predoctoral asociadas a dichos proyectos.",
+      611193577.13,
+      102
+     ],
+     [
+      "720469",
+      "Convocatoria ayudas para provisión del conjunto de equipamiento activo e infraestr. auxiliar para provisión de servicios de com. móviles con tecnología 5G en zonas donde no existe cobertura móvil 4G con servicio mínimo de 50 Mbps (UNICO 5G Redes Activas)",
+      508625880.07,
+      4
+     ],
+     [
+      "620791",
+      "Concesión directa de ayudas a las comunidades autónomas y a las ciudades de Ceuta y Melilla para la ejecución de programas de incentivos ligados a la movilidad eléctrica (MOVES III)",
+      383030117.0,
+      17
+     ],
+     [
+      "709644",
+      "Orden de 21 de julio por la que se efectúa la convocatoria de concesión de ayudas a proyectos para el impulso a la cadena de valor del vehículo eléctrico y conectado dentro del PERTE VEC, en el marco del PRTR en el año 2023.",
+      347997744.28,
+      15
+     ],
+     [
+      "762771",
+      "Orden de 22 de mayo de 2024 por la que se efectúa la convocatoria de concesión de ayudas a proyectos de producción de baterías del vehículo eléctrico dentro del Plan para la Recuperación, Transformación y Resiliencia en el año 2024",
+      293218064.46,
+      4
+     ],
+     [
+      "620666",
+      "Ayudas directas a CCAA Programas de incentivos ligados al autoconsumo y al almacenamiento",
+      248704904.0,
+      12
+     ],
+     [
+      "352191",
+      "Concesión directa de subvenciones a proyectos singulares de entidades locales que favorezcan el paso a una economía baja en carbono",
+      244011848.23,
+      81
+     ],
+     [
+      "300692",
+      "Incentivos Regionales para la corrección de los desequilibrios económicos interterritoriales",
+      239237569.32,
+      21
+     ],
+     [
+      "719793",
+      "Segunda convocatoria del programa de ayudas para la mejora de la eficiencia del ciclo urbano del agua, en el marco del PRTR",
+      216332736.26,
+      39
+     ],
+     [
+      "796664",
+      "Real Decreto 876/2024, de 3 de septiembre, concesión directa de una subvención a Unión Profesional para el desarrollo de un programa de formación de competencias digitales en el ámbito de los colegios profesionales, en el marco del PRTR",
+      200000000.0,
+      1
+     ],
+     [
+      "773680",
+      "Mecanismo de compensación de costes de emisiones indirectas de CO2 - 2024",
+      198123518.91,
+      27
+     ],
+     [
+      "748264",
+      "SUBVENCIÓN NOMINATIVA UMU GASTOS GENERALES DE FUNCIONAMIENTO EJERCICIO 2024",
+      186216937.0,
+      1
+     ],
+     [
+      "735612",
+      "Convocatoria anticipada de las ayudas de actuación integral para la descarbonización de la industria manufacturera como parte del PERTE de Descarbonización Industrial en el marco del Plan de Recuperación, Transformación y Resiliencia.",
+      184271436.41,
+      14
+     ],
+     [
+      "734336",
+      "Resolución de la Dirección del Instituto de Salud Carlos III O.A., M.P., por la que se aprueba la convocatoria correspondiente al año 2024 mediante tramitación anticipada de concesión de subvenciones de la Acción Estratégica en Salud 2021-2023.",
+      148355482.13,
+      48
+     ],
+     [
+      "738195",
+      "Convocatoria instrumental 2024. Acción de cooperación local",
+      137366171.24,
+      27
+     ],
+     [
+      "749748",
+      "Orden de 26 de marzo de 2024 por la que se aprueba la convocatoria 2024 de ayudas para la adquisición de equipamiento científico-técnico.",
+      127007701.9,
+      59
+     ],
+     [
+      "676181",
+      "Convocatoria de ayudas para el programa de mejora de la competitividad y dinamización del patrimonio histórico con uso turístico ejercicio 2022.",
+      120425950.0,
+      46
+     ],
+     [
+      "730807",
+      "Resolución de 1 de diciembre de 2023 de la Presidencia de la Agencia Estatal de Investigación, por la que se aprueba la convocatoria 2023 de las ayudas Ramón y Cajal.",
+      117692800.0,
+      73
+     ],
+     [
+      "721850",
+      "Resolución de Dirección General de Cooperación Autonómica y Local por la que se aprueba la primera convocatoria para la selección de proyectos de formación para el empleo promovidos por entidades locales para su financiación mediante el EFESO FSE+ 21-27",
+      115669565.15,
+      29
+     ],
+     [
+      "764358",
+      "RESOLUCIÓ DE LA CONSELLERIA D’EDUCACIÓ, UNIVERSITATS I OCUPACIÓ PER LA QUAL S’EFECTÚA UNA TRANSFERÈNCIA A LES UNIVERSITATS PÚBLIQUES DE LA COMUNITAT VALENCIANA. LÍNIA T0078000. EXERCICI 2024",
+      103139380.0,
+      5
+     ],
+     [
+      "735816",
+      "Real Decreto 1086/2023, de 12 de diciembre, por el que se regula la concesión directa de subvenciones a entidades del Tercer Sector (...)en el marco del Plan de Recuperación, Transformación y Resiliencia.",
+      93779397.5,
+      13
+     ],
+     [
+      "703678",
+      "Resolución de 5 de julio de 2023 de la Presidencia de la Agencia Estatal de Investigación, por la que se aprueba la convocatoria del año 2023 de ayudas para incentivar la consolidación investigadora.",
+      89027048.0,
+      79
+     ],
+     [
+      "783584",
+      "Convocatoria instrumental Fondo Global 24 - 2624 - 26",
+      85000000.0,
+      1
+     ],
+     [
+      "735607",
+      "Orden de 26 de diciembre de 2023 por la que se aprueba la convocatoria del año 2023 de ayudas a proyectos de colaboración público-privada (ayudas para actividades no económicas de organismos de investigación).",
+      76428869.77,
+      85
+     ],
+     [
+      "775862",
+      "Convenios de colaboración entre la Admón.del Principado de Asturias, a través de la Consejería de Derechos Sociales y Bienestar, y las Entidades Locales, que establecen el marco de cooperación para el desarrollo de las prestaciones sociales básicas de S.S",
+      75241352.0,
+      12
+     ],
+     [
+      "740346",
+      "Resolución por la cual se establecen los módulos de compensación económica por las actuaciones profesionales del los abogados en materia de asistencia jurídica gratuita para el año 2024.",
+      70322475.66,
+      1
+     ],
+     [
+      "683068",
+      "Resolución de 21 de marzo de 2023 de la Presidencia de la Agencia Estatal de Investigación, por la que se aprueba la convocatoria 2023 de ayudas a «Centros de Excelencia Severo Ochoa» y «Unidades de Excelencia María de Maeztu»",
+      70054000.0,
+      11
+     ],
+     [
+      "798285",
+      "Subvenciones para la financiación de iniciativas locales que contribuyan a la consecución de los objetivos del Marco de actuaciones para el desarrollo territorial sostenible del área de influencia del Espacio Natural Doñana",
+      70000000.0,
+      14
+     ]
+    ]
+   }
   },
   "2023": {
    "total_fuente": 37326,
@@ -15344,7 +16028,235 @@
      "AYUNTAMIENTO DE OVIEDO",
      35428549.43
     ]
-   ]
+   ],
+   "motivos": {
+    "fichero": "subvenciones-motivos-2023.json",
+    "beneficiarios": 996,
+    "importe": 19492374092.32,
+    "cobertura": 0.523,
+    "por_finalidad": {
+     "Industria y Energía": 5846847175.64,
+     "Investigación, desarrollo e innovación": 2585596227.38,
+     "Infraestructuras": 2028489193.68,
+     "Educación": 1749276457.3,
+     "Otras actuaciones de carácter económico": 1479350105.6,
+     "Fomento del Empleo": 892655580.73,
+     "Servicios Sociales y Promoción Social": 854801527.41,
+     "Comercio, Turismo y Pymes": 757784334.36,
+     "Cooperación internacional para el desarrollo y cultural": 630574368.32,
+     "Subvenciones al transporte": 539808194.19,
+     "Sanidad": 496082750.09,
+     "Acceso a la vivienda y fomento de la edificación": 465460765.68,
+     "Cultura": 360403046.63,
+     "Justicia": 203394895.23,
+     "Otras Prestaciones económicas": 191988976.62,
+     "Agricultura, Pesca y Alimentación": 174113360.07,
+     "Sin clasificar (convocatorias pequeñas)": 98332921.24,
+     "Seguridad Ciudadana e Instituciones Penitenciarias": 78494173.35,
+     "Desempleo": 58920038.8
+    },
+    "por_instrumento": {
+     "SUBVENCIÓN y ENTREGA DINERARIA SIN CONTRAPRESTACIÓN": 19006962920.37,
+     "VENTAJA FISCAL": 296145129.03,
+     "PRÉSTAMO": 183475662.27,
+     "OTROS INSTRUMENTOS DE AYUDA": 3505718.6,
+     "GARANTÍA": 2284662.05
+    },
+    "por_administracion": {
+     "ESTADO": 11861822017.86,
+     "AUTONOMICA": 6868283895.47,
+     "LOCAL": 760033855.9,
+     "OTROS": 2234323.09
+    },
+    "por_procedimiento": {
+     "Concesión directa": 12843520821.34,
+     "Concurrencia competitiva": 6550520349.74,
+     "Sin clasificar (convocatorias pequeñas)": 98332921.24
+    },
+    "mrr": 6126037635.68,
+    "convocatorias": [
+     [
+      "841508",
+      "Retribución especifica de los productores de energía eléctrica a partir de fuentes de energía renovables, cogeneración y residuos (RECORE 2023)",
+      2629953303.29,
+      289
+     ],
+     [
+      "678255",
+      "RESOLUCIÓ CONSELLERIA D' INNOVACIÓ, UNIVERSITATS, CIÈNCIA I SOCIETAT DIGITAL PER LA QUAL ES CONCEDEIX SUBVENCIÓ UNIVERSITATS PÚBLIQUES COMUNITAT VALENCIANA. LÍNIA DE SUBVENCIÓ T0097000. EXERCICI 2023.",
+      824495200.0,
+      5
+     ],
+     [
+      "707168",
+      "Orden ICT/736/2023, de 5 de julio, por la que se establecen las bases reguladoras para la concesión de ayudas PERTE VEC en el marco del PRTR y se efectúa la convocatoria de ayudas a proyectos de producción de baterías del vehículo eléctrico del año 2023.",
+      576987530.17,
+      14
+     ],
+     [
+      "662668",
+      "Orden de 30 de diciembre de 2022 por la que se aprueba la convocatoria 2022 de ayudas a «Proyectos de Generación de Conocimiento» y a actuaciones para la formación de personal investigador predoctoral asociadas a dichos proyectos.",
+      573337711.3,
+      98
+     ],
+     [
+      "620666",
+      "Ayudas directas a CCAA Programas de incentivos ligados al autoconsumo y al almacenamiento",
+      568654342.38,
+      19
+     ],
+     [
+      "640563",
+      "Ayudas a municipios para la implantación de ZBE y la transformación digital y sostenible del transporte urbano, en el marco del PRTR. Convocatoria correspondiente al ejercicio 2022.",
+      448323072.89,
+      75
+     ],
+     [
+      "655686",
+      "Convocatoria de ayudas para provisión de conexión de Backhaul mediante fibra óptica a emplazamientos de redes públicas de telefonía móvil en el marco del PRTR–financiado por la Unión Europea– NEXTGENERATIONEU. Programa UNICO 5G REDES Backhaul fibra óptica",
+      443885188.0,
+      6
+     ],
+     [
+      "615575",
+      "Orden ICT/209/2022, de 17 de marzo, por la que se efectúa la convocatoria correspondiente al año 2022, y se modifica la Orden ICT/1466/2021, de 23 de diciembre, para la concesión de ayudas PERTE VEC en el marco del PRTR.",
+      403046849.4,
+      24
+     ],
+     [
+      "623692",
+      "Resolución de 28 de abril de 2022 de la Presidencia de la AECID por la que se aprueba la convocatoria pública de concesión de subvenciones para la realización de convenios de cooperación para el desarrollo 2022-25",
+      357000006.0,
+      28
+     ],
+     [
+      "620791",
+      "Concesión directa de ayudas a las comunidades autónomas y a las ciudades de Ceuta y Melilla para la ejecución de programas de incentivos ligados a la movilidad eléctrica (MOVES III)",
+      259267754.33,
+      11
+     ],
+     [
+      "702944",
+      "PROGRAMAS Y PROYECTOS PARA ASIGNACIÓN DE RECURSOS EN EL MARCO DEL FDCAN 2023-2027",
+      254466606.0,
+      1
+     ],
+     [
+      "300692",
+      "Incentivos Regionales para la corrección de los desequilibrios económicos interterritoriales",
+      211798918.77,
+      19
+     ],
+     [
+      "814893",
+      "Ayudas a la inversión del régimen económico y fiscal de Canarias del art. 94 Ley 20/1991 y en Ley 19/1994. Año 2023",
+      193450236.26,
+      21
+     ],
+     [
+      "709379",
+      "Convocatoria 2023 de la línea de ayudas para la compensación de los costes adicionales debidos al aumento excepcional de los precios del gas natural.",
+      172732003.67,
+      44
+     ],
+     [
+      "688013",
+      "SUBVENCION NOMINATIVA UMU GASTOS GENERALES DE FUNCIONAMIENTO 2023",
+      172100000.0,
+      1
+     ],
+     [
+      "614583",
+      "Convocatoria de ayudas destinadas al Plan de Impulso para la Rehabilitación de Edificios de titularidad pública del Ministerio de Transportes, Movilidad y Agenda Urbana.",
+      170582157.33,
+      75
+     ],
+     [
+      "696505",
+      "Mecanismo de compensación de costes de emisiones indirectas de CO2 - 2023",
+      158441876.37,
+      28
+     ],
+     [
+      "671287",
+      "Orden TED/934/2022, de 23 de septiembre, primera convocatoria de subvenciones (2022) en concurrencia competitiva de proyectos de mejora de la eficiencia del ciclo urbano del agua (PERTE digitalización del ciclo del agua), en el marco del PRTR",
+      157866638.51,
+      27
+     ],
+     [
+      "727957",
+      "Actuación “Administración y servicios públicos electrónicos”, ejecutadas por entidades públicas de la Administración General del Estado (función ejercida por la Aut. de Gestión - aplica sólo a determinadas regiones) -2023- Incl. escalonadas 21-27",
+      142109656.19,
+      3
+     ],
+     [
+      "711007",
+      "Orden por la que se establecen las nuevas bases reguladoras y se convoca la concesión de ayudas para la realización de proyectos del Programa UNICO Banda Ancha 2023 en el marco del Plan de Recuperación, Transformación y Resiliencia – Financiado por la UE",
+      130177124.77,
+      6
+     ],
+     [
+      "682488",
+      "Resolución de la Dirección del Instituto de Salud Carlos III O.A., M.P., por la que se aprueba la convocatoria correspondiente al año 2023 de concesión de subvenciones de la Acción Estratégica en Salud 2021-2023, en el marco del PRTR.",
+      125627879.83,
+      55
+     ],
+     [
+      "669494",
+      "Convocatoria instrumental 2023. Acción de cooperación local",
+      112510533.32,
+      28
+     ],
+     [
+      "727700",
+      "Orden que establece las bases reguladoras para la concesión de ayudas a participantes en proyectos importantes de interés común europeo (IPCEI) y primera convocatoria, en el marco del PRTR- Financiado por la UE -NextGenerationEU (IPCEI CIS)",
+      111133882.78,
+      3
+     ],
+     [
+      "727694",
+      "Orden que establece las bases reguladoras para la concesión de ayudas a participantes en proyectos importantes de interés común europeo (IPCEI) y primera convocatoria, en el marco del PRTR- Financiado por la UE -NextGenerationEU (IPCEI MICRO)",
+      110999999.7,
+      1
+     ],
+     [
+      "662389",
+      "Resolución de 21 de diciembre de 2022 de la Presidencia de la Agencia Estatal de Investigación, por la que se aprueba la convocatoria del año 2022 de ayudas para contratos predoctorales para la formación de doctores.",
+      110587328.0,
+      78
+     ],
+     [
+      "698753",
+      "Segunda convocatoria del programa de incentivos a proyectos pioneros y singulares de hidrógeno renovable (Programa H2 PIONEROS) en el Marco del Plan de Recuperación, Transformación y Resiliencia, financiado por la Unión Europea - NextGenerationEU.",
+      107735566.8,
+      10
+     ],
+     [
+      "727390",
+      "Orden de 15 noviembre de 2023, subvenciones destinadas a EE.LL. para el desarrollo y ejecución de estrategias locales que promuevan la elaboración de itinerarios de inclusión sociolaboral para colectivos en riesgo de exclusión - ERACIS",
+      106451380.63,
+      32
+     ],
+     [
+      "646161",
+      "Bases reguladoras y convocatoria 2022, de subvenciones destinadas a la transformación digital y modernización de las administraciones de las entidades locales, en el marco del Plan de Recuperación, Transformación y Resiliencia (PRTR)",
+      106236830.01,
+      102
+     ],
+     [
+      "736599",
+      "CONVENIO AYUNTAMIENTO DE MADRID PARA ATENCIÓN A PERSONAS SIT DE DEPENDENCIA",
+      106000000.0,
+      1
+     ],
+     [
+      "663046",
+      "Resolución de 21 de diciembre de 2022 de la Presidencia de la Agencia Estatal de Investigación, por la que se aprueba la convocatoria 2022 de las ayudas Ramón y Cajal.",
+      101902400.0,
+      67
+     ]
+    ]
+   }
   },
   "2022": {
    "total_fuente": 30832,
@@ -15927,7 +16839,236 @@
      "AQUANARIA SL",
      33355012.81
     ]
-   ]
+   ],
+   "motivos": {
+    "fichero": "subvenciones-motivos-2022.json",
+    "beneficiarios": 999,
+    "importe": 21710970014.78,
+    "cobertura": 0.593,
+    "por_finalidad": {
+     "Industria y Energía": 4088084794.31,
+     "Otras actuaciones de carácter económico": 3492743319.74,
+     "Investigación, desarrollo e innovación": 2836779420.69,
+     "Servicios Sociales y Promoción Social": 1660906357.95,
+     "Educación": 1644691288.14,
+     "Subvenciones al transporte": 1314353405.85,
+     "Sanidad": 1313390837.16,
+     "Fomento del Empleo": 1000844732.81,
+     "Infraestructuras": 907336645.74,
+     "Comercio, Turismo y Pymes": 828622267.14,
+     "Acceso a la vivienda y fomento de la edificación": 645124016.44,
+     "Cultura": 570577495.71,
+     "Cooperación internacional para el desarrollo y cultural": 412194542.18,
+     "Agricultura, Pesca y Alimentación": 238248563.89,
+     "Otras Prestaciones económicas": 228223842.56,
+     "Justicia": 212536140.03,
+     "Sin clasificar (convocatorias pequeñas)": 113885741.18,
+     "Desempleo": 98279196.67,
+     "Seguridad Ciudadana e Instituciones Penitenciarias": 79080900.38,
+     "Defensa": 25066506.21
+    },
+    "por_instrumento": {
+     "SUBVENCIÓN y ENTREGA DINERARIA SIN CONTRAPRESTACIÓN": 20125627856.21,
+     "PRÉSTAMO": 1289942600.24,
+     "VENTAJA FISCAL": 290821088.4,
+     "OTROS INSTRUMENTOS DE AYUDA": 3662329.44,
+     "GARANTÍA": 916140.49
+    },
+    "por_administracion": {
+     "ESTADO": 14700858841.17,
+     "AUTONOMICA": 6054544496.08,
+     "LOCAL": 946422687.81,
+     "OTROS": 9143989.72
+    },
+    "por_procedimiento": {
+     "Concesión directa": 14892542475.38,
+     "Concurrencia competitiva": 6704541798.22,
+     "Sin clasificar (convocatorias pequeñas)": 113885741.18
+    },
+    "mrr": 7810721845.83,
+    "convocatorias": [
+     [
+      "759155",
+      "Retribución especifica de los productores de energía eléctrica a partir de fuentes de energía renovables, cogeneración y residuos (RECORE 2022)",
+      1910980822.8,
+      275
+     ],
+     [
+      "547485",
+      "AYUDAS OTORGADAS POR EL FONDO DE SOLVENCIA A LAS EMPRESAS ESTRATÉGICAS",
+      1246010907.24,
+      19
+     ],
+     [
+      "727967",
+      "Selección de operaciones para su cofinanciación con cargo al Objetivo Específico 20.1.1 “Productos y servicios para los servicios de salud” del Programa Operativo Plurirregional de España, que en su caso pueden derivar en otros PPOO regionales",
+      1202543914.62,
+      1
+     ],
+     [
+      "576282",
+      "Ayudas a municipios para la implantación de zonas de bajas emisiones y la transformación digital y sostenible del transporte urbano, en el marco del PRTR. Convocatoria correspondiente al ejercicio 2021.",
+      1125184346.64,
+      135
+     ],
+     [
+      "611969",
+      "RESOLUCIÓ DE LA CONSELLERIA D¿INNOVACIÓ, UNIVERSITATS, CIÈNCIA I SOCIETAT DIGITAL PER LA QUE ES CONCEDEIX UNA SUBVENCIÓ A LES UNIVERSITATS PÚBLIQUES DE LA COMUNITAT VALENCIANA. LÍNIA DE SUBVENCIÓ T0097000. EXERCICI 2022.",
+      777825660.0,
+      5
+     ],
+     [
+      "620666",
+      "Ayudas directas a CCAA Programas de incentivos ligados al autoconsumo y al almacenamiento",
+      611567035.0,
+      14
+     ],
+     [
+      "634244",
+      "Programa de ayudas destinadas a la financiación de estrategias de energía sostenible para las Illes Balears y Canarias, en el marco del Plan de Recuperación, Transformación y Resiliencia",
+      498700000.0,
+      2
+     ],
+     [
+      "590214",
+      "Orden de 11 de noviembre de 2021 por la que se aprueba la convocatoria 2021 de ayudas a «Proyectos de Generación de Conocimiento».",
+      414185763.64,
+      104
+     ],
+     [
+      "680786",
+      "Real Decreto 590/2022, de 19 de julio, por el que se regula la concesión directa de subvenciones a determinadas entidades para la financiación del Sistema de Acogida de Protección Internacional",
+      381370235.19,
+      13
+     ],
+     [
+      "620791",
+      "Concesión directa de ayudas a las comunidades autónomas y a las ciudades de Ceuta y Melilla para la ejecución de programas de incentivos ligados a la movilidad eléctrica (MOVES III)",
+      293647590.21,
+      15
+     ],
+     [
+      "598843",
+      "Orden CIN/1360/2021, de 3 de diciembre, por la que se aprueba la convocatoria 2021 de ayudas a proyectos estratégicos orientados a la transición ecológica y a la transición digital.",
+      270434189.75,
+      89
+     ],
+     [
+      "633889",
+      "Resolución de Secretaría de Estado de Telecomunicaciones e Infraestructuras Digitales, por la que se convocan ayudas para la realización de proyectos del Programa de Universalización de Infraestructuras Digitales para la Cohesión – Banda Ancha 2022 PRTR",
+      244607771.49,
+      6
+     ],
+     [
+      "611309",
+      "Subvención de concesión directa (art.22.2.c) de la Ley General de Subvenciones a a las CCAA y a las ciudades de Ceuta y Melilla de ayudas para la transformación de flotas de transporte de viajeros y mercancías de empresas privadas",
+      196200033.45,
+      16
+     ],
+     [
+      "670865",
+      "Orden TMA/370/2022,de 21 de abril, por la que se aprueban las bases reguladoras para el Programa de Apoyo al Transporte Sostenible y Digital en concurrencia competitiva, en el marco del PRTR,y se aprueba y publica convocatoria 2022 (M4-M5)",
+      185288866.62,
+      12
+     ],
+     [
+      "623692",
+      "Resolución de 28 de abril de 2022 de la Presidencia de la AECID por la que se aprueba la convocatoria pública de concesión de subvenciones para la realización de convenios de cooperación para el desarrollo 2022-25",
+      169505008.0,
+      25
+     ],
+     [
+      "620820",
+      "Ayudas directas CCAA del Programa de ayudas para actuaciones de eficiencia energética en PYME y gran empresa del sector industrial (Industria III)",
+      169130916.48,
+      7
+     ],
+     [
+      "835840",
+      "Transferencias directas en el marco del Plan de Impulso para la Rehabilitación de Edificios de Titularidad Pública del Ministerio de Transportes, Movilidad y Agenda Urbana (ahora MIVAU)",
+      166574400.0,
+      7
+     ],
+     [
+      "663339",
+      "Ayudas directas al transporte público terrestre, urbano e interurbano en el ámbito autonómico reguladas por el Real Decreto-ley 11/2022",
+      164026404.08,
+      17
+     ],
+     [
+      "614583",
+      "Convocatoria de ayudas destinadas al Plan de Impulso para la Rehabilitación de Edificios de titularidad pública del Ministerio de Transportes, Movilidad y Agenda Urbana.",
+      163915470.69,
+      96
+     ],
+     [
+      "619334",
+      "SUBVENCIÓN NOMINATIVA UMU GASTOS GENERALES DE FUNCIONAMIENTO 2022",
+      158383161.0,
+      1
+     ],
+     [
+      "631499",
+      "Mecanismo de compensación de costes de emisiones indirectas de CO2 - 2022",
+      158281662.43,
+      22
+     ],
+     [
+      "620674",
+      "Concesión directa a las comunidades autónomas y a las ciudades de Ceuta y Melilla de ayudas para la ejecución de los programas de incentivos para la implantación de instalaciones de energías renovables térmicas en diferentes sectores de la economía",
+      150000000.0,
+      19
+     ],
+     [
+      "605102",
+      "Convocatoria instrumental 2022. Acción de cooperación local",
+      144958406.65,
+      42
+     ],
+     [
+      "590179",
+      "Extracto de la Resolución de 16 de octubre de 2021, de la Secretaría de Estado de Política Territorial, por la que se aprueba la convocatoria de las subvenciones previstas en el artículo 8 del Real Decreto-ley 10/2021, de 18 de mayo, por el que se adoptan",
+      140406321.86,
+      25
+     ],
+     [
+      "620299",
+      "BASES Y CONVOCATORIA BARRIOS 2022",
+      138320864.25,
+      21
+     ],
+     [
+      "602408",
+      "Orden CIN/1478/2021, de 27 de diciembre, por la que se aprueba la convocatoria 2021 de las ayudas Ramón y Cajal.",
+      136219050.02,
+      83
+     ],
+     [
+      "677035",
+      "SUBVENCIÓN DE EXPLOTACIÓN CONTRATO SERVICIO PÚBLICO MUNICIPAL TRANSPORTE URBANO COLECTIVO DE VIAJEROS 2022-2032.",
+      123446975.66,
+      1
+     ],
+     [
+      "609489",
+      "Resolución de la Dirección del Instituto de Salud Carlos III O.A., M.P., por la que se aprueba la convocatoria correspondiente al año 2022 de concesión de subvenciones de la Acción Estratégica en Salud 2021-2023, en el marco del PRTR",
+      122327941.9,
+      55
+     ],
+     [
+      "633413",
+      "Resolución de la Presidencia del CSD, por la que se convocan ayudas a las Federaciones Deportivas Españolas para los años 2022, 2023 y 2024.",
+      121160421.17,
+      17
+     ],
+     [
+      "623761",
+      "RD 287/2022, de 19 de abril, por el que se regula la concesión directa de subvenciones a las Comunidades Autónomas para financiar la realización de cuatro programas del segundo marco para la implementación de los Planes Complementarios de I+D+i",
+      116503250.0,
+      16
+     ]
+    ]
+   }
   }
  }
 }

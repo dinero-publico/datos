@@ -1,4 +1,8 @@
-{"anio": 2023, "origen": "Intervención General de la Administración del Estado", "unidad": "euros; en grandes beneficiarios, ayuda equivalente total del año", "campos": ["nif", "nombre", "euros"], "beneficiarios": [
+{"anio": 2023,
+"origen": "Intervención General de la Administración del Estado",
+"unidad": "euros; en grandes beneficiarios, ayuda equivalente total del año",
+"campos": ["nif", "nombre", "euros"],
+"beneficiarios": [
 ["Q4618001D", "UNIVERSITAT DE VALENCIA (ESTUDI GENERAL DE VALENCIA)", 442392559.72],
 ["S0811001G", "COMUNIDAD AUTÓNOMA DE CATALUÑA", 354747024.39],
 ["P3500001G", "CABILDO INSULAR GRAN CANARIA", 349715417.92],

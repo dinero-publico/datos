@@ -973,6 +973,11 @@ BDNS_ORIGEN = "Intervención General de la Administración del Estado"
 BDNS_UMBRAL = 100_000  # «grandes beneficiarios»: ayuda equivalente total en el año ≥ 100.000 €
 BDNS_PAGINA = 10_000
 BDNS_TOP = 100  # beneficiarios por año en el fichero principal; la lista completa va aparte
+BDNS_TOP_MOTIVOS = 1000  # beneficiarios por año de los que se consultan sus concesiones (el motivo)
+BDNS_MAX_PETICIONES = 2500  # consultas de motivos por ejecución, para no abusar de la API
+# De cada beneficiario se pide el detalle (finalidad, procedimiento, fondos) de las convocatorias que
+# suman este porcentaje de lo que recibió; las demás (muchas, de importe pequeño) quedan con su título.
+BDNS_COBERTURA_DETALLE = 0.98
 
 # Tipo de entidad según la primera letra del NIF (Orden EHA/451/2008).
 NIF_TIPOS = {
@@ -1102,7 +1107,105 @@ def parse_partidos(filas: list[dict]) -> dict:
     }
 
 
-def fetch_subvenciones(dl: Downloader, previo: dict | None = None, anio_actual: int | None = None) -> dict:
+SIN_CLASIFICAR = "Sin clasificar (convocatorias pequeñas)"
+
+
+def procedimiento(tipo: str | None) -> str:
+    """«Concesión directa - instrumental» → «Concesión directa»."""
+    return clean((tipo or "").split(" - ")[0]) or "Sin información"
+
+
+def agrupar_concesiones(filas: list[dict]) -> tuple[list[list], dict[str, dict]]:
+    """Concesiones de un beneficiario → [[convocatoria, instrumento, euros, n], ...] y {convocatoria: {titulo, organo}}.
+
+    Se usa la ayuda equivalente, la misma medida que el total de grandes beneficiarios.
+    """
+    grupos: dict[tuple, list] = {}
+    titulos = {}
+    for x in filas:
+        num = str(x.get("numeroConvocatoria") or "")
+        instr = clean(x.get("instrumento") or "") or "SIN INFORMACIÓN"
+        g = grupos.setdefault((num, instr), [num, instr, 0.0, 0])
+        g[2] += float(x.get("ayudaEquivalente") or 0)
+        g[3] += 1
+        if num and num not in titulos:
+            titulos[num] = {"titulo": clean(x.get("convocatoria") or ""),
+                            "organo": [clean(x.get(k) or "") for k in ("nivel1", "nivel2", "nivel3")]}
+    out = [[g[0], g[1], r2(g[2]), g[3]] for g in grupos.values()]
+    out.sort(key=lambda g: -g[2])
+    return out, titulos
+
+
+def parse_convocatoria(d: dict | None, base: dict | None = None) -> dict:
+    """Detalle de una convocatoria de la API → lo que se publica de ella.
+
+    Sin detalle (d=None) queda el título y el órgano que traen las propias concesiones.
+    """
+    base = base or {}
+    if not d:
+        return {"titulo": base.get("titulo", ""), "finalidad": None, "organo": base.get("organo") or ["", "", ""],
+                "tipo": None, "mrr": None, "detalle": False}
+    org = d.get("organo") or {}
+    return {
+        "titulo": clean(d.get("descripcion") or "") or base.get("titulo", ""),
+        "finalidad": clean(d.get("descripcionFinalidad") or "") or None,
+        "organo": [clean(org.get(k) or "") for k in ("nivel1", "nivel2", "nivel3")],
+        "tipo": clean(d.get("tipoConvocatoria") or "") or None,
+        "mrr": bool(d.get("mrr")),
+        "detalle": True,
+    }
+
+
+def fetch_motivos(dl: Downloader, grandes: dict, previo: dict | None, convocatorias: dict,
+                  max_peticiones: int = BDNS_MAX_PETICIONES) -> dict:
+    """Concesiones de los mayores beneficiarios de cada año, agrupadas por convocatoria.
+
+    Solo se vuelve a consultar un beneficiario si su total ha cambiado desde la última vez.
+    `convocatorias` (número → detalle) se completa aquí con las que falten.
+    """
+    previo = previo or {}
+    peticiones = 0
+    motivos = {}
+    for a in sorted(grandes, reverse=True):  # primero los años recientes
+        antes = previo.get(a, {})
+        actual = {}
+        for nif, _, total in [b for b in grandes[a]["lista"] if b[0]][:BDNS_TOP_MOTIVOS]:
+            p = antes.get(nif)
+            if p and abs(p["total"] - total) < 0.5:
+                actual[nif] = p
+                continue
+            if peticiones >= max_peticiones:
+                if p:
+                    actual[nif] = p  # desactualizado: se rehará en otra ejecución
+                continue
+            filas, _ = _bdns_todo(dl, "concesiones/busqueda", "id", nifCif=nif, fechaDesde=f"01/01/{a}", fechaHasta=f"31/12/{a}")
+            peticiones += 1 + len(filas) // BDNS_PAGINA
+            grupos, titulos = agrupar_concesiones(filas)
+            actual[nif] = {"total": total, "c": grupos}
+            suma, acumulado = sum(g[2] for g in grupos), 0.0
+            for num, _, eur, _ in grupos:  # de mayor a menor importe
+                if not num:
+                    continue
+                importante = acumulado < BDNS_COBERTURA_DETALLE * suma
+                acumulado += eur
+                tiene = convocatorias.get(num, {}).get("detalle", False)  # None: la BDNS no la devolvió
+                if tiene is not False or (not importante or peticiones >= max_peticiones * 2):
+                    convocatorias.setdefault(num, parse_convocatoria(None, titulos.get(num)))
+                    continue
+                r = dl._request("GET", BDNS_API + "convocatorias", params={"vpd": "GE", "numConv": num})
+                peticiones += 1
+                d = r.json() if r.status_code == 200 and r.content else None
+                convocatorias[num] = parse_convocatoria(d, titulos.get(num)) if d else {
+                    **parse_convocatoria(None, titulos.get(num)), "detalle": None}  # la BDNS no la devuelve
+        motivos[a] = actual
+        log.info("  Motivos %s: %d beneficiarios (%d consultas acumuladas)", a, len(actual), peticiones)
+    for a, v in previo.items():
+        motivos.setdefault(a, v)
+    return motivos
+
+
+def fetch_subvenciones(dl: Downloader, previo: dict | None = None, anio_actual: int | None = None,
+                       max_peticiones: int = BDNS_MAX_PETICIONES) -> dict:
     """Grandes beneficiarios (lista completa por año) y subvenciones a partidos políticos.
 
     La BDNS retira las concesiones a los cuatro años; los años que ya no ofrece se
@@ -1130,6 +1233,10 @@ def fetch_subvenciones(dl: Downloader, previo: dict | None = None, anio_actual: 
         for a, v in previo.get("partidos", {}).items():
             partidos.setdefault(a, v)
     actual = anio_actual or max(anios)
+    convocatorias = dict((previo or {}).get("convocatorias", {}))
+    motivos = fetch_motivos(dl, {a: grandes[a] for a in map(str, anios)}, (previo or {}).get("motivos"),
+                            convocatorias, max_peticiones)
+    usadas = {g[0] for m in motivos.values() for b in m.values() for g in b["c"]}
     return {
         "fuente": BDNS_WEB + "grandesbeneficiarios",
         "fuente_partidos": BDNS_WEB + "partidospoliticos",
@@ -1144,6 +1251,8 @@ def fetch_subvenciones(dl: Downloader, previo: dict | None = None, anio_actual: 
         "tipos": NIF_TIPOS,
         "grandes": dict(sorted(grandes.items(), reverse=True)),
         "partidos": dict(sorted(partidos.items(), reverse=True)),
+        "motivos": dict(sorted(motivos.items(), reverse=True)),
+        "convocatorias": {k: convocatorias[k] for k in sorted(usadas) if k in convocatorias},
     }
 
 
@@ -1151,16 +1260,63 @@ def nombre_lista_subvenciones(anio: str) -> str:
     return f"subvenciones-{anio}.json"
 
 
+def nombre_motivos_subvenciones(anio: str) -> str:
+    return f"subvenciones-motivos-{anio}.json"
+
+
+def resumen_motivos(motivos: dict, convocatorias: dict, total_anio: float) -> dict:
+    """Para qué se dieron las ayudas de los beneficiarios consultados: sumas por finalidad, etc."""
+    sumas = {k: {} for k in ("por_finalidad", "por_instrumento", "por_administracion", "por_procedimiento")}
+    conv: dict[str, list] = {}
+    mrr = importe = 0.0
+    for b in motivos.values():
+        for num, instr, eur, _ in b["c"]:
+            c = convocatorias.get(num) or {}
+            importe += eur
+            sin = SIN_CLASIFICAR if c.get("detalle") is False else "Sin información"
+            for k, v in (("por_finalidad", c.get("finalidad") or sin), ("por_instrumento", instr),
+                         ("por_administracion", (c.get("organo") or [""])[0] or "Sin información"),
+                         ("por_procedimiento", procedimiento(c.get("tipo")) if c.get("tipo") else sin)):
+                sumas[k][v] = sumas[k].get(v, 0) + eur
+            if c.get("mrr"):
+                mrr += eur
+            x = conv.setdefault(num, [num, 0.0, set()])
+            x[1] += eur
+    for nif, b in motivos.items():
+        for num, *_ in b["c"]:
+            conv[num][2].add(nif)
+    top = sorted(conv.values(), key=lambda x: -x[1])[:30]
+    return {
+        "beneficiarios": len(motivos),
+        "importe": r2(importe),
+        "cobertura": round(importe / total_anio, 4) if total_anio else None,
+        **{k: {n: r2(v) for n, v in sorted(s.items(), key=lambda kv: -kv[1])} for k, s in sumas.items()},
+        "mrr": r2(mrr),
+        "convocatorias": [[n, (convocatorias.get(n) or {}).get("titulo", ""), r2(e), len(s)] for n, e, s in top],
+    }
+
+
 def partir_subvenciones(obj: dict) -> dict[str, dict]:
-    """El JSON completo → fichero principal (resúmenes) + una lista completa por año."""
-    principal = {k: v for k, v in obj.items() if k != "grandes"}
+    """El JSON completo → fichero principal (resúmenes), una lista completa por año y,
+    por año, las concesiones de los mayores beneficiarios agrupadas por convocatoria."""
+    principal = {k: v for k, v in obj.items() if k not in ("grandes", "motivos", "convocatorias")}
     principal["grandes"] = {}
     ficheros = {}
+    convs = obj.get("convocatorias", {})
     for a, g in obj["grandes"].items():
         nombre = nombre_lista_subvenciones(a)
-        principal["grandes"][a] = {"total_fuente": g["total_fuente"], "lista": nombre, **resumen_beneficiarios(g["lista"])}
+        res = resumen_beneficiarios(g["lista"])
+        principal["grandes"][a] = {"total_fuente": g["total_fuente"], "lista": nombre, **res}
         ficheros[nombre] = {"anio": int(a), "origen": obj["origen"], "unidad": obj["unidad"],
                             "campos": ["nif", "nombre", "euros"], "beneficiarios": g["lista"]}
+        m = obj.get("motivos", {}).get(a)
+        if m:
+            nm = nombre_motivos_subvenciones(a)
+            principal["grandes"][a]["motivos"] = {"fichero": nm, **resumen_motivos(m, convs, res["total"])}
+            usadas = sorted({c[0] for b in m.values() for c in b["c"]})
+            ficheros[nm] = {"anio": int(a), "origen": obj["origen"],
+                            "campos": ["convocatoria", "instrumento", "euros", "concesiones"],
+                            "beneficiarios": m, "convocatorias": {k: convs[k] for k in usadas if k in convs}}
     return {"subvenciones.json": principal, **ficheros}
 
 
@@ -1169,9 +1325,16 @@ def unir_subvenciones(principal: dict | None, leer) -> dict | None:
     if not principal:
         return None
     obj = {k: v for k, v in principal.items() if k != "grandes"}
-    obj["grandes"] = {}
+    obj["grandes"], motivos, convs = {}, {}, {}
     for a, g in principal.get("grandes", {}).items():
         lista = leer(g.get("lista") or nombre_lista_subvenciones(a))
         if lista:
             obj["grandes"][a] = {"total_fuente": g.get("total_fuente"), "lista": lista["beneficiarios"]}
+        m = leer((g.get("motivos") or {}).get("fichero") or nombre_motivos_subvenciones(a))
+        if m:
+            motivos[a] = m["beneficiarios"]
+            convs.update(m.get("convocatorias", {}))
+    if motivos:
+        obj["motivos"] = motivos
+        obj["convocatorias"] = dict(sorted(convs.items()))
     return obj

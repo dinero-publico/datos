@@ -21,7 +21,7 @@ concurrency:
 jobs:
   datos:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 75
     steps:
       - uses: actions/checkout@v4
 
@@ -37,7 +37,8 @@ jobs:
 
       - name: Descargar y transformar
         if: github.event_name != 'push'
-        run: python -m dinero_datos descargar
+        # Motivos de las subvenciones: como mucho 800 beneficiarios nuevos o cambiados por día.
+        run: python -m dinero_datos descargar --max-peticiones 800
 
       - name: Analizar y comprobar
         run: python -m dinero_datos analizar

@@ -1,4 +1,8 @@
-{"anio": 2026, "origen": "Intervención General de la Administración del Estado", "unidad": "euros; en grandes beneficiarios, ayuda equivalente total del año", "campos": ["nif", "nombre", "euros"], "beneficiarios": [
+{"anio": 2026,
+"origen": "Intervención General de la Administración del Estado",
+"unidad": "euros; en grandes beneficiarios, ayuda equivalente total del año",
+"campos": ["nif", "nombre", "euros"],
+"beneficiarios": [
 ["Q4618001D", "UNIVERSITAT DE VALENCIA (ESTUDI GENERAL DE VALENCIA)", 362616596.81],
 ["B56937444", "ONUBA SUSTAINABLE FUELS, S.L.", 303750000.0],
 ["Q4618002B", "UNIVERSIDAD POLITECNICA DE VALENCIA-MINISTERIO DE UNIVERSIDADES E INVESTIGACION", 302387663.04],

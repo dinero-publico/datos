@@ -65,3 +65,43 @@ def test_comprobaciones_subvenciones():
     inf = analisis.Informe()
     analisis.comprobar_subvenciones(principal, inf)
     assert not inf.pruebas[0]["ok"]
+
+
+def _conc(num, eur, instr="SUBVENCIÓN y ENTREGA DINERARIA SIN CONTRAPRESTACIÓN ", tit="Convocatoria", n1="ESTADO"):
+    return {"numeroConvocatoria": num, "ayudaEquivalente": eur, "instrumento": instr, "convocatoria": tit,
+            "nivel1": n1, "nivel2": "MINISTERIO", "nivel3": "DG"}
+
+
+def test_agrupar_concesiones_por_convocatoria():
+    grupos, titulos = f.agrupar_concesiones([
+        _conc("1", 100), _conc("1", 50), _conc("2", 500, "PRÉSTAMO", "Otra", "AUTONOMICA")])
+    assert grupos == [["2", "PRÉSTAMO", 500, 1], ["1", "SUBVENCIÓN y ENTREGA DINERARIA SIN CONTRAPRESTACIÓN", 150, 2]]
+    assert titulos["2"] == {"titulo": "Otra", "organo": ["AUTONOMICA", "MINISTERIO", "DG"]}
+
+
+def test_resumen_motivos():
+    convs = {
+        "1": {**f.parse_convocatoria({"descripcion": "Plan", "descripcionFinalidad": "Sanidad",
+                                      "tipoConvocatoria": "Concesión directa - instrumental", "mrr": True,
+                                      "organo": {"nivel1": "ESTADO"}}), },
+        "2": f.parse_convocatoria(None, {"titulo": "Pequeña", "organo": ["LOCAL", "", ""]}),
+    }
+    motivos = {"B1": {"total": 1000, "c": [["1", "SUBVENCIÓN", 900, 1], ["2", "SUBVENCIÓN", 100, 3]]},
+               "P1": {"total": 900, "c": [["1", "PRÉSTAMO", 900, 1]]}}
+    r = f.resumen_motivos(motivos, convs, 10_000)
+    assert r["importe"] == 1900 and r["cobertura"] == 0.19 and r["mrr"] == 1800
+    assert r["por_finalidad"] == {"Sanidad": 1800, f.SIN_CLASIFICAR: 100}
+    assert r["por_procedimiento"] == {"Concesión directa": 1800, f.SIN_CLASIFICAR: 100}
+    assert r["por_administracion"] == {"ESTADO": 1800, "LOCAL": 100}
+    assert r["convocatorias"][0] == ["1", "Plan", 1800, 2]
+
+
+def test_partir_y_unir_con_motivos():
+    obj = _obj()
+    obj["motivos"] = {"2025": {"P2812500C": {"total": 900000, "c": [["7", "SUBVENCIÓN", 900000, 2]]}}}
+    obj["convocatorias"] = {"7": f.parse_convocatoria(None, {"titulo": "X", "organo": ["ESTADO", "", ""]})}
+    partes = f.partir_subvenciones(obj)
+    m = partes["subvenciones.json"]["grandes"]["2025"]["motivos"]
+    assert m["fichero"] == "subvenciones-motivos-2025.json" and m["cobertura"] == 0.72
+    assert partes["subvenciones-motivos-2025.json"]["convocatorias"]["7"]["titulo"] == "X"
+    assert f.unir_subvenciones(partes["subvenciones.json"], partes.get) == obj

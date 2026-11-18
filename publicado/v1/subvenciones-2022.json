@@ -1,4 +1,8 @@
-{"anio": 2022, "origen": "Intervención General de la Administración del Estado", "unidad": "euros; en grandes beneficiarios, ayuda equivalente total del año", "campos": ["nif", "nombre", "euros"], "beneficiarios": [
+{"anio": 2022,
+"origen": "Intervención General de la Administración del Estado",
+"unidad": "euros; en grandes beneficiarios, ayuda equivalente total del año",
+"campos": ["nif", "nombre", "euros"],
+"beneficiarios": [
 ["S2827001E", "Mº SANIDAD CONSUMO Y BIENESTAR SOCIAL", 1202543914.62],
 ["S3511001D", "COMUNIDAD AUTONOMA DE CANARIAS", 569047687.98],
 ["Q2866001G", "CRUZ ROJA ESPAÑOLA", 464746179.62],

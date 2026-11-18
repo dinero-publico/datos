@@ -1,8 +1,8 @@
 {
- "generado": "2026-11-18T13:25:23+00:00",
+ "generado": "2026-11-18T15:39:07+00:00",
  "resumen": {
-  "pruebas": 16,
-  "correctas": 16,
+  "pruebas": 17,
+  "correctas": 17,
   "con_fallos": 0
  },
  "pruebas": [
@@ -141,6 +141,14 @@
   {
    "fuente": "subvenciones",
    "prueba": "Las subvenciones a partidos por beneficiario suman el total",
+   "ok": true,
+   "casos": 5,
+   "fallos": [],
+   "n_fallos": 0
+  },
+  {
+   "fuente": "subvenciones",
+   "prueba": "Los motivos (finalidad, instrumento, administración, procedimiento) suman lo consultado",
    "ok": true,
    "casos": 5,
    "fallos": [],

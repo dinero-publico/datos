@@ -1,4 +1,8 @@
-{"anio": 2024, "origen": "Intervención General de la Administración del Estado", "unidad": "euros; en grandes beneficiarios, ayuda equivalente total del año", "campos": ["nif", "nombre", "euros"], "beneficiarios": [
+{"anio": 2024,
+"origen": "Intervención General de la Administración del Estado",
+"unidad": "euros; en grandes beneficiarios, ayuda equivalente total del año",
+"campos": ["nif", "nombre", "euros"],
+"beneficiarios": [
 ["Q4618001D", "UNIVERSITAT DE VALENCIA (ESTUDI GENERAL DE VALENCIA)", 494355628.7],
 ["Q2818002D", "AGENCIA ESTATAL CSIC (CONSEJ.INV.CI", 386865517.86],
 ["Q4618002B", "UNIVERSIDAD POLITECNICA DE VALENCIA-MINISTERIO DE UNIVERSIDADES E INVESTIGACION", 376962519.91],

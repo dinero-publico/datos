@@ -53,6 +53,7 @@ Cada fuente se procesa por separado: si una falla, se conserva su último JSON v
 | `poblacion.json` | Población a 1 de enero por comunidad | INE |
 | `subvenciones.json` | Grandes beneficiarios de subvenciones (100.000 € o más en el año) por año: total, reparto por tipo de entidad y los 100 mayores; y subvenciones a partidos y grupos políticos por beneficiario y administración | BDNS (IGAE) |
 | `subvenciones-AAAA.json` | Lista completa de grandes beneficiarios de cada año: `[nif, nombre, euros]` | BDNS (IGAE) |
+| `subvenciones-motivos-AAAA.json` | Para los 1.000 mayores beneficiarios de cada año, sus concesiones agrupadas por convocatoria (`[convocatoria, instrumento, euros, concesiones]`) y el detalle de cada convocatoria: título oficial, finalidad, órgano, procedimiento y si son fondos MRR | BDNS (IGAE) |
 | `meta.json` | Fecha en que cambió cada fuente y último error | — |
 | `informe.json` | Resultado de las comprobaciones | — |
 | `catalogo.json` | Lista de ficheros con tamaño, sha256 y fecha | — |
@@ -64,6 +65,8 @@ El historial de git de `publicado/` es también el historial de los datos. El hi
 ### Subvenciones y datos personales
 
 Origen de los datos de subvenciones: Intervención General de la Administración del Estado (API del [Sistema Nacional de Publicidad de Subvenciones](https://www.infosubvenciones.es/bdnstrans/GE/es/avisolegal)). Su aviso legal solo permite reutilizar datos personales tras disociarlos, así que **la herramienta disocia a las personas físicas**: si el NIF es un DNI o NIE con letra de control válida, un NIF K/L/M o un número de ocho cifras, el beneficiario se publica como «Persona física (nombre no publicado)», sin NIF, y solo cuenta en los totales. La BDNS retira cada concesión a los cuatro años; los años que deja de ofrecer se conservan de la descarga anterior.
+
+**Motivo de las ayudas.** La API no permite sumar concesiones por finalidad (ordenar por importe agota su tiempo de respuesta), así que se consultan una a una las concesiones de los 1.000 mayores beneficiarios de cada año (entre la mitad y algo más de la mitad del importe de todos los grandes beneficiarios) y se pide el detalle de las convocatorias que suman el 98 % de lo que recibió cada uno; las demás quedan como «Sin clasificar (convocatorias pequeñas)», con su título. Solo se repite la consulta de un beneficiario cuando cambia su total, con un máximo de consultas por ejecución (`--max-peticiones`; el workflow usa 800).
 
 ## Puesta en marcha y actualización
 

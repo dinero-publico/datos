@@ -1,4 +1,8 @@
-{"anio": 2025, "origen": "Intervención General de la Administración del Estado", "unidad": "euros; en grandes beneficiarios, ayuda equivalente total del año", "campos": ["nif", "nombre", "euros"], "beneficiarios": [
+{"anio": 2025,
+"origen": "Intervención General de la Administración del Estado",
+"unidad": "euros; en grandes beneficiarios, ayuda equivalente total del año",
+"campos": ["nif", "nombre", "euros"],
+"beneficiarios": [
 ["A85309219", "RED ELECTRICA DE ESPAÑA SA", 761946962.65],
 ["S0811001G", "COMUNIDAD AUTÓNOMA DE CATALUÑA", 588795229.29],
 ["Q4618001D", "UNIVERSITAT DE VALENCIA (ESTUDI GENERAL DE VALENCIA)", 448680736.24],
