@@ -10,6 +10,7 @@ Fuentes (todas del Ministerio de Hacienda):
 Además (IGAE e INE):
   * IGAE   - Gasto ejecutado por función (COFOG) de cada administración y de cada comunidad
   * INE    - Población residente a 1 de enero, para los euros por habitante
+  * BDNS   - Grandes beneficiarios de subvenciones y subvenciones a partidos políticos (IGAE)
 
 Cada función fetch_* descarga los originales de una fuente (y guarda copia en raw/)
 y devuelve su JSON normalizado. La orquestación está en dinero_datos/cli.py.
@@ -961,3 +962,216 @@ def fetch_poblacion(dl: Downloader, desde: int) -> dict:
         "provisionales": sorted(provisionales),
         "territorios": territorios,
     }
+
+
+# --------------------------------------------------------------------------- #
+# 7. BDNS: grandes beneficiarios de subvenciones y subvenciones a partidos
+# --------------------------------------------------------------------------- #
+BDNS_API = "https://www.infosubvenciones.es/bdnstrans/api/"
+BDNS_WEB = "https://www.infosubvenciones.es/bdnstrans/GE/es/"
+BDNS_ORIGEN = "Intervención General de la Administración del Estado"
+BDNS_UMBRAL = 100_000  # «grandes beneficiarios»: ayuda equivalente total en el año ≥ 100.000 €
+BDNS_PAGINA = 10_000
+BDNS_TOP = 100  # beneficiarios por año en el fichero principal; la lista completa va aparte
+
+# Tipo de entidad según la primera letra del NIF (Orden EHA/451/2008).
+NIF_TIPOS = {
+    "A": "Sociedades anónimas", "B": "Sociedades limitadas", "C": "Sociedades colectivas",
+    "D": "Sociedades comanditarias", "E": "Comunidades de bienes", "F": "Cooperativas",
+    "G": "Asociaciones y fundaciones", "H": "Comunidades de propietarios", "J": "Sociedades civiles",
+    "N": "Entidades extranjeras", "P": "Ayuntamientos y entidades locales", "Q": "Organismos públicos",
+    "R": "Entidades religiosas", "S": "Órganos de la Administración", "U": "Uniones temporales de empresas",
+    "V": "Otras entidades", "W": "Establecimientos de no residentes",
+    "fisica": "Personas físicas", "otro": "Otros identificadores (sobre todo extranjeros)",
+}
+PERSONA_FISICA = "Persona física (nombre no publicado)"
+_DNI_LETRAS = "TRWAGMYFPDXBNJZSQVHLCKE"
+
+
+def es_persona_fisica(nif: str) -> bool:
+    """NIF de persona física: DNI o NIE con letra de control válida, o NIF K/L/M.
+
+    Ante un número de 8 cifras sin letra se asume también persona física, por prudencia.
+    """
+    nif = nif.upper().replace("-", "")
+    if re.fullmatch(r"\d{8}", nif) or re.fullmatch(r"[KLM]\d{7}[A-Z0-9]", nif):
+        return True
+    m = re.fullmatch(r"([XYZ]?)(\d{7,8})([A-Z])", nif)
+    if not m:
+        return False
+    pre, digitos, letra = m.groups()
+    if pre:
+        if len(digitos) != 7:
+            return False
+        digitos = str("XYZ".index(pre)) + digitos
+    return _DNI_LETRAS[int(digitos) % 23] == letra
+
+
+def tipo_nif(nif: str) -> str:
+    if not nif or es_persona_fisica(nif):
+        return "fisica"
+    c = nif[:1].upper()
+    return c if c in NIF_TIPOS and len(c) == 1 and not c.isdigit() else "otro"
+
+
+def separar_beneficiario(texto: str) -> tuple[str, str]:
+    """«B12345678 NOMBRE, S.L.» → («B12345678», «NOMBRE, S.L.»). Las personas físicas se disocian."""
+    nif, _, nombre = (texto or "").strip().partition(" ")
+    if not nombre:
+        nif, nombre = "", nif
+    if tipo_nif(nif) == "fisica":
+        return "", PERSONA_FISICA
+    return nif.upper(), clean(nombre)
+
+
+def _bdns_get(dl: Downloader, ruta: str, **params) -> dict | list:
+    r = dl._request("GET", BDNS_API + ruta, params={"vpd": "GE", **params})
+    if r.status_code != 200:
+        raise SourceError(f"{BDNS_API}{ruta} respondió {r.status_code}")
+    try:
+        return r.json()
+    except ValueError as e:
+        raise SourceError(f"{BDNS_API}{ruta} no devolvió JSON") from e
+
+
+def _bdns_todo(dl: Downloader, ruta: str, clave_id: str, **params) -> tuple[list[dict], int]:
+    """Todas las páginas de una búsqueda; devuelve (filas sin duplicados, total que declara la API)."""
+    filas, vistos, total, pagina = [], set(), 0, 0
+    while True:
+        d = _bdns_get(dl, ruta, page=pagina, pageSize=BDNS_PAGINA, **params)
+        total = d.get("totalElements", 0)
+        for x in d.get("content", []):
+            if x.get(clave_id) not in vistos:
+                vistos.add(x.get(clave_id))
+                filas.append(x)
+        if d.get("last", True) or not d.get("content"):
+            return filas, total
+        pagina += 1
+
+
+def parse_grandes_beneficiarios(filas: list[dict]) -> list[list]:
+    """Filas de la API → [[nif, nombre, euros], ...] ordenadas de mayor a menor importe."""
+    out = []
+    for x in filas:
+        nif, nombre = separar_beneficiario(x.get("beneficiario", ""))
+        out.append([nif, nombre, r2(float(x.get("ayudaETotal") or 0))])
+    out.sort(key=lambda b: (-b[2], b[1]))
+    return out
+
+
+def resumen_beneficiarios(benef: list[list]) -> dict:
+    por_tipo: dict[str, list] = {}
+    for nif, _, imp in benef:
+        t = por_tipo.setdefault(tipo_nif(nif), [0, 0.0])
+        t[0] += 1
+        t[1] += imp
+    total = sum(b[2] for b in benef)
+    return {
+        "beneficiarios": len(benef),
+        "total": r2(total),
+        "minimo": benef[-1][2] if benef else None,
+        "por_tipo": {k: [v[0], r2(v[1])] for k, v in sorted(por_tipo.items(), key=lambda kv: -kv[1][1])},
+        "top": benef[:BDNS_TOP],
+    }
+
+
+def parse_partidos(filas: list[dict]) -> dict:
+    """Concesiones a partidos y grupos políticos de un año, agregadas por NIF y por administración."""
+    por_nif: dict[str, dict] = {}
+    niveles: dict[str, float] = {}
+    organos: dict[tuple, float] = {}
+    for x in filas:
+        imp = float(x.get("importe") or 0)
+        nif, nombre = separar_beneficiario(x.get("beneficiario", ""))
+        b = por_nif.setdefault(nif or nombre, {"nif": nif, "nombres": {}, "importe": 0.0, "n": 0})
+        b["importe"] += imp
+        b["n"] += 1
+        b["nombres"][nombre] = b["nombres"].get(nombre, 0) + imp
+        nivel = clean(x.get("nivel1") or "") or "SIN DATO"
+        niveles[nivel] = niveles.get(nivel, 0) + imp
+        org = (nivel, clean(x.get("nivel2") or ""), clean(x.get("nivel3") or ""))
+        organos[org] = organos.get(org, 0) + imp
+    benef = [[b["nif"], max(b["nombres"], key=b["nombres"].get), r2(b["importe"]), b["n"]] for b in por_nif.values()]
+    benef.sort(key=lambda b: (-b[2], b[1]))
+    return {
+        "concesiones": len(filas),
+        "total": r2(sum(niveles.values())),
+        "por_nivel": {k: r2(v) for k, v in sorted(niveles.items(), key=lambda kv: -kv[1])},
+        "organos": [[*k, r2(v)] for k, v in sorted(organos.items(), key=lambda kv: -kv[1])[:25]],
+        "beneficiarios": benef,
+    }
+
+
+def fetch_subvenciones(dl: Downloader, previo: dict | None = None, anio_actual: int | None = None) -> dict:
+    """Grandes beneficiarios (lista completa por año) y subvenciones a partidos políticos.
+
+    La BDNS retira las concesiones a los cuatro años; los años que ya no ofrece se
+    conservan de la descarga anterior (`previo`, en el formato de unir_subvenciones).
+    """
+    if dl.offline_dir is not None:
+        raise SourceError("La BDNS se consulta en su API; no hay modo offline")
+    anios = sorted(int(a["id"]) for a in _bdns_get(dl, "grandesbeneficiarios/anios"))
+    if not anios:
+        raise SourceError("La BDNS no devolvió años de grandes beneficiarios")
+    grandes, partidos = {}, {}
+    for a in anios:
+        filas, total = _bdns_todo(dl, "grandesbeneficiarios/busqueda", "idPersona", anios=a)
+        if total and len(filas) < total:
+            raise SourceError(f"Grandes beneficiarios {a}: {len(filas)} de {total} filas")
+        grandes[str(a)] = {"total_fuente": total, "lista": parse_grandes_beneficiarios(filas)}
+        filas, total = _bdns_todo(dl, "partidospoliticos/busqueda", "id", fechaDesde=f"01/01/{a}", fechaHasta=f"31/12/{a}")
+        if total and len(filas) < total:
+            raise SourceError(f"Partidos {a}: {len(filas)} de {total} concesiones")
+        partidos[str(a)] = parse_partidos(filas)
+        log.info("  BDNS %d: %d grandes beneficiarios, %d concesiones a partidos", a, len(grandes[str(a)]["lista"]), len(filas))
+    if previo:
+        for a, v in previo.get("grandes", {}).items():
+            grandes.setdefault(a, v)
+        for a, v in previo.get("partidos", {}).items():
+            partidos.setdefault(a, v)
+    actual = anio_actual or max(anios)
+    return {
+        "fuente": BDNS_WEB + "grandesbeneficiarios",
+        "fuente_partidos": BDNS_WEB + "partidospoliticos",
+        "api": BDNS_API,
+        "origen": BDNS_ORIGEN,
+        "aviso_legal": BDNS_WEB + "avisolegal",
+        "disociacion": "Dinero Público no publica el nombre ni el NIF de las personas físicas: figuran como «"
+                       + PERSONA_FISICA + "» y solo cuentan en los totales.",
+        "umbral": BDNS_UMBRAL,
+        "unidad": "euros; en grandes beneficiarios, ayuda equivalente total del año",
+        "en_curso": [a for a in sorted(grandes) if int(a) >= actual],
+        "tipos": NIF_TIPOS,
+        "grandes": dict(sorted(grandes.items(), reverse=True)),
+        "partidos": dict(sorted(partidos.items(), reverse=True)),
+    }
+
+
+def nombre_lista_subvenciones(anio: str) -> str:
+    return f"subvenciones-{anio}.json"
+
+
+def partir_subvenciones(obj: dict) -> dict[str, dict]:
+    """El JSON completo → fichero principal (resúmenes) + una lista completa por año."""
+    principal = {k: v for k, v in obj.items() if k != "grandes"}
+    principal["grandes"] = {}
+    ficheros = {}
+    for a, g in obj["grandes"].items():
+        nombre = nombre_lista_subvenciones(a)
+        principal["grandes"][a] = {"total_fuente": g["total_fuente"], "lista": nombre, **resumen_beneficiarios(g["lista"])}
+        ficheros[nombre] = {"anio": int(a), "origen": obj["origen"], "unidad": obj["unidad"],
+                            "campos": ["nif", "nombre", "euros"], "beneficiarios": g["lista"]}
+    return {"subvenciones.json": principal, **ficheros}
+
+
+def unir_subvenciones(principal: dict | None, leer) -> dict | None:
+    """Inversa de partir_subvenciones, a partir de lo publicado (leer(nombre) → dict | None)."""
+    if not principal:
+        return None
+    obj = {k: v for k, v in principal.items() if k != "grandes"}
+    obj["grandes"] = {}
+    for a, g in principal.get("grandes", {}).items():
+        lista = leer(g.get("lista") or nombre_lista_subvenciones(a))
+        if lista:
+            obj["grandes"][a] = {"total_fuente": g.get("total_fuente"), "lista": lista["beneficiarios"]}
+    return obj

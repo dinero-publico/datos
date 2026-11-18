@@ -1,6 +1,6 @@
 # Dinero Público · datos
 
-Herramienta que **descarga, analiza y transforma** los datos oficiales del gasto público en España (Ministerio de Hacienda e INE) y los publica como JSON abiertos en:
+Herramienta que **descarga, analiza y transforma** los datos oficiales del gasto público y las subvenciones en España (Ministerio de Hacienda, IGAE e INE) y los publica como JSON abiertos en:
 
 **https://dinero-publico.github.io/datos/**
 
@@ -51,13 +51,19 @@ Cada fuente se procesa por separado: si una falla, se conserva su último JSON v
 | `ccaa.json` | Presupuestos iniciales de cada comunidad por política, capítulo y clasificación económica, con `prorrogados` | SGCIEF |
 | `cofog.json` | Gasto ejecutado por función (COFOG) de cada administración y comunidad | IGAE |
 | `poblacion.json` | Población a 1 de enero por comunidad | INE |
+| `subvenciones.json` | Grandes beneficiarios de subvenciones (100.000 € o más en el año) por año: total, reparto por tipo de entidad y los 100 mayores; y subvenciones a partidos y grupos políticos por beneficiario y administración | BDNS (IGAE) |
+| `subvenciones-AAAA.json` | Lista completa de grandes beneficiarios de cada año: `[nif, nombre, euros]` | BDNS (IGAE) |
 | `meta.json` | Fecha en que cambió cada fuente y último error | — |
 | `informe.json` | Resultado de las comprobaciones | — |
 | `catalogo.json` | Lista de ficheros con tamaño, sha256 y fecha | — |
 
-Importes en millones de euros corrientes. `v1` es la versión del formato: si cambia la estructura de los JSON de forma incompatible, se publicará en `v2` y `v1` se mantendrá un tiempo.
+Importes en millones de euros corrientes, salvo las subvenciones, que van en euros. `v1` es la versión del formato: si cambia la estructura de los JSON de forma incompatible, se publicará en `v2` y `v1` se mantendrá un tiempo.
 
 El historial de git de `publicado/` es también el historial de los datos. El histórico anterior a la separación está en el repositorio de la web (carpeta `data/`).
+
+### Subvenciones y datos personales
+
+Origen de los datos de subvenciones: Intervención General de la Administración del Estado (API del [Sistema Nacional de Publicidad de Subvenciones](https://www.infosubvenciones.es/bdnstrans/GE/es/avisolegal)). Su aviso legal solo permite reutilizar datos personales tras disociarlos, así que **la herramienta disocia a las personas físicas**: si el NIF es un DNI o NIE con letra de control válida, un NIF K/L/M o un número de ocho cifras, el beneficiario se publica como «Persona física (nombre no publicado)», sin NIF, y solo cuenta en los totales. La BDNS retira cada concesión a los cuatro años; los años que deja de ofrecer se conservan de la descarga anterior.
 
 ## Puesta en marcha y actualización
 

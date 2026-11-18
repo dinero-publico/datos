@@ -222,9 +222,35 @@ def comprobar_poblacion(d: dict, inf: Informe):
     inf.prueba("poblacion", "Comunidades, Ceuta y Melilla suman la población de España", fallos, len(esp))
 
 
+def comprobar_subvenciones(d: dict, inf: Informe):
+    g = d["grandes"]
+    fallos = []
+    for a, x in g.items():
+        if x["total_fuente"] is not None and x["beneficiarios"] != x["total_fuente"]:
+            fallos.append(f"{a}: {x['beneficiarios']} beneficiarios, la BDNS declara {x['total_fuente']}")
+    inf.prueba("subvenciones", "Están todos los grandes beneficiarios que declara la BDNS", fallos, len(g))
+    fallos = []
+    for a, x in g.items():
+        s = sum(v[1] for v in x["por_tipo"].values())
+        n = sum(v[0] for v in x["por_tipo"].values())
+        if n != x["beneficiarios"] or not _casi(s, x["total"], 1.0):
+            fallos.append(f"{a}: tipos {n} / {s:.0f} € ≠ total {x['beneficiarios']} / {x['total']:.0f} €")
+        if x["minimo"] is not None and x["minimo"] < d["umbral"]:
+            fallos.append(f"{a}: hay beneficiarios por debajo de {d['umbral']} € ({x['minimo']})")
+    inf.prueba("subvenciones", "Los tipos de entidad suman el total y nadie queda por debajo del umbral", fallos, len(g))
+    fallos = []
+    for a, x in d["partidos"].items():
+        s = sum(b[2] for b in x["beneficiarios"])
+        n = sum(b[3] for b in x["beneficiarios"])
+        if n != x["concesiones"] or not _casi(s, x["total"], 1.0):
+            fallos.append(f"{a}: beneficiarios {n} / {s:.0f} € ≠ {x['concesiones']} / {x['total']:.0f} €")
+    inf.prueba("subvenciones", "Las subvenciones a partidos por beneficiario suman el total", fallos, len(d["partidos"]))
+
+
 COMPROBACIONES = {
     "estado.json": comprobar_estado, "pge.json": comprobar_pge, "entregas.json": comprobar_entregas,
     "ccaa.json": comprobar_ccaa, "cofog.json": comprobar_cofog, "poblacion.json": comprobar_poblacion,
+    "subvenciones.json": comprobar_subvenciones,
 }
 
 

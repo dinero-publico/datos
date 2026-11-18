@@ -44,7 +44,10 @@ FUENTES = {
     "ccaa": ("ccaa.json", "Presupuestos iniciales de las comunidades por política, capítulo y clasificación económica (SGCIEF)"),
     "cofog": ("cofog.json", "Gasto ejecutado por función (COFOG) de cada administración y comunidad (IGAE)"),
     "poblacion": ("poblacion.json", "Población residente a 1 de enero por comunidad (INE)"),
+    "subvenciones": ("subvenciones.json", "Grandes beneficiarios de subvenciones y ayudas (100.000 € o más en el año) y subvenciones a partidos políticos (BDNS, IGAE)"),
 }
+# Fuentes que se publican en varios ficheros: el principal más «<nombre>-<parte>.json».
+LISTAS = {"subvenciones": "Lista completa de grandes beneficiarios de {parte} (BDNS, IGAE)"}
 
 
 def digest(obj) -> str:
@@ -58,7 +61,15 @@ def leer(nombre: str) -> dict | None:
 
 def escribir(nombre: str, obj) -> None:
     SALIDA.mkdir(parents=True, exist_ok=True)
-    (SALIDA / nombre).write_text(json.dumps(obj, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    filas = obj.get("beneficiarios") if isinstance(obj, dict) and nombre.startswith("subvenciones-") else None
+    if filas is not None:
+        # Listas largas: una fila por línea (diffs legibles y ficheros pequeños).
+        cab = json.dumps({k: v for k, v in obj.items() if k != "beneficiarios"}, ensure_ascii=False)[:-1]
+        cuerpo = ",\n".join(json.dumps(b, ensure_ascii=False) for b in filas)
+        texto = f'{cab}, "beneficiarios": [\n{cuerpo}\n]}}'
+    else:
+        texto = json.dumps(obj, ensure_ascii=False, indent=1)
+    (SALIDA / nombre).write_text(texto + "\n", encoding="utf-8")
 
 
 def ahora() -> str:
@@ -83,6 +94,7 @@ def descargar(only: list[str] | None, offline: Path | None, year: int, delay: fl
         "ccaa": lambda: f.fetch_ccaa(dl, anios, previo("ccaa.json"), reuse_before=year - 1),
         "cofog": lambda: f.fetch_cofog(dl, desde=year - f.YEARS_BACK - 2),
         "poblacion": lambda: f.fetch_poblacion(dl, desde=year - f.YEARS_BACK - 2),
+        "subvenciones": lambda: f.fetch_subvenciones(dl, f.unir_subvenciones(leer("subvenciones.json"), leer), year),
     }
     meta = leer("meta.json") or {}
     meta.setdefault("fuentes", {})
@@ -96,9 +108,11 @@ def descargar(only: list[str] | None, offline: Path | None, year: int, delay: fl
         try:
             obj = trabajo()
             h = digest(obj)
-            if h != info.get("hash") or not (SALIDA / nombre).exists():
+            salidas = f.partir_subvenciones(obj) if clave == "subvenciones" else {nombre: obj}
+            if h != info.get("hash") or any(not (SALIDA / n).exists() for n in salidas):
                 # Se conservan los datos derivados del análisis anterior hasta que se vuelva a analizar.
-                escribir(nombre, analisis.enriquecer(nombre, obj))
+                for n, o in salidas.items():
+                    escribir(n, analisis.enriquecer(n, o))
                 info["descargado"] = ahora()
                 info["hash"] = h
                 log.info("  ✔ actualizado %s", nombre)
@@ -157,11 +171,18 @@ def publicar() -> int:
         if not p.exists():
             continue
         m = meta.get(clave, {})
-        ficheros[clave] = {
-            "fichero": nombre, "url": URL_PUBLICA + nombre, "descripcion": desc, "bytes": p.stat().st_size,
-            "sha256": hashlib.sha256(p.read_bytes()).hexdigest(), "actualizado": m.get("descargado"),
-            "ultimo_error": m.get("error_fecha") if m.get("error") else None,
-        }
+        partes = [(clave, p, desc)]
+        if clave in LISTAS:
+            stem = Path(nombre).stem
+            for q in sorted(SALIDA.glob(f"{stem}-*.json"), reverse=True):
+                parte = q.stem[len(stem) + 1:]
+                partes.append((f"{clave}-{parte}", q, LISTAS[clave].format(parte=parte)))
+        for k, q, d in partes:
+            ficheros[k] = {
+                "fichero": q.name, "url": URL_PUBLICA + q.name, "descripcion": d, "bytes": q.stat().st_size,
+                "sha256": hashlib.sha256(q.read_bytes()).hexdigest(), "actualizado": m.get("descargado"),
+                "ultimo_error": m.get("error_fecha") if m.get("error") else None,
+            }
     cat = {"version": 1, "proyecto": "https://dinero-publico.github.io/", "ficheros": ficheros,
            "informe": URL_PUBLICA + "informe.json", "meta": URL_PUBLICA + "meta.json"}
     if cat != leer("catalogo.json"):
@@ -190,10 +211,10 @@ a{{color:var(--a)}}h1{{font-family:Georgia,serif;font-weight:400}}.muted{{color:
 th{{color:var(--muted);font-weight:500}}code{{font-size:.9em}}
 </style></head><body><main>
 <h1>Datos de Dinero Público</h1>
-<p>Presupuestos y gasto público de España, descargados cada día de las fuentes oficiales (Ministerio de Hacienda e INE), comprobados y normalizados a JSON. Son los datos que usa <a href="https://dinero-publico.github.io/">dinero-publico.github.io</a>.</p>
+<p>Presupuestos, gasto público y subvenciones de España, descargados cada día de las fuentes oficiales (Ministerio de Hacienda, IGAE e INE), comprobados y normalizados a JSON. Son los datos que usa <a href="https://dinero-publico.github.io/">dinero-publico.github.io</a>.</p>
 <p class="muted">{informe} · <a href="v1/informe.json">informe</a> · <a href="v1/catalogo.json">catálogo</a> · <a href="v1/meta.json">estado de las descargas</a> · <a href="https://github.com/dinero-publico/datos">código de la herramienta</a></p>
 <div class="scroll"><table><thead><tr><th>Fichero</th><th>Contenido</th><th>Actualizado</th><th>Tamaño</th></tr></thead><tbody>{filas}</tbody></table></div>
-<p class="muted">Formato estable bajo <code>/datos/v1/</code>. Los datos proceden del Ministerio de Hacienda y del INE y se reutilizan según sus condiciones. Detalle de cada fuente en <a href="https://dinero-publico.github.io/fuentes.html">Fuentes y metodología</a>.</p>
+<p class="muted">Formato estable bajo <code>/datos/v1/</code>. Los datos proceden del Ministerio de Hacienda y del INE y se reutilizan según sus condiciones. Subvenciones: origen de los datos, Intervención General de la Administración del Estado (BDNS); Dinero Público no publica los nombres de las personas físicas. Detalle de cada fuente en <a href="https://dinero-publico.github.io/fuentes.html">Fuentes y metodología</a>.</p>
 </main></body></html>
 """
 

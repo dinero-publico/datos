@@ -1,8 +1,8 @@
 {
- "generado": "2026-11-17T19:41:41+00:00",
+ "generado": "2026-11-18T13:25:23+00:00",
  "resumen": {
-  "pruebas": 13,
-  "correctas": 13,
+  "pruebas": 16,
+  "correctas": 16,
   "con_fallos": 0
  },
  "pruebas": [
@@ -119,6 +119,30 @@
    "prueba": "Comunidades, Ceuta y Melilla suman la población de España",
    "ok": true,
    "casos": 13,
+   "fallos": [],
+   "n_fallos": 0
+  },
+  {
+   "fuente": "subvenciones",
+   "prueba": "Están todos los grandes beneficiarios que declara la BDNS",
+   "ok": true,
+   "casos": 5,
+   "fallos": [],
+   "n_fallos": 0
+  },
+  {
+   "fuente": "subvenciones",
+   "prueba": "Los tipos de entidad suman el total y nadie queda por debajo del umbral",
+   "ok": true,
+   "casos": 5,
+   "fallos": [],
+   "n_fallos": 0
+  },
+  {
+   "fuente": "subvenciones",
+   "prueba": "Las subvenciones a partidos por beneficiario suman el total",
+   "ok": true,
+   "casos": 5,
    "fallos": [],
    "n_fallos": 0
   }

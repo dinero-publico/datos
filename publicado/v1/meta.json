@@ -31,6 +31,11 @@
    "descargado": "2026-11-17T13:57:25+00:00",
    "hash": "1fc41e14c0fa3c3d",
    "fichero": "poblacion.json"
+  },
+  "subvenciones": {
+   "descargado": "2026-11-18T13:25:23+00:00",
+   "hash": "c21a382b8df4832e",
+   "fichero": "subvenciones.json"
   }
  }
 }
