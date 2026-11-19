@@ -33,12 +33,12 @@
  },
  "partidos": {
   "2026": {
-   "concesiones": 769,
-   "total": 78793434.67,
+   "concesiones": 772,
+   "total": 78800809.67,
    "por_nivel": {
     "ESTADO": 56527714.21,
-    "AUTONOMICA": 15653113.15,
-    "LOCAL": 6612607.31
+    "AUTONOMICA": 15653988.15,
+    "LOCAL": 6619107.31
    },
    "organos": [
     [
@@ -710,6 +710,12 @@
      1
     ],
     [
+     "V67530410",
+     "GRUP MUNICIPAL ERC DE TERRASSA",
+     32500.0,
+     10
+    ],
+    [
      "G45912144",
      "GRUPO MUNICIPAL VOX TOLEDO",
      32400.0,
@@ -834,12 +840,6 @@
      "ASOC. DE FAMILIARES DE ENFER. DE",
      26571.47,
      1
-    ],
-    [
-     "V67530410",
-     "GRUP MUNICIPAL ERC DE TERRASSA",
-     26000.0,
-     8
     ],
     [
      "G72378300",
@@ -1865,6 +1865,12 @@
      "G22281281",
      "GRUPO MUNICIPAL DE CHUNTA ARAGONESISTA EN EL AYTO.DE JACA",
      1009.41,
+     1
+    ],
+    [
+     "G16614554",
+     "MES PER MENORCA",
+     875.0,
      1
     ],
     [
@@ -13031,55 +13037,55 @@
  },
  "grandes": {
   "2026": {
-   "total_fuente": 18687,
+   "total_fuente": 18793,
    "lista": "subvenciones-2026.json",
-   "beneficiarios": 18687,
-   "total": 18963671534.4,
+   "beneficiarios": 18793,
+   "total": 19215467414.03,
    "minimo": 100000.0,
    "por_tipo": {
     "P": [
-     5314,
-     5882699639.85
+     5318,
+     5956594949.24
     ],
     "B": [
-     5777,
-     4425299265.44
+     5818,
+     4438604300.41
     ],
     "Q": [
-     404,
-     3023980100.54
+     409,
+     3124603789.04
     ],
     "A": [
-     1288,
-     2275030349.68
+     1297,
+     2286462933.36
     ],
     "G": [
-     3891,
-     2164498491.48
+     3923,
+     2207365670.65
     ],
     "F": [
-     635,
-     324605255.51
+     638,
+     325033212.34
     ],
     "otro": [
-     131,
-     231793430.05
+     133,
+     232993430.05
     ],
     "S": [
      47,
-     208098297.37
+     212845437.07
     ],
     "H": [
-     524,
-     184259733.97
+     530,
+     185171064.18
     ],
     "R": [
-     291,
-     113573868.7
+     293,
+     115723133.89
     ],
     "E": [
-     243,
-     47172270.35
+     244,
+     47284801.03
     ],
     "N": [
      15,
@@ -13091,18 +13097,22 @@
     ],
     "J": [
      116,
-     16591485.23
+     16599346.54
     ],
     "W": [
      4,
      8241809.68
+    ],
+    "D": [
+     1,
+     116000.0
     ]
    },
    "top": [
     [
      "Q4618001D",
-     "UNIVERSITAT DE VALENCIA (ESTUDI GENERAL DE VALENCIA)",
-     362616596.81
+     "UNIVERSITAT DE VALENCIA",
+     367183366.81
     ],
     [
      "B56937444",
@@ -13111,23 +13121,23 @@
     ],
     [
      "Q4618002B",
-     "UNIVERSIDAD POLITECNICA DE VALENCIA-MINISTERIO DE UNIVERSIDADES E INVESTIGACION",
-     302387663.04
+     "UNIVERSITAT POLITECNICA DE VALENCIA",
+     303426903.04
     ],
     [
      "Q3018001B",
-     "UNIVERSIDAD MURCIA",
-     209377815.26
+     "UNIVERSIDAD DE MURCIA",
+     210474388.26
     ],
     [
      "B85771269",
-     "CEMEX ESPANA OPERACIONES S L U",
+     "CEMEXN ESPAÑA OPERACIONES, S.L.",
      200146751.23
     ],
     [
      "Q0332001G",
-     "UNIVERSIDAD DE ALICANTE MINISTERIO DE UNIVERSIDADES E INVESTIGACION",
-     191211028.62
+     "UNIVERSIDAD DE ALICANTE",
+     191520838.62
     ],
     [
      "A81604464",
@@ -13135,9 +13145,14 @@
      183186637.5
     ],
     [
+     "Q2818002D",
+     "CSIC. INSTITUTO DE PARASITOLOGÍA Y BIOMEDICINA LO",
+     156631479.27
+    ],
+    [
      "Q3818001D",
      "UNIVERSIDAD DE LA LAGUNA",
-     154793242.78
+     155572672.78
     ],
     [
      "00012345678X",
@@ -13145,38 +13160,33 @@
      145000000.0
     ],
     [
+     "Q3518001G",
+     "UNIVERSIDAD DE LAS PALMAS DE GRAN CANARIA",
+     138512625.18
+    ],
+    [
      "B75697870",
      "GOTION SPAIN GREEN ENERGY, S.L",
      138223266.52
     ],
     [
-     "Q3518001G",
-     "UNIVERSIDAD DE LAS PALMAS DE G.C.",
-     138202815.18
-    ],
-    [
-     "Q2818002D",
-     "AGENCIA ESTATAL CSIC (CONSEJ.INV.CI",
-     133128009.27
-    ],
-    [
      "A36603025",
-     "VOTORANTIM CEMENTOS ESPAÑA, S.A.",
+     "VOTORANTIM CEMENTOS ESPAÑA SA",
      119602017.5
     ],
     [
      "Q6250003H",
-     "UNIVERSITAT JAUME I",
-     100450222.96
+     "UNIVERSIDAD JAUME I DE CASTELLÓ",
+     101799272.96
     ],
     [
      "Q1567003G",
-     "AUTORIDAD PORTUARIA DE LA CORUÑA MOPT",
+     "AUTORIDADE PORTUARIA DA CORUÑA",
      97449679.0
     ],
     [
      "Q5350015C",
-     "UNIVERSIDAD MIGUEL HERNANDEZ DE ELCHE",
+     "UNIVERSIDAD MIGUEL HERNÁNDEZ ELCHE",
      95425780.79
     ],
     [
@@ -13186,8 +13196,8 @@
     ],
     [
      "P2305000H",
-     "AYUNTAMIENTO DE JAÉN",
-     88632253.53
+     "AYUNTAMIENTO DE JAEN",
+     88637253.53
     ],
     [
      "A71550321",
@@ -13201,12 +13211,12 @@
     ],
     [
      "Q5856176B",
-     "CONSELL DELS ILTRES COLLEGIS D'ADVOCATS DE CATALUNYA CCT",
+     "CONSELL DE L'ADVOCACIA CATALANA",
      69052828.93
     ],
     [
      "P3800001D",
-     "CABILDO INSULAR TENERIFE",
+     "CABILDO INSULAR DE TENERIFE",
      66768137.37
     ],
     [
@@ -13216,18 +13226,18 @@
     ],
     [
      "A35604487",
-     "SALCAI-UTINSA, S.A.",
+     "SALCAI-UTINSA SA",
      61815267.6
     ],
     [
      "P3500001G",
-     "CABILDO INSULAR GRAN CANARIA",
+     "CABILDO INSULAR DE GRAN CANARIA",
      61397002.74
     ],
     [
      "Q8050013E",
      "UNIVERSIDAD POLITECNICA DE CARTAGENA",
-     60581431.19
+     60867908.19
     ],
     [
      "B24962136",
@@ -13236,13 +13246,18 @@
     ],
     [
      "S3511001D",
-     "COMUNIDAD AUTONOMA DE CANARIAS",
+     "COMUNIDAD AUTÓNOMA DE CANARIAS",
      59450255.55
     ],
     [
      "A33473752",
-     "EDP ESPAÑA SA",
+     "SINAE (HIDROELÉCTRICA DEL CANTÁBRICO, S.A.) (EDP ESPAÑA S.A.)",
      59210950.05
+    ],
+    [
+     "P1110100C",
+     "AYUNTAMIENTO DE CEUTA",
+     58845623.15
     ],
     [
      "Q7855055E",
@@ -13262,7 +13277,7 @@
     [
      "P2300500B",
      "AYUNTAMIENTO DE ANDUJAR",
-     53935272.27
+     53939272.27
     ],
     [
      "S0711002F",
@@ -13276,23 +13291,23 @@
     ],
     [
      "Q1267007A",
-     "AUTORIDAD PORTUARIA DE CASTELLÓN",
+     "AP CASTELLÓN",
      50833000.0
     ],
     [
+     "Q2866001G",
+     "CRUZ ROJA ESPAÑOLA",
+     50415309.65
+    ],
+    [
      "G96101597",
-     "CONSEJO VALENCIANO DE COLEGIOS DE ABOGADOS",
+     "CONSEJO VALENCIANO DE COLEGIOS DE LA ABOGACÍA",
      50222000.0
     ],
     [
      "B87996302",
      "DOÑA URRACA ENERGY",
      50216284.0
-    ],
-    [
-     "Q2866001G",
-     "CRUZ ROJA ESPAÑOLA",
-     49995585.53
     ],
     [
      "Q1518001A",
@@ -13305,19 +13320,19 @@
      49252662.81
     ],
     [
+     "A07152515",
+     "EMPRESA MUNICIPAL DE TRANSPORTS URBANS DE PALMA DE MALLORCA S.A",
+     47392552.26
+    ],
+    [
      "G60667813",
-     "UNIVERSITAT OBERTA DE CATALUNYA",
-     45966935.14
+     "FUNDACIÓ PER A LA UNIVERSITAT OBERTA DE CATALUNYA",
+     46796365.14
     ],
     [
      "B01859685",
      "SALIME ENERGÍA SL",
      45000000.0
-    ],
-    [
-     "A07152515",
-     "EMPRESA MUNICIPAL DE TRANSPORTS URBANS D",
-     42277671.0
     ],
     [
      "B84160423",
@@ -13336,8 +13351,8 @@
     ],
     [
      "A28637304",
-     "AGRUPACION ESPAÑOLA DE ENTIDADES ASEGURADORAS DE L",
-     38486773.5
+     "AGR.ESP.ENT.ASEG.SEGUR.(AGROSEGURO)",
+     38873539.8
     ],
     [
      "A60437845",
@@ -13350,8 +13365,13 @@
      37031994.34
     ],
     [
+     "Q0818001J",
+     "UNIVERSITAT DE BARCELONA",
+     36908537.51
+    ],
+    [
      "A35092683",
-     "GUAGUAS MUNICIPALES S.A.",
+     "GUAGUAS MUNICIPALES SA",
      36323215.42
     ],
     [
@@ -13366,7 +13386,7 @@
     ],
     [
      "A47000518",
-     "RENAULT ESPAÑA, S. A.",
+     "RENAULT ESPAÑA S.A.",
      34862758.72
     ],
     [
@@ -13380,9 +13400,9 @@
      33036959.45
     ],
     [
-     "Q0818001J",
-     "UNIVERSITAT DE BARCELONA UNIVERSITAT DE BARCELONA",
-     31252527.51
+     "Q1818002F",
+     "UNIVERSIDAD DE GRANADA",
+     31692964.42
     ],
     [
      "P4100000A",
@@ -13396,7 +13416,7 @@
     ],
     [
      "A31768138",
-     "ACCIONA GENERACIÓN RENOVABLE, S.A.",
+     "ACCIONA GENERACIÓN RENOVABLE SA",
      30209671.22
     ],
     [
@@ -13425,14 +13445,14 @@
      29353650.66
     ],
     [
-     "Q3500385D",
-     "CONSORCIO PARA EL DISEÑO,LA CONSTRUCCION, PLOCAN",
-     28860300.0
+     "Q8650002B",
+     "UNIVERSIDADE DE VIGO",
+     29065110.53
     ],
     [
-     "Q1818002F",
-     "UNIVERSIDAD DE GRANADA",
-     28115434.42
+     "Q3500385D",
+     "CONSORCIO PARA EL DISENO, CONSTRUCCION, EQUIPAMIENTO Y EXPLOTACION DE LA PLATAFORMA OCEANICA DE CANARIAS",
+     28860300.0
     ],
     [
      "B27274588",
@@ -13441,18 +13461,13 @@
     ],
     [
      "A45445210",
-     "IBERDROLA RENOVABLES CASTILLA LA MANCHA",
+     "IBERDROLA RENOVABLES CASTILLA LA MANCHA SA",
      27777968.0
     ],
     [
      "B19936475",
      "DISTRITO Z RE DEVELOPMENT, SB III, SL",
      25838818.0
-    ],
-    [
-     "Q8650002B",
-     "UNIVERSIDAD DE VIGO",
-     25797390.53
     ],
     [
      "A28212264",
@@ -13496,12 +13511,12 @@
     ],
     [
      "Q4367131B",
-     "AUTORITAT PORTUÀRIA DE TARRAGONA",
+     "AUTORITAT PORTUARIA DE TARRAGONA",
      24000000.0
     ],
     [
      "G28570927",
-     "PARTIDO POPULAR",
+     "PARTIDO POPULAR CLM",
      23565318.22
     ],
     [
@@ -13520,13 +13535,18 @@
      22904734.02
     ],
     [
+     "Q5018001G",
+     "UNIVERSIDAD DE ZARAGOZA",
+     22715380.79
+    ],
+    [
      "Q1173007D",
-     "CAMARA OFICIAL DE COMERCIO, INDUSTRIA, SERVICIOS Y NAVEGACIÓN DE CEUTA",
+     "CAMARA OFICIAL DE COMERCIO INDUSTRIA Y NAVEGACION",
      22484216.0
     ],
     [
      "A95075586",
-     "IBERDROLA GENERACION, S.A.",
+     "IBERDROLA GENERACION,S.A.U",
      22413617.5
     ],
     [
@@ -13536,7 +13556,7 @@
     ],
     [
      "S7900010E",
-     "CIUDAD DE MELILLA",
+     "CIUDAD AUTÓNOMA DE MELILLA",
      22326057.25
     ],
     [
@@ -13555,9 +13575,9 @@
      21978887.0
     ],
     [
-     "Q5018001G",
-     "UNIVERSIDAD DE ZARAGOZA",
-     21306330.79
+     "Q6550005J",
+     "UNIVERSIDADE DA CORUÑA",
+     21790547.74
     ],
     [
      "P0800258F",
@@ -13575,6 +13595,11 @@
      20914821.0
     ],
     [
+     "Q4118001I",
+     "UNIVERSIDAD DE SEVILLA",
+     20727857.21
+    ],
+    [
      "P1103000D",
      "AYUNTAMIENTO DE ROTA",
      20343793.78
@@ -13583,74 +13608,59 @@
      "P1101500E",
      "AYUNTAMIENTO DE CHICLANA DE LA FRONTERA",
      20343282.67
-    ],
-    [
-     "N0361726C",
-     "DELEGACION EN ESPAÑA DEL ALTO COMISIONADO DE LAS NACIONES UNIDAS PARA REFUGIADOS",
-     20000000.0
-    ],
-    [
-     "G66210345",
-     "FUNDACIÓ EURECAT FUNDACIÓ EURECAT",
-     19775124.15
-    ],
-    [
-     "U67792143",
-     "CASTROMIL SAU, ALCALABUS SL Y LA HISPANO",
-     19668935.62
     ]
    ],
    "motivos": {
     "fichero": "subvenciones-motivos-2026.json",
     "beneficiarios": 1000,
     "puestos": 1000,
-    "importe": 11208420913.06,
-    "cobertura": 0.591,
+    "importe": 11375740638.64,
+    "cobertura": 0.592,
     "por_finalidad": {
-     "Industria y Energía": 3650115587.19,
-     "Infraestructuras": 1791509765.79,
-     "Educación": 1759444566.03,
-     "Investigación, desarrollo e innovación": 872876856.32,
-     "Otras actuaciones de carácter económico": 650012409.46,
+     "Industria y Energía": 3649415836.93,
+     "Infraestructuras": 1792139004.25,
+     "Educación": 1759268378.37,
+     "Investigación, desarrollo e innovación": 985163033.25,
+     "Otras actuaciones de carácter económico": 701696903.47,
      "Subvenciones al transporte": 409920456.71,
-     "Fomento del Empleo": 405392852.36,
-     "Servicios Sociales y Promoción Social": 271988054.02,
-     "Otras Prestaciones económicas": 234096115.81,
+     "Fomento del Empleo": 409594960.22,
+     "Servicios Sociales y Promoción Social": 272102479.29,
+     "Otras Prestaciones económicas": 239124563.08,
      "Justicia": 220286428.4,
-     "Agricultura, Pesca y Alimentación": 211335278.69,
-     "Comercio, Turismo y Pymes": 185226360.31,
-     "Sanidad": 169323592.49,
-     "Cultura": 155719001.02,
-     "Acceso a la vivienda y fomento de la edificación": 69660059.02,
-     "Cooperación internacional para el desarrollo y cultural": 52176356.26,
-     "Sin clasificar (convocatorias pequeñas)": 40883654.28,
+     "Agricultura, Pesca y Alimentación": 210376323.4,
+     "Comercio, Turismo y Pymes": 182335333.53,
+     "Sanidad": 169429592.49,
+     "Cultura": 154434851.75,
+     "Acceso a la vivienda y fomento de la edificación": 69760059.02,
+     "Cooperación internacional para el desarrollo y cultural": 52361983.38,
+     "Sin clasificar (convocatorias pequeñas)": 39640949.05,
      "Seguridad Ciudadana e Instituciones Penitenciarias": 31744990.31,
-     "Desempleo": 26708528.59
+     "Desempleo": 26944511.74
     },
     "por_instrumento": {
-     "SUBVENCIÓN y ENTREGA DINERARIA SIN CONTRAPRESTACIÓN": 11106733765.5,
-     "PRÉSTAMO": 98393639.79,
+     "SUBVENCIÓN y ENTREGA DINERARIA SIN CONTRAPRESTACIÓN": 11270824188.52,
+     "PRÉSTAMO": 101759817.35,
      "OTROS INSTRUMENTOS DE AYUDA": 1710429.97,
-     "GARANTÍA": 1315451.65,
+     "GARANTÍA": 1178576.65,
      "VENTAJA FISCAL": 267626.15
     },
     "por_administracion": {
-     "ESTADO": 6530283505.08,
-     "AUTONOMICA": 3964776688.05,
-     "LOCAL": 712843894.59,
+     "ESTADO": 6677315588.82,
+     "AUTONOMICA": 3981698242.83,
+     "LOCAL": 716209981.65,
      "OTROS": 516825.34
     },
     "por_procedimiento": {
-     "Concesión directa": 7577873102.16,
-     "Concurrencia competitiva": 3589664156.62,
-     "Sin clasificar (convocatorias pequeñas)": 40883654.28
+     "Concesión directa": 7627088818.44,
+     "Concurrencia competitiva": 3709010871.15,
+     "Sin clasificar (convocatorias pequeñas)": 39640949.05
     },
-    "mrr": 3648289665.12,
+    "mrr": 3640216271.27,
     "convocatorias": [
      [
       "896524",
       "Extracto de la Resolución de 31 de marzo de 2026 de la Secretaría de Estado de Política Territorial que regula el régimen de ayudas a entidades locales previstas en el artículo 7 del Real Decreto-ley 5/2026, de 17 de febrero",
-      1644811057.55,
+      1645402822.89,
       191
      ],
      [
@@ -13732,22 +13742,28 @@
       1
      ],
      [
-      "877803",
-      "Primera convocatoria de ayudas a proyectos para reforzar la Cadena de valor industrial de tecnologías limpias y sus componentes clave, en el Marco del PRTR, Financiado por la Unión Europea – NextGenerationEU y del pacto por una industria limpia.",
-      132662879.0,
-      11
-     ],
-     [
       "907162",
       "Orden Aportación dineraria mensual ULL 2026",
       130600414.0,
       1
      ],
      [
+      "877803",
+      "Primera convocatoria de ayudas a proyectos para reforzar la Cadena de valor industrial de tecnologías limpias y sus componentes clave, en el Marco del PRTR, Financiado por la Unión Europea – NextGenerationEU y del pacto por una industria limpia.",
+      130070007.0,
+      10
+     ],
+     [
       "886379",
       "Orden aportación dineraria mensual ULPGC 2026",
       114696670.0,
       1
+     ],
+     [
+      "857449",
+      "Resolución de 29 de octubre de 2025 de la Presidencia de la Agencia Estatal de Investigación, por la que se aprueba la convocatoria 2025 de las ayudas Ramón y Cajal.",
+      102017990.0,
+      60
      ],
      [
       "866756",
@@ -13762,16 +13778,16 @@
       1
      ],
      [
-      "768798",
-      "CONVOCATORIA DE SUBVENCIONES, EN RÉGIMEN DE CONCURRENCIA COMPETITIVA, PARA EL IMPULSO DE LA ECONOMÍA CIRCULAR EN EL SECTOR DEL PLÁSTICO, EN EL MARCO DEL PLAN DE RECUPERACIÓN, TRANSFORMACIÓN Y RESILIENCIA, PARA EL AÑO 2024.",
-      89202101.29,
-      19
-     ],
-     [
       "880353",
       "CONVOCATORIA INSTRUMENTAL 2026. ACCIÓN DE COOPERACIÓN LOCAL",
-      88673203.2,
+      88921361.97,
       40
+     ],
+     [
+      "768798",
+      "CONVOCATORIA DE SUBVENCIONES, EN RÉGIMEN DE CONCURRENCIA COMPETITIVA, PARA EL IMPULSO DE LA ECONOMÍA CIRCULAR EN EL SECTOR DEL PLÁSTICO, EN EL MARCO DEL PLAN DE RECUPERACIÓN, TRANSFORMACIÓN Y RESILIENCIA, PARA EL AÑO 2024.",
+      86656928.0,
+      18
      ],
      [
       "876660",
@@ -13788,8 +13804,8 @@
      [
       "844319",
       "Orden de 3 de septiembre de 2025 por la que se aprueba la convocatoria 2025 de ayudas para la adquisición de equipamiento científico-técnico.",
-      77689149.19,
-      48
+      81055326.75,
+      53
      ],
      [
       "823506",
@@ -13812,50 +13828,44 @@
      [
       "928250",
       "Real Decreto 637/2026, de 29 de julio, por el que se regula la concesión directa de subvenciones a las federaciones deportivas españolas, al Comité Olímpico Español y al Comité Paralímpico Español para el año 2026.",
-      64405569.65,
-      19
+      62473478.05,
+      18
      ],
      [
       "839514",
       "Resolución de 11 de junio de 2025, del Consejo de Administración de E.P.E. Instituto para la Diversificación y Ahorro de la Energía (IDAE), M.P. por la que se aprueba la primera convocatoria de ayudas al impulso de la economía circular de bienes de equipo",
       59550879.0,
       14
-     ],
-     [
-      "940259",
-      "Aportación dineraria Tenerife para gratuidad transporte terrestre público colectivo 2026",
-      56872596.39,
-      1
      ]
     ]
    }
   },
   "2025": {
-   "total_fuente": 33380,
+   "total_fuente": 33347,
    "lista": "subvenciones-2025.json",
-   "beneficiarios": 33380,
-   "total": 38778762555.38,
+   "beneficiarios": 33347,
+   "total": 38764731471.15,
    "minimo": 100000.0,
    "por_tipo": {
     "P": [
      6313,
-     10713643753.08
+     10713471804.34
     ],
     "B": [
-     11930,
-     8559833839.12
+     11901,
+     8551254244.69
     ],
     "A": [
-     2554,
-     5501418737.85
+     2550,
+     5500552217.6
     ],
     "G": [
      6874,
-     4890544433.83
+     4889256202.73
     ],
     "Q": [
-     846,
-     4838447084.14
+     848,
+     4836133031.02
     ],
     "S": [
      131,
@@ -13863,15 +13873,15 @@
     ],
     "F": [
      1354,
-     712121664.71
+     712104636.83
     ],
     "H": [
-     1594,
-     586972226.95
+     1592,
+     586349642.95
     ],
     "R": [
      584,
-     308516607.01
+     308419214.5
     ],
     "otro": [
      218,
@@ -13887,7 +13897,7 @@
     ],
     "J": [
      371,
-     59143501.12
+     59069768.92
     ],
     "U": [
      16,
@@ -13913,7 +13923,7 @@
    "top": [
     [
      "A85309219",
-     "RED ELECTRICA DE ESPAÑA SA",
+     "RED ELÉCTRICA DE ESPAÑA, S.A.U.",
      761946962.65
     ],
     [
@@ -13923,18 +13933,18 @@
     ],
     [
      "Q4618001D",
-     "UNIVERSITAT DE VALENCIA (ESTUDI GENERAL DE VALENCIA)",
+     "UNIVERSITAT DE VALENCIA",
      448680736.24
     ],
     [
      "Q4618002B",
-     "UNIVERSIDAD POLITECNICA DE VALENCIA-MINISTERIO DE UNIVERSIDADES E INVESTIGACION",
+     "UNIVERSITAT POLITECNICA DE VALENCIA",
      361392384.98
     ],
     [
      "Q2818002D",
-     "AGENCIA ESTATAL CSIC (CONSEJ.INV.CI",
-     328683400.08
+     "CSIC. INSTITUTO DE PARASITOLOGÍA Y BIOMEDICINA LO",
+     327216159.07
     ],
     [
      "P4625200C",
@@ -13948,12 +13958,12 @@
     ],
     [
      "A95758389",
-     "IBERDROLA CLIENTES SA",
+     "IBERDROLA CLIENTES, S.A.",
      261878178.39
     ],
     [
      "S3511001D",
-     "COMUNIDAD AUTONOMA DE CANARIAS",
+     "COMUNIDAD AUTÓNOMA DE CANARIAS",
      259811212.1
     ],
     [
@@ -13963,12 +13973,12 @@
     ],
     [
      "Q3018001B",
-     "UNIVERSIDAD MURCIA",
+     "UNIVERSIDAD DE MURCIA",
      237195304.8
     ],
     [
      "Q0332001G",
-     "UNIVERSIDAD DE ALICANTE MINISTERIO DE UNIVERSIDADES E INVESTIGACION",
+     "UNIVERSIDAD DE ALICANTE",
      230865623.41
     ],
     [
@@ -13978,13 +13988,13 @@
     ],
     [
      "P4618800I",
-     "AYUNTAMIENTO DE PAIPORTA",
+     "AYUNTAMIENTO DE PAIPORTA (VALENCIA)",
      212232506.02
     ],
     [
      "Q2866001G",
      "CRUZ ROJA ESPAÑOLA",
-     211872242.72
+     211826637.61
     ],
     [
      "B55388474",
@@ -13993,7 +14003,7 @@
     ],
     [
      "Q1800796C",
-     "CONSORCIO PARA EL IMPULSO DE LA CONSTRUCCION EN ESPAÑA DE LA INFRAESTRUCTURA CIENTIFICO-TECNICA IFMIF-DONES",
+     "CONSORCIO PARA EL IMPULSO DE LA CONSTRUCCION EN ES",
      189520534.42
     ],
     [
@@ -14013,12 +14023,12 @@
     ],
     [
      "P5890049I",
-     "AUTORITAT TRANSPORT METROPOLITA CONSORCI PER LA COORDINACIO SISTEMA METROP TRANSPORT PUBLIC AREA BARCELONA",
+     "AUTORITAT DEL TRANSPORT METROPOLITA",
      149301520.0
     ],
     [
      "P5030300G",
-     "AYUNTAMIENTO DE ZARAGOZA - SERVICIO DE JUVENTUD",
+     "AYUNTAMIENTO DE ZARAGOZA",
      142157348.39
     ],
     [
@@ -14048,22 +14058,22 @@
     ],
     [
      "Q6250003H",
-     "UNIVERSITAT JAUME I",
+     "UNIVERSIDAD JAUME I DE CASTELLÓ",
      124430321.01
     ],
     [
      "S4611001A",
-     "GENERALITAT DE VALENCIA",
+     "COMUNIDAD AUTÓNOMA DE VALENCIA",
      117195338.09
     ],
     [
      "Q5350015C",
-     "UNIVERSIDAD MIGUEL HERNANDEZ DE ELCHE",
+     "UNIVERSIDAD MIGUEL HERNÁNDEZ ELCHE",
      114824419.29
     ],
     [
      "A78923125",
-     "TELEFONICA MOVILES ESPAÑA SA",
+     "TELEFONICA MOVILES ESPAÑA . SA UNIPERSONAL",
      105644394.04
     ],
     [
@@ -14133,7 +14143,7 @@
     ],
     [
      "P4619500D",
-     "AJUNTAMENT DE PICANYA",
+     "AYUNTAMIENTO DE PICANYA",
      77492593.21
     ],
     [
@@ -14143,7 +14153,7 @@
     ],
     [
      "B84196997",
-     "GNERA ENERGIA Y TECNOLOGIA S.L.",
+     "GNERA ENERGIA Y TECNOLOGIA SL",
      76999032.05
     ],
     [
@@ -14158,27 +14168,27 @@
     ],
     [
      "Q5856176B",
-     "CONSELL DELS ILTRES COLLEGIS D'ADVOCATS DE CATALUNYA CCT",
+     "CONSELL DE L'ADVOCACIA CATALANA",
      74258182.37
     ],
     [
      "P4616700C",
-     "AYUNTAMIENTO DE MASSANASSA",
+     "AYUNTAMIENTO DE MASANASA AYUNTAMIENTO DE MASSANASSA",
      72698595.54
     ],
     [
      "Q0818001J",
-     "UNIVERSITAT DE BARCELONA UNIVERSITAT DE BARCELONA",
+     "UNIVERSITAT DE BARCELONA",
      70445634.74
     ],
     [
      "P3500001G",
-     "CABILDO INSULAR GRAN CANARIA",
+     "CABILDO INSULAR DE GRAN CANARIA",
      70324063.95
     ],
     [
      "S1511001H",
-     "XUNTA DE GALICIA",
+     "DX DE ORDENACIÓN E PRODUCIÓN FORESTAL",
      69352151.2
     ],
     [
@@ -14188,12 +14198,12 @@
     ],
     [
      "Q9650012I",
-     "ENTIDAD PUBLICA DE SANEAMIENTO DE AGUASRESIDUALES",
+     "E.P. DE SANEAMIENTO DE AGUAS RESIDUALES DE LA C.VALENCIANA",
      67165336.64
     ],
     [
      "A50002567",
-     "SA INDUSTRIAS CELULOSA ARAGONESA",
+     "S.A. INDUSTRIAS CELULOSA ARAGONESA",
      66532655.16
     ],
     [
@@ -14203,7 +14213,7 @@
     ],
     [
      "P3800001D",
-     "CABILDO INSULAR TENERIFE",
+     "CABILDO INSULAR DE TENERIFE",
      65851514.59
     ],
     [
@@ -14213,7 +14223,7 @@
     ],
     [
      "G60667813",
-     "UNIVERSITAT OBERTA DE CATALUNYA",
+     "FUNDACIÓ PER A LA UNIVERSITAT OBERTA DE CATALUNYA",
      64910109.65
     ],
     [
@@ -14228,12 +14238,12 @@
     ],
     [
      "S5011001D",
-     "DIPUTACION GENERAL DE ARAGON",
+     "GOBIERNO DE ARAGON",
      62882105.24
     ],
     [
      "A95075586",
-     "IBERDROLA GENERACION, S.A.",
+     "IBERDROLA GENERACION,S.A.U",
      62521205.42
     ],
     [
@@ -14258,23 +14268,23 @@
     ],
     [
      "A07152515",
-     "EMPRESA MUNICIPAL DE TRANSPORTS URBANS D",
+     "EMPRESA MUNICIPAL DE TRANSPORTS URBANS DE PALMA DE MALLORCA S.A",
      58912858.61
     ],
     [
      "B88532163",
-     "GREEN CAPITAL DEVELOPMENT 52, S.L.",
+     "GREEN CAPITAL DEVELOPMENT 52 SL",
      57905446.09
     ],
     [
      "P4610400F",
-     "AYUNTAMIENTO DE CUART DE POBLET",
+     "AYUNTAMIENTO DE QUART DE POBLET",
      56866977.92
     ],
     [
      "A47000518",
-     "RENAULT ESPAÑA, S. A.",
-     56741152.16
+     "RENAULT ESPAÑA S.A.",
+     56801152.16
     ],
     [
      "A32259541",
@@ -14288,7 +14298,7 @@
     ],
     [
      "A35604487",
-     "SALCAI-UTINSA, S.A.",
+     "SALCAI-UTINSA SA",
      56006996.95
     ],
     [
@@ -14303,7 +14313,7 @@
     ],
     [
      "B28051993",
-     "GLOBAL OMNIUM INVERSIONES S.L.",
+     "GLOBAL OMNIUM INVERSIONES SL",
      53257189.39
     ],
     [
@@ -14313,7 +14323,7 @@
     ],
     [
      "P4602100B",
-     "AYUNTAMIENTO DE ALDAIA",
+     "AYUNTAMIENTO DE ALDAYA",
      52443855.83
     ],
     [
@@ -14323,42 +14333,42 @@
     ],
     [
      "G96101597",
-     "CONSEJO VALENCIANO DE COLEGIOS DE ABOGADOS",
+     "CONSEJO VALENCIANO DE COLEGIOS DE LA ABOGACÍA",
      51713901.16
     ],
     [
      "Q2818015F",
-     "UNIVERSIDAD POLITÉCNICA DE MADRID",
+     "UNIVERSIDAD POLITECNICA DE MADRID",
      51400807.5
     ],
     [
      "Q0818002H",
-     "UNIVERSITAT AUTONOMA DE BARCELONA UNIVERSITAT AUTONOMA DE BARCELONA",
+     "UNIVERSIDAD AUTÓNOMA DE BARCELONA",
      50916523.09
     ],
     [
      "Q8650002B",
-     "UNIVERSIDAD DE VIGO",
+     "UNIVERSIDADE DE VIGO",
      50577345.9
     ],
     [
      "P4621500J",
-     "AYUNTAMIENTO DE REQUENA",
+     "AYUNTAMIENTO DE REQUENA (VALENCIA)",
      49635440.62
     ],
     [
      "A82104001",
-     "IBERENOVA PROMOCIONES, S.A.",
+     "IBERENOVA PROMOCIONES, S.A.U.",
      49518354.69
     ],
     [
      "A81046856",
-     "ARCELORMITTAL ESPANA SA",
+     "ARCELORMITTAL ESPAÑA, S.A.",
      48681175.99
     ],
     [
      "A80303365",
-     "SOCIEDAD DE INFRAESTRUCTURAS Y EQUIPAMIE",
+     "SIEPSE",
      48208548.9
     ],
     [
@@ -14383,7 +14393,7 @@
     ],
     [
      "S0711001H",
-     "C.A. DE LAS ISLAS BALEARES",
+     "COMUNITAT AUTONOMA DE LES ILLES BALEARS",
      45559626.03
     ],
     [
@@ -14393,7 +14403,7 @@
     ],
     [
      "A28637304",
-     "AGRUPACION ESPAÑOLA DE ENTIDADES ASEGURADORAS DE L",
+     "AGR.ESP.ENT.ASEG.SEGUR.(AGROSEGURO)",
      44420575.99
     ],
     [
@@ -14416,17 +14426,17 @@
     "fichero": "subvenciones-motivos-2025.json",
     "beneficiarios": 995,
     "puestos": 1000,
-    "importe": 21871673616.75,
-    "cobertura": 0.564,
+    "importe": 21867249908.78,
+    "cobertura": 0.5641,
     "por_finalidad": {
      "Industria y Energía": 6596338348.95,
-     "Infraestructuras": 3265423053.83,
-     "Investigación, desarrollo e innovación": 2544954978.09,
-     "Educación": 1919729736.68,
+     "Infraestructuras": 3266677206.83,
+     "Investigación, desarrollo e innovación": 2539778160.64,
+     "Educación": 1919759736.68,
      "Servicios Sociales y Promoción Social": 1897002236.82,
-     "Otras actuaciones de carácter económico": 1616983360.14,
+     "Otras actuaciones de carácter económico": 1617013360.14,
      "Subvenciones al transporte": 1204190083.81,
-     "Fomento del Empleo": 797803466.28,
+     "Fomento del Empleo": 797307912.76,
      "Cultura": 344739654.26,
      "Agricultura, Pesca y Alimentación": 301559083.61,
      "Otras Prestaciones económicas": 289062254.25,
@@ -14434,28 +14444,28 @@
      "Justicia": 230505705.74,
      "Cooperación internacional para el desarrollo y cultural": 199683942.29,
      "Comercio, Turismo y Pymes": 195492013.82,
-     "Sin clasificar (convocatorias pequeñas)": 87317766.4,
+     "Sin clasificar (convocatorias pequeñas)": 87257766.4,
      "Sanidad": 64681566.27,
      "Seguridad Ciudadana e Instituciones Penitenciarias": 51926204.03,
-     "Desempleo": 33161648.46
+     "Desempleo": 33156158.46
     },
     "por_instrumento": {
-     "SUBVENCIÓN y ENTREGA DINERARIA SIN CONTRAPRESTACIÓN": 20977475983.27,
+     "SUBVENCIÓN y ENTREGA DINERARIA SIN CONTRAPRESTACIÓN": 20973052275.3,
      "VENTAJA FISCAL": 609675373.16,
      "PRÉSTAMO": 268193965.44,
      "OTROS INSTRUMENTOS DE AYUDA": 15698126.53,
      "GARANTÍA": 630168.35
     },
     "por_administracion": {
-     "ESTADO": 14146337240.64,
-     "AUTONOMICA": 6718030827.86,
+     "ESTADO": 14147591393.64,
+     "AUTONOMICA": 6712352966.89,
      "LOCAL": 1005024003.05,
      "OTROS": 2281545.2
     },
     "por_procedimiento": {
-     "Concesión directa": 14823521546.06,
-     "Concurrencia competitiva": 6960834304.29,
-     "Sin clasificar (convocatorias pequeñas)": 87317766.4
+     "Concesión directa": 14824835699.06,
+     "Concurrencia competitiva": 6955156443.32,
+     "Sin clasificar (convocatorias pequeñas)": 87257766.4
     },
     "mrr": 5145671652.75,
     "convocatorias": [
@@ -14643,23 +14653,23 @@
    }
   },
   "2024": {
-   "total_fuente": 33875,
+   "total_fuente": 33876,
    "lista": "subvenciones-2024.json",
-   "beneficiarios": 33875,
-   "total": 33650915859.89,
+   "beneficiarios": 33876,
+   "total": 33651574495.97,
    "minimo": 100000.0,
    "por_tipo": {
     "P": [
      6460,
-     8209090720.6
+     8208941027.38
     ],
     "B": [
      12150,
-     7248902106.8
+     7248878359.84
     ],
     "G": [
-     6460,
-     5226632201.72
+     6461,
+     5226729479.74
     ],
     "A": [
      2668,
@@ -14667,7 +14677,7 @@
     ],
     "Q": [
      796,
-     4493181288.33
+     4493941836.57
     ],
     "S": [
      128,
@@ -14695,7 +14705,7 @@
     ],
     "E": [
      653,
-     122566692.29
+     122540942.29
     ],
     "J": [
      678,
@@ -14725,32 +14735,32 @@
    "top": [
     [
      "Q4618001D",
-     "UNIVERSITAT DE VALENCIA (ESTUDI GENERAL DE VALENCIA)",
+     "UNIVERSITAT DE VALENCIA",
      494355628.7
     ],
     [
      "Q2818002D",
-     "AGENCIA ESTATAL CSIC (CONSEJ.INV.CI",
-     386865517.86
+     "CSIC. INSTITUTO DE PARASITOLOGÍA Y BIOMEDICINA LO",
+     386927497.86
     ],
     [
      "Q4618002B",
-     "UNIVERSIDAD POLITECNICA DE VALENCIA-MINISTERIO DE UNIVERSIDADES E INVESTIGACION",
+     "UNIVERSITAT POLITECNICA DE VALENCIA",
      376962519.91
     ],
     [
      "A78923125",
-     "TELEFONICA MOVILES ESPAÑA SA",
+     "TELEFONICA MOVILES ESPAÑA . SA UNIPERSONAL",
      298399346.34
     ],
     [
      "Q0332001G",
-     "UNIVERSIDAD DE ALICANTE MINISTERIO DE UNIVERSIDADES E INVESTIGACION",
+     "UNIVERSIDAD DE ALICANTE",
      253245945.26
     ],
     [
      "Q3018001B",
-     "UNIVERSIDAD MURCIA",
+     "UNIVERSIDAD DE MURCIA",
      235850344.23
     ],
     [
@@ -14770,17 +14780,17 @@
     ],
     [
      "Q6250003H",
-     "UNIVERSITAT JAUME I",
+     "UNIVERSIDAD JAUME I DE CASTELLÓ",
      155327736.48
     ],
     [
      "A16952764",
-     "POWERCO BATTERY SPAIN SA.",
+     "POWER HOLDCO SPAIN SA",
      152860637.07
     ],
     [
      "S3511001D",
-     "COMUNIDAD AUTONOMA DE CANARIAS",
+     "COMUNIDAD AUTÓNOMA DE CANARIAS",
      146487493.5
     ],
     [
@@ -14790,7 +14800,7 @@
     ],
     [
      "Q5350015C",
-     "UNIVERSIDAD MIGUEL HERNANDEZ DE ELCHE",
+     "UNIVERSIDAD MIGUEL HERNÁNDEZ ELCHE",
      136188170.7
     ],
     [
@@ -14810,7 +14820,7 @@
     ],
     [
      "A79380465",
-     "MERCEDES BENZ ESPAÑA S.A.U",
+     "MERCEDES-BENZ ESPAÑA, S.A.",
      104488606.32
     ],
     [
@@ -14820,7 +14830,7 @@
     ],
     [
      "A28047223",
-     "REPSOL PETROLEO, S.A.",
+     "REPSOL PETROLEO SA",
      87237699.37
     ],
     [
@@ -14835,17 +14845,17 @@
     ],
     [
      "B50629187",
-     "STELLANTIS ESPAÑA S.L.",
+     "STELLANTIS ESPAÑA SL",
      84872990.98
     ],
     [
      "P3800001D",
-     "CABILDO INSULAR TENERIFE",
+     "CABILDO INSULAR DE TENERIFE",
      84712701.09
     ],
     [
      "P3500001G",
-     "CABILDO INSULAR GRAN CANARIA",
+     "CABILDO INSULAR DE GRAN CANARIA",
      82898349.33
     ],
     [
@@ -14865,27 +14875,27 @@
     ],
     [
      "Q5856176B",
-     "CONSELL DELS ILTRES COLLEGIS D'ADVOCATS DE CATALUNYA CCT",
+     "CONSELL DE L'ADVOCACIA CATALANA",
      71017728.22
     ],
     [
      "Q0818001J",
-     "UNIVERSITAT DE BARCELONA UNIVERSITAT DE BARCELONA",
+     "UNIVERSITAT DE BARCELONA",
      70317299.73
     ],
     [
      "S5011001D",
-     "DIPUTACION GENERAL DE ARAGON",
+     "GOBIERNO DE ARAGON",
      66862570.24
     ],
     [
      "Q1818002F",
      "UNIVERSIDAD DE GRANADA",
-     66481199.42
+     66609399.42
     ],
     [
      "A80907397",
-     "VODAFONE ESPAÑA S.A.",
+     "VODAFONE ESPAÑA SAU",
      66103279.14
     ],
     [
@@ -14895,13 +14905,13 @@
     ],
     [
      "A35604487",
-     "SALCAI-UTINSA, S.A.",
+     "SALCAI-UTINSA SA",
      63248596.0
     ],
     [
      "Q2818015F",
-     "UNIVERSIDAD POLITÉCNICA DE MADRID",
-     62677021.14
+     "UNIVERSIDAD POLITECNICA DE MADRID",
+     62646031.14
     ],
     [
      "S3100000C",
@@ -14915,12 +14925,12 @@
     ],
     [
      "S1911001D",
-     "JUNTA DE COMUNIDADES DE CASTILLA LA MANCHA",
+     "CASTILLA LA MANCHA",
      59281972.39
     ],
     [
      "A47000518",
-     "RENAULT ESPAÑA, S. A.",
+     "RENAULT ESPAÑA S.A.",
      57119283.11
     ],
     [
@@ -14930,12 +14940,12 @@
     ],
     [
      "Q2818029G",
-     "UNIVERSIDAD CARLOS III DE MADRID",
+     "UNIVERSIDAD CARLOS III",
      54015978.92
     ],
     [
      "Q0818003F",
-     "UNIVERSITAT POLITÈCNICA DE CATALUNYA (UPC)",
+     "UNIVERSITAT POLITECNICA DE CATALUNYA",
      53862591.29
     ],
     [
@@ -14945,7 +14955,7 @@
     ],
     [
      "Q9655132J",
-     "INSTITUT VALENCIÀ DE CULTURA",
+     "INSTITUT VALENCIÂ DE CULTURA",
      52953038.3
     ],
     [
@@ -14955,22 +14965,22 @@
     ],
     [
      "Q8650002B",
-     "UNIVERSIDAD DE VIGO",
+     "UNIVERSIDADE DE VIGO",
      52323028.18
     ],
     [
      "Q0818002H",
-     "UNIVERSITAT AUTONOMA DE BARCELONA UNIVERSITAT AUTONOMA DE BARCELONA",
+     "UNIVERSIDAD AUTÓNOMA DE BARCELONA",
      51981706.11
     ],
     [
      "G96101597",
-     "CONSEJO VALENCIANO DE COLEGIOS DE ABOGADOS",
+     "CONSEJO VALENCIANO DE COLEGIOS DE LA ABOGACÍA",
      51801500.98
     ],
     [
      "G15852981",
-     "CESGA",
+     "FUNDACIÓN CENTRO TECNOLÓGICO DE SUPERCOMPUTACIÓN DE GALICIA (CESGA)",
      51420964.0
     ],
     [
@@ -14980,22 +14990,22 @@
     ],
     [
      "G60667813",
-     "UNIVERSITAT OBERTA DE CATALUNYA",
+     "FUNDACIÓ PER A LA UNIVERSITAT OBERTA DE CATALUNYA",
      50598228.81
     ],
     [
      "A28003119",
-     "COMPAÑÍA ESPAÑOLA PETRÓLEOS, S.A.",
+     "MOEVE, S.A.",
      50153440.37
     ],
     [
      "A97516058",
-     "STADLER RAIL VALENCIA, S.A.U.",
+     "STADLER RAIL VALENCIA S.A.U",
      50010559.75
     ],
     [
      "B85680437",
-     "ENSO ESCO, S.L.",
+     "ENSO ESCO SL",
      50000000.0
     ],
     [
@@ -15005,7 +15015,7 @@
     ],
     [
      "S4611001A",
-     "GENERALITAT DE VALENCIA",
+     "COMUNIDAD AUTÓNOMA DE VALENCIA",
      47385268.25
     ],
     [
@@ -15020,7 +15030,7 @@
     ],
     [
      "A50002567",
-     "SA INDUSTRIAS CELULOSA ARAGONESA",
+     "S.A. INDUSTRIAS CELULOSA ARAGONESA",
      43002474.97
     ],
     [
@@ -15035,7 +15045,7 @@
     ],
     [
      "P3802400F",
-     "AYUNTAMIENTO LLANOS ARIDANE",
+     "AYUNTAMIENTO DE LOS LLANOS DE ARIDANE",
      41215783.55
     ],
     [
@@ -15075,22 +15085,22 @@
     ],
     [
      "Q2918001E",
-     "UNIVERSIDAD DE MÁLAGA",
-     38560048.54
+     "UNIVERSIDAD DE MALAGA",
+     38431848.54
     ],
     [
      "A28637304",
-     "AGRUPACION ESPAÑOLA DE ENTIDADES ASEGURADORAS DE L",
+     "AGR.ESP.ENT.ASEG.SEGUR.(AGROSEGURO)",
      38137857.91
     ],
     [
      "A81046856",
-     "ARCELORMITTAL ESPANA SA",
+     "ARCELORMITTAL ESPAÑA, S.A.",
      38075971.28
     ],
     [
      "A35092683",
-     "GUAGUAS MUNICIPALES S.A.",
+     "GUAGUAS MUNICIPALES SA",
      37387817.04
     ],
     [
@@ -15110,7 +15120,7 @@
     ],
     [
      "S4711001J",
-     "JUNTA DE CASTILLA Y LEON-SERVICIOS CENTRALES",
+     "SECRETARIA GENERAL DE LA CONSEJERIA DE FAMILIA E I",
      35114872.02
     ],
     [
@@ -15130,7 +15140,7 @@
     ],
     [
      "A28122992",
-     "REPSOL QUIMICA SA",
+     "REPSOL MATERIALS, S.A.",
      33357609.8
     ],
     [
@@ -15140,12 +15150,12 @@
     ],
     [
      "Q3518001G",
-     "UNIVERSIDAD DE LAS PALMAS DE G.C.",
+     "UNIVERSIDAD DE LAS PALMAS DE GRAN CANARIA",
      32831381.96
     ],
     [
      "P3500003C",
-     "CABILDO INSULAR FUERTEVENTURA",
+     "CABILDO INSULAR DE FUERTEVENTURA",
      32765202.48
     ],
     [
@@ -15155,7 +15165,7 @@
     ],
     [
      "P2200015B",
-     "MANCOMUNIDAD SERV MUNIC ALTO VALLE",
+     "MANCOMUNIDAD DEL ALTO VALLE DEL ARAGON",
      31355988.19
     ],
     [
@@ -15165,12 +15175,12 @@
     ],
     [
      "P1800000J",
-     "DIPUTACIÓN PROVINCIAL DE GRANADA",
+     "DIPUTACION DE GRANADA",
      30883407.62
     ],
     [
      "G85296226",
-     "CONSORCIO CENTRO DE INVESTIGACIÓN BIOMÉDICA EN RED, M.P. (CIBER)",
+     "CIBER CENTRO DE INVESTIGACION BIOMEDICA EN RED",
      30653187.38
     ],
     [
@@ -15185,12 +15195,12 @@
     ],
     [
      "B79110482",
-     "ATLANTIC COPPER, S.L.U.",
+     "ATLANTIC COPPER SL",
      30041146.32
     ],
     [
      "Q4818001B",
-     "UNIVERSIDAD DEL PAIS VASCO",
+     "UNIVERSIDAD DEL PAÍS VASCO",
      29905321.37
     ],
     [
@@ -15210,12 +15220,12 @@
     ],
     [
      "A82528548",
-     "XFERA MÓVILES S.A.",
+     "XFERA MOVILES SA",
      28881320.75
     ],
     [
      "B93583615",
-     "CLEAN SUSTAINABLE ENERGY CLM S.L",
+     "CLEAN SUSTAINABLE ENERGY CASTILLA-LA MANCHA, S.L.",
      28740838.63
     ],
     [
@@ -15455,31 +15465,31 @@
    }
   },
   "2023": {
-   "total_fuente": 37326,
+   "total_fuente": 37315,
    "lista": "subvenciones-2023.json",
-   "beneficiarios": 37326,
-   "total": 37266766377.04,
+   "beneficiarios": 37315,
+   "total": 37255084066.25,
    "minimo": 100000.0,
    "por_tipo": {
     "B": [
-     15320,
-     9138471797.45
+     15311,
+     9129879344.98
     ],
     "P": [
      6226,
-     8659688666.47
+     8658953299.66
     ],
     "A": [
-     3335,
-     5648084808.63
+     3333,
+     5647339722.18
     ],
     "G": [
      6324,
-     5247534105.97
+     5246081637.48
     ],
     "Q": [
      840,
-     4436922558.73
+     4436897902.07
     ],
     "S": [
      139,
@@ -15507,11 +15517,11 @@
     ],
     "E": [
      583,
-     129232540.71
+     129200738.87
     ],
     "J": [
      759,
-     121599637.83
+     121499159.76
     ],
     "U": [
      24,
@@ -15533,7 +15543,7 @@
    "top": [
     [
      "Q4618001D",
-     "UNIVERSITAT DE VALENCIA (ESTUDI GENERAL DE VALENCIA)",
+     "UNIVERSITAT DE VALENCIA",
      442392559.72
     ],
     [
@@ -15543,17 +15553,17 @@
     ],
     [
      "P3500001G",
-     "CABILDO INSULAR GRAN CANARIA",
+     "CABILDO INSULAR DE GRAN CANARIA",
      349715417.92
     ],
     [
      "Q4618002B",
-     "UNIVERSIDAD POLITECNICA DE VALENCIA-MINISTERIO DE UNIVERSIDADES E INVESTIGACION",
+     "UNIVERSITAT POLITECNICA DE VALENCIA",
      338027714.51
     ],
     [
      "Q2818002D",
-     "AGENCIA ESTATAL CSIC (CONSEJ.INV.CI",
+     "CSIC. INSTITUTO DE PARASITOLOGÍA Y BIOMEDICINA LO",
      329965587.86
     ],
     [
@@ -15568,38 +15578,38 @@
     ],
     [
      "Q0332001G",
-     "UNIVERSIDAD DE ALICANTE MINISTERIO DE UNIVERSIDADES E INVESTIGACION",
+     "UNIVERSIDAD DE ALICANTE",
      229891192.32
     ],
     [
      "S3511001D",
-     "COMUNIDAD AUTONOMA DE CANARIAS",
+     "COMUNIDAD AUTÓNOMA DE CANARIAS",
      213810343.67
     ],
     [
      "Q3018001B",
-     "UNIVERSIDAD MURCIA",
+     "UNIVERSIDAD DE MURCIA",
      210145577.99
     ],
     [
      "A16952764",
-     "POWERCO BATTERY SPAIN SA.",
+     "POWER HOLDCO SPAIN SA",
      201989086.21
     ],
     [
      "A93135218",
-     "AVATEL TELECOM S.A.",
+     "AVATELTELECOM, S.A.",
      194100663.21
     ],
     [
      "A82018474",
-     "TELEFONICA DE ESPAÑA S.A.",
+     "TELEFONICA DE ESPAÑA S.A.U",
      175366058.24
     ],
     [
      "Q2866001G",
      "CRUZ ROJA ESPAÑOLA",
-     154122523.37
+     154097866.71
     ],
     [
      "A28049161",
@@ -15613,7 +15623,7 @@
     ],
     [
      "Q6250003H",
-     "UNIVERSITAT JAUME I",
+     "UNIVERSIDAD JAUME I DE CASTELLÓ",
      128792598.71
     ],
     [
@@ -15623,12 +15633,12 @@
     ],
     [
      "Q5350015C",
-     "UNIVERSIDAD MIGUEL HERNANDEZ DE ELCHE",
+     "UNIVERSIDAD MIGUEL HERNÁNDEZ ELCHE",
      118893148.4
     ],
     [
      "P3500003C",
-     "CABILDO INSULAR FUERTEVENTURA",
+     "CABILDO INSULAR DE FUERTEVENTURA",
      118420182.08
     ],
     [
@@ -15638,22 +15648,22 @@
     ],
     [
      "A65232357",
-     "ADAMO TELECOM IBERIA, S.A.",
+     "ADAMO TELECOM IBERIA SAU",
      117003937.21
     ],
     [
      "B67809673",
-     "OPENCHIP & SOFTWARE TECHNOLOGIES, S.L.",
+     "OPENCHIP & SOFTWARE TECHNOLOGIES SL",
      110999999.7
     ],
     [
      "S4611001A",
-     "GENERALITAT DE VALENCIA",
+     "COMUNIDAD AUTÓNOMA DE VALENCIA",
      98911402.71
     ],
     [
      "P3800001D",
-     "CABILDO INSULAR TENERIFE",
+     "CABILDO INSULAR DE TENERIFE",
      98735648.61
     ],
     [
@@ -15668,7 +15678,7 @@
     ],
     [
      "A35604487",
-     "SALCAI-UTINSA, S.A.",
+     "SALCAI-UTINSA SA",
      93978893.11
     ],
     [
@@ -15678,12 +15688,12 @@
     ],
     [
      "Q0818001J",
-     "UNIVERSITAT DE BARCELONA UNIVERSITAT DE BARCELONA",
+     "UNIVERSITAT DE BARCELONA",
      86490602.05
     ],
     [
      "S3933002B",
-     "COMUNIDAD AUTÓNOMA DE CANTABRIA",
+     "GOBIERNO DE CANTABRIA",
      84895914.68
     ],
     [
@@ -15693,12 +15703,12 @@
     ],
     [
      "Q2819009H",
-     "SERVICIO PÚBLICO DE EMPLEO ESTATAL",
+     "SERVICIO PUBLICO DE EMPLEO ESTATAL",
      79656597.67
     ],
     [
      "S5011001D",
-     "DIPUTACION GENERAL DE ARAGON",
+     "GOBIERNO DE ARAGON",
      77264682.38
     ],
     [
@@ -15733,12 +15743,12 @@
     ],
     [
      "S4711001J",
-     "JUNTA DE CASTILLA Y LEON-SERVICIOS CENTRALES",
+     "SECRETARIA GENERAL DE LA CONSEJERIA DE FAMILIA E I",
      73616082.89
     ],
     [
      "A86212420",
-     "AENA SME SA",
+     "AENA SME S.A.",
      72211211.88
     ],
     [
@@ -15748,12 +15758,12 @@
     ],
     [
      "A81046856",
-     "ARCELORMITTAL ESPANA SA",
+     "ARCELORMITTAL ESPAÑA, S.A.",
      70760306.47
     ],
     [
      "S0800099D",
-     "CONS.BARCELONA SUPERCOMPUTING C-CNS",
+     "BARCELONA SUPERCOMPUTING CENTER CENTRO NACIONAL DE SUPERCOMPUTACION",
      69070208.62
     ],
     [
@@ -15763,22 +15773,22 @@
     ],
     [
      "S1911001D",
-     "JUNTA DE COMUNIDADES DE CASTILLA LA MANCHA",
+     "CASTILLA LA MANCHA",
      66748758.64
     ],
     [
      "A28047223",
-     "REPSOL PETROLEO, S.A.",
+     "REPSOL PETROLEO SA",
      66380456.36
     ],
     [
      "Q5856176B",
-     "CONSELL DELS ILTRES COLLEGIS D'ADVOCATS DE CATALUNYA CCT",
+     "CONSELL DE L'ADVOCACIA CATALANA",
      66181213.39
     ],
     [
      "A79380465",
-     "MERCEDES BENZ ESPAÑA S.A.U",
+     "MERCEDES-BENZ ESPAÑA, S.A.",
      66011027.84
     ],
     [
@@ -15788,7 +15798,7 @@
     ],
     [
      "B10565489",
-     "LOTTE ENERGY MATERIALS SPAIN S.L.",
+     "LOTTE ENERGY MATERIALS SPAIN, S.L.",
      65062457.15
     ],
     [
@@ -15808,12 +15818,12 @@
     ],
     [
      "G58020124",
-     "FUNDACION UNIVERSITARIA BALMES",
+     "FUNDACIÒ UNIVERSITÀRIA BALMES",
      59363452.48
     ],
     [
      "Q9655132J",
-     "INSTITUT VALENCIÀ DE CULTURA",
+     "INSTITUT VALENCIÂ DE CULTURA",
      58069460.0
     ],
     [
@@ -15823,12 +15833,12 @@
     ],
     [
      "A50002567",
-     "SA INDUSTRIAS CELULOSA ARAGONESA",
+     "S.A. INDUSTRIAS CELULOSA ARAGONESA",
      57652038.54
     ],
     [
      "B50629187",
-     "STELLANTIS ESPAÑA S.L.",
+     "STELLANTIS ESPAÑA SL",
      56836808.49
     ],
     [
@@ -15858,12 +15868,12 @@
     ],
     [
      "Q0818002H",
-     "UNIVERSITAT AUTONOMA DE BARCELONA UNIVERSITAT AUTONOMA DE BARCELONA",
+     "UNIVERSIDAD AUTÓNOMA DE BARCELONA",
      54180712.78
     ],
     [
      "Q2818015F",
-     "UNIVERSIDAD POLITÉCNICA DE MADRID",
+     "UNIVERSIDAD POLITECNICA DE MADRID",
      53896524.64
     ],
     [
@@ -15878,17 +15888,17 @@
     ],
     [
      "G60667813",
-     "UNIVERSITAT OBERTA DE CATALUNYA",
+     "FUNDACIÓ PER A LA UNIVERSITAT OBERTA DE CATALUNYA",
      50731756.89
     ],
     [
      "A35092683",
-     "GUAGUAS MUNICIPALES S.A.",
+     "GUAGUAS MUNICIPALES SA",
      50350918.66
     ],
     [
      "A28122992",
-     "REPSOL QUIMICA SA",
+     "REPSOL MATERIALS, S.A.",
      50215408.4
     ],
     [
@@ -15903,7 +15913,7 @@
     ],
     [
      "S1511001H",
-     "XUNTA DE GALICIA",
+     "DX DE ORDENACIÓN E PRODUCIÓN FORESTAL",
      48649469.38
     ],
     [
@@ -15913,27 +15923,27 @@
     ],
     [
      "Q0818003F",
-     "UNIVERSITAT POLITÈCNICA DE CATALUNYA (UPC)",
+     "UNIVERSITAT POLITECNICA DE CATALUNYA",
      47110855.81
     ],
     [
      "B46066361",
-     "FORD ESPAÑA SL",
+     "FORD ESPAÑA, S.L.",
      46602350.0
     ],
     [
      "P4800000D",
-     "DIPUTACION FORAL BIZKAIA",
+     "DIPUTACIÓN FORAL DE BIZKAIA",
      46240072.74
     ],
     [
      "Q8650002B",
-     "UNIVERSIDAD DE VIGO",
+     "UNIVERSIDADE DE VIGO",
      46066797.79
     ],
     [
      "B93583615",
-     "CLEAN SUSTAINABLE ENERGY CLM S.L",
+     "CLEAN SUSTAINABLE ENERGY CASTILLA-LA MANCHA, S.L.",
      45343057.27
     ],
     [
@@ -15943,7 +15953,7 @@
     ],
     [
      "G96101597",
-     "CONSEJO VALENCIANO DE COLEGIOS DE ABOGADOS",
+     "CONSEJO VALENCIANO DE COLEGIOS DE LA ABOGACÍA",
      43942305.46
     ],
     [
@@ -15953,7 +15963,7 @@
     ],
     [
      "P5030300G",
-     "AYUNTAMIENTO DE ZARAGOZA - SERVICIO DE JUVENTUD",
+     "AYUNTAMIENTO DE ZARAGOZA",
      43466862.8
     ],
     [
@@ -15968,12 +15978,12 @@
     ],
     [
      "Q2818029G",
-     "UNIVERSIDAD CARLOS III DE MADRID",
+     "UNIVERSIDAD CARLOS III",
      39867236.29
     ],
     [
      "B35137538",
-     "YUDAYA SL",
+     "YUDAYA, S.L.",
      39725813.29
     ],
     [
@@ -15988,12 +15998,12 @@
     ],
     [
      "P1800000J",
-     "DIPUTACIÓN PROVINCIAL DE GRANADA",
+     "DIPUTACION DE GRANADA",
      38325305.73
     ],
     [
      "G66210345",
-     "FUNDACIÓ EURECAT FUNDACIÓ EURECAT",
+     "FUNDACIÓ EURECAT",
      38183714.69
     ],
     [
@@ -16008,7 +16018,7 @@
     ],
     [
      "Q0718001A",
-     "UNIVERSIDAD DE LAS ISLAS BALEARES",
+     "UNIVERSITAT DE LES ILLES BALEARS",
      36292020.11
     ],
     [
@@ -16036,17 +16046,17 @@
     "fichero": "subvenciones-motivos-2023.json",
     "beneficiarios": 996,
     "puestos": 1000,
-    "importe": 19492374092.32,
-    "cobertura": 0.523,
+    "importe": 19490462172.49,
+    "cobertura": 0.5232,
     "por_finalidad": {
-     "Industria y Energía": 5846847175.64,
-     "Investigación, desarrollo e innovación": 2585596227.38,
+     "Industria y Energía": 5846519193.75,
+     "Investigación, desarrollo e innovación": 2585585891.77,
      "Infraestructuras": 2028489193.68,
      "Educación": 1749276457.3,
      "Otras actuaciones de carácter económico": 1479350105.6,
-     "Fomento del Empleo": 892655580.73,
+     "Fomento del Empleo": 888492538.4,
      "Servicios Sociales y Promoción Social": 854801527.41,
-     "Comercio, Turismo y Pymes": 757784334.36,
+     "Comercio, Turismo y Pymes": 760373774.36,
      "Cooperación internacional para el desarrollo y cultural": 630574368.32,
      "Subvenciones al transporte": 539808194.19,
      "Sanidad": 496082750.09,
@@ -16060,30 +16070,30 @@
      "Desempleo": 58920038.8
     },
     "por_instrumento": {
-     "SUBVENCIÓN y ENTREGA DINERARIA SIN CONTRAPRESTACIÓN": 19006962920.37,
+     "SUBVENCIÓN y ENTREGA DINERARIA SIN CONTRAPRESTACIÓN": 19005051000.54,
      "VENTAJA FISCAL": 296145129.03,
      "PRÉSTAMO": 183475662.27,
      "OTROS INSTRUMENTOS DE AYUDA": 3505718.6,
      "GARANTÍA": 2284662.05
     },
     "por_administracion": {
-     "ESTADO": 11861822017.86,
-     "AUTONOMICA": 6868283895.47,
+     "ESTADO": 11859260533.63,
+     "AUTONOMICA": 6868933459.87,
      "LOCAL": 760033855.9,
      "OTROS": 2234323.09
     },
     "por_procedimiento": {
-     "Concesión directa": 12843520821.34,
-     "Concurrencia competitiva": 6550520349.74,
+     "Concesión directa": 12846325780.66,
+     "Concurrencia competitiva": 6545803470.59,
      "Sin clasificar (convocatorias pequeñas)": 98332921.24
     },
-    "mrr": 6126037635.68,
+    "mrr": 6127377318.58,
     "convocatorias": [
      [
       "841508",
       "Retribución especifica de los productores de energía eléctrica a partir de fuentes de energía renovables, cogeneración y residuos (RECORE 2023)",
-      2629953303.29,
-      289
+      2629956303.41,
+      290
      ],
      [
       "678255",
@@ -16100,7 +16110,7 @@
      [
       "662668",
       "Orden de 30 de diciembre de 2022 por la que se aprueba la convocatoria 2022 de ayudas a «Proyectos de Generación de Conocimiento» y a actuaciones para la formación de personal investigador predoctoral asociadas a dichos proyectos.",
-      573337711.3,
+      573308378.3,
       98
      ],
      [
@@ -16263,10 +16273,10 @@
    }
   },
   "2022": {
-   "total_fuente": 30832,
+   "total_fuente": 30840,
    "lista": "subvenciones-2022.json",
-   "beneficiarios": 30832,
-   "total": 36610394981.88,
+   "beneficiarios": 30840,
+   "total": 36617469867.0,
    "minimo": 100000.0,
    "por_tipo": {
     "P": [
@@ -16274,12 +16284,12 @@
      9166684422.51
     ],
     "B": [
-     11452,
-     6745457350.25
+     11457,
+     6751313012.4
     ],
     "Q": [
      900,
-     4906962862.16
+     4906943012.16
     ],
     "S": [
      174,
@@ -16287,11 +16297,11 @@
     ],
     "G": [
      5707,
-     4736608624.3
+     4737078065.07
     ],
     "A": [
-     2949,
-     4683797762.63
+     2952,
+     4684567394.83
     ],
     "F": [
      1217,
@@ -16350,7 +16360,7 @@
     ],
     [
      "S3511001D",
-     "COMUNIDAD AUTONOMA DE CANARIAS",
+     "COMUNIDAD AUTÓNOMA DE CANARIAS",
      569047687.98
     ],
     [
@@ -16360,7 +16370,7 @@
     ],
     [
      "Q4618001D",
-     "UNIVERSITAT DE VALENCIA (ESTUDI GENERAL DE VALENCIA)",
+     "UNIVERSITAT DE VALENCIA",
      427770134.58
     ],
     [
@@ -16370,7 +16380,7 @@
     ],
     [
      "Q4618002B",
-     "UNIVERSIDAD POLITECNICA DE VALENCIA-MINISTERIO DE UNIVERSIDADES E INVESTIGACION",
+     "UNIVERSITAT POLITECNICA DE VALENCIA",
      389311128.93
     ],
     [
@@ -16380,22 +16390,22 @@
     ],
     [
      "Q2818002D",
-     "AGENCIA ESTATAL CSIC (CONSEJ.INV.CI",
+     "CSIC. INSTITUTO DE PARASITOLOGÍA Y BIOMEDICINA LO",
      358112538.74
     ],
     [
      "S0711001H",
-     "C.A. DE LAS ISLAS BALEARES",
+     "COMUNITAT AUTONOMA DE LES ILLES BALEARS",
      351897862.06
     ],
     [
      "A08685471",
-     "CELSA OPCO SA",
+     "BARNA STEEL, S.A.",
      346323069.95
     ],
     [
      "S4611001A",
-     "GENERALITAT DE VALENCIA",
+     "COMUNIDAD AUTÓNOMA DE VALENCIA",
      315175531.38
     ],
     [
@@ -16410,27 +16420,27 @@
     ],
     [
      "A28092583",
-     "TECNICAS REUNIDAS S A",
+     "TECNICAS REUNIDAS, S.A.",
      207511498.51
     ],
     [
      "S1511001H",
-     "XUNTA DE GALICIA",
+     "DX DE ORDENACIÓN E PRODUCIÓN FORESTAL",
      202203185.26
     ],
     [
      "B64841927",
-     "VOLOTEA S.L.",
+     "VOLOTEA S.L",
      200013805.09
     ],
     [
      "Q3018001B",
-     "UNIVERSIDAD MURCIA",
+     "UNIVERSIDAD DE MURCIA",
      198069716.22
     ],
     [
      "Q0332001G",
-     "UNIVERSIDAD DE ALICANTE MINISTERIO DE UNIVERSIDADES E INVESTIGACION",
+     "UNIVERSIDAD DE ALICANTE",
      194314690.42
     ],
     [
@@ -16445,12 +16455,12 @@
     ],
     [
      "U72694631",
-     "U.T.E. MIA",
+     "U.T.E.",
      123446975.66
     ],
     [
      "S1911001D",
-     "JUNTA DE COMUNIDADES DE CASTILLA LA MANCHA",
+     "CASTILLA LA MANCHA",
      116618442.12
     ],
     [
@@ -16460,12 +16470,12 @@
     ],
     [
      "Q6250003H",
-     "UNIVERSITAT JAUME I",
+     "UNIVERSIDAD JAUME I DE CASTELLÓ",
      113494990.09
     ],
     [
      "S5011001D",
-     "DIPUTACION GENERAL DE ARAGON",
+     "GOBIERNO DE ARAGON",
      111974783.79
     ],
     [
@@ -16481,11 +16491,11 @@
     [
      "Q2818014I",
      "UNIVERSIDAD COMPLUTENSE DE MADRID",
-     104846563.83
+     104802713.83
     ],
     [
      "G28651529",
-     "COMISION ESPAÑOLA DE AYUDA AL REFUGIADO",
+     "COMISIÓN ESPAÑOLA DE AYUDA AL REFUGIADO",
      102032534.16
     ],
     [
@@ -16495,27 +16505,27 @@
     ],
     [
      "Q5350015C",
-     "UNIVERSIDAD MIGUEL HERNANDEZ DE ELCHE",
+     "UNIVERSIDAD MIGUEL HERNÁNDEZ ELCHE",
      99617337.39
     ],
     [
      "A65232357",
-     "ADAMO TELECOM IBERIA, S.A.",
+     "ADAMO TELECOM IBERIA SAU",
      98141189.66
     ],
     [
      "P5030300G",
-     "AYUNTAMIENTO DE ZARAGOZA - SERVICIO DE JUVENTUD",
+     "AYUNTAMIENTO DE ZARAGOZA",
      96969452.63
     ],
     [
      "Q2818015F",
-     "UNIVERSIDAD POLITÉCNICA DE MADRID",
+     "UNIVERSIDAD POLITECNICA DE MADRID",
      95578604.83
     ],
     [
      "Q0818001J",
-     "UNIVERSITAT DE BARCELONA UNIVERSITAT DE BARCELONA",
+     "UNIVERSITAT DE BARCELONA",
      95125006.91
     ],
     [
@@ -16530,7 +16540,7 @@
     ],
     [
      "A84818558",
-     "CORPORACION DE RADIO Y TELEVISION ESPAÑOLA SA",
+     "CORPORACIÓN RADIO TV ESPAÑOLA S.A.",
      79777636.59
     ],
     [
@@ -16540,7 +16550,7 @@
     ],
     [
      "A93135218",
-     "AVATEL TELECOM S.A.",
+     "AVATELTELECOM, S.A.",
      73152794.53
     ],
     [
@@ -16555,27 +16565,27 @@
     ],
     [
      "S3933002B",
-     "COMUNIDAD AUTÓNOMA DE CANTABRIA",
+     "GOBIERNO DE CANTABRIA",
      71338728.77
     ],
     [
      "S4711001J",
-     "JUNTA DE CASTILLA Y LEON-SERVICIOS CENTRALES",
+     "SECRETARIA GENERAL DE LA CONSEJERIA DE FAMILIA E I",
      70446190.27
     ],
     [
      "Q2818013A",
      "UNIVERSIDAD AUTONOMA DE MADRID",
-     68245910.79
+     68289910.79
     ],
     [
      "Q5856176B",
-     "CONSELL DELS ILTRES COLLEGIS D'ADVOCATS DE CATALUNYA CCT",
+     "CONSELL DE L'ADVOCACIA CATALANA",
      59480334.21
     ],
     [
      "S3011001I",
-     "COMUNIDAD AUTONOMA DE LA REGION DE MURCIA",
+     "COMUNIDAD AUTÓNOMA DE LA REGIÓN DE MURCIA",
      59082963.17
     ],
     [
@@ -16585,7 +16595,7 @@
     ],
     [
      "A83516641",
-     "WAMOS AIR, S.A.",
+     "WAMOS AIR S.A.",
      57846462.66
     ],
     [
@@ -16605,17 +16615,17 @@
     ],
     [
      "P3500001G",
-     "CABILDO INSULAR GRAN CANARIA",
+     "CABILDO INSULAR DE GRAN CANARIA",
      56733645.77
     ],
     [
      "A82018474",
-     "TELEFONICA DE ESPAÑA S.A.",
+     "TELEFONICA DE ESPAÑA S.A.U",
      56313406.7
     ],
     [
      "S0800099D",
-     "CONS.BARCELONA SUPERCOMPUTING C-CNS",
+     "BARCELONA SUPERCOMPUTING CENTER CENTRO NACIONAL DE SUPERCOMPUTACION",
      54814737.07
     ],
     [
@@ -16625,7 +16635,7 @@
     ],
     [
      "P5809509B",
-     "CONSORCI PER GESTIO DE RESIDUS DEL VALLÈS ORIENTAL",
+     "CONSORCI PER A LA GESTIÓ DELS RESIDUS DEL VALLÈS ORIENTAL",
      53737026.66
     ],
     [
@@ -16635,12 +16645,12 @@
     ],
     [
      "Q9655132J",
-     "INSTITUT VALENCIÀ DE CULTURA",
+     "INSTITUT VALENCIÂ DE CULTURA",
      53255973.36
     ],
     [
      "A35604487",
-     "SALCAI-UTINSA, S.A.",
+     "SALCAI-UTINSA SA",
      50379328.15
     ],
     [
@@ -16650,17 +16660,17 @@
     ],
     [
      "B82846817",
-     "EDISTRIBUCIÓN REDES DIGITALES, S.L.(ANTES ENDESA DISTRIB. ELECTRICA S.",
+     "EDISTRIBUCION REDES DIGITALES SLU",
      48033027.55
     ],
     [
      "Q2818029G",
-     "UNIVERSIDAD CARLOS III DE MADRID",
+     "UNIVERSIDAD CARLOS III",
      48001336.38
     ],
     [
      "P2007400A",
-     "AYUNTAMIENTO DE DONOSTIA-SS. TESORERIA",
+     "AYUNTAMIENTO DE DONOSTIA",
      47661344.57
     ],
     [
@@ -16670,7 +16680,7 @@
     ],
     [
      "Q0818003F",
-     "UNIVERSITAT POLITÈCNICA DE CATALUNYA (UPC)",
+     "UNIVERSITAT POLITECNICA DE CATALUNYA",
      46377943.81
     ],
     [
@@ -16685,22 +16695,22 @@
     ],
     [
      "P3800001D",
-     "CABILDO INSULAR TENERIFE",
+     "CABILDO INSULAR DE TENERIFE",
      45368201.05
     ],
     [
      "Q0818002H",
-     "UNIVERSITAT AUTONOMA DE BARCELONA UNIVERSITAT AUTONOMA DE BARCELONA",
+     "UNIVERSIDAD AUTÓNOMA DE BARCELONA",
      44892092.14
     ],
     [
      "G96101597",
-     "CONSEJO VALENCIANO DE COLEGIOS DE ABOGADOS",
+     "CONSEJO VALENCIANO DE COLEGIOS DE LA ABOGACÍA",
      44515000.0
     ],
     [
      "G60667813",
-     "UNIVERSITAT OBERTA DE CATALUNYA",
+     "FUNDACIÓ PER A LA UNIVERSITAT OBERTA DE CATALUNYA",
      44129403.46
     ],
     [
@@ -16715,37 +16725,37 @@
     ],
     [
      "Q8650002B",
-     "UNIVERSIDAD DE VIGO",
+     "UNIVERSIDADE DE VIGO",
      43351620.66
     ],
     [
      "W0109762E",
-     "MEDWAY OPERADOR FERROVIARIO DE MERCADORI",
+     "MEDWAY, OPERADOR FERROVIARIO DE MERCADORIAS, S.A., SUC. ESPAÑA",
      43063056.85
     ],
     [
      "P0704000I",
-     "AYUNTAMIENTO DE PALMA",
+     "AJUNTAMENT DE PALMA",
      42989724.38
     ],
     [
      "S7900010E",
-     "CIUDAD DE MELILLA",
+     "CIUDAD AUTÓNOMA DE MELILLA",
      42810090.68
     ],
     [
      "P3803800F",
-     "AYUNTAMIENTO SANTA CRUZ TENERIFE",
+     "AYUNTAMIENTO DE SANTA CRUZ DE TENERIFE",
      42300396.87
     ],
     [
      "A95075578",
-     "I-DE REDES ELECTRICAS INTELIGENTES SAU",
+     "IBERDROLA DISTRIBUCION ELECTRICA S.A.",
      41408274.26
     ],
     [
      "P0810000J",
-     "AJ. HOSPITALET DE LLOBREGAT, L'",
+     "AYUNTAMIENTO DE L'HOSPITALET DE LLOBREGAT",
      41399373.14
     ],
     [
@@ -16755,12 +16765,12 @@
     ],
     [
      "Q2818016D",
-     "UNIVERSIDAD NACIONAL DE EDUCACIÓN A DISTANCIA-UNED",
+     "UNIVERSIDAD NACIONAL DE EDUCACIÓNA A DISTANCIA",
      37838934.18
     ],
     [
      "A86868114",
-     "RENFE MERCANCIAS SOCIEDAD MERCANTIL ESTA",
+     "RENFE MERCANCIAS SME, SA",
      37819160.0
     ],
     [
@@ -16780,12 +16790,12 @@
     ],
     [
      "A28047223",
-     "REPSOL PETROLEO, S.A.",
+     "REPSOL PETROLEO SA",
      35588032.82
     ],
     [
      "G73600553",
-     "FUNDACIÓN CEPAIM ACCIÓN ITEGRAL CON MIGRANTES.",
+     "FUNDACION CEPAIM ACCION INTEGRAL CON MIG",
      35090147.04
     ],
     [
@@ -16805,32 +16815,32 @@
     ],
     [
      "G85296226",
-     "CONSORCIO CENTRO DE INVESTIGACIÓN BIOMÉDICA EN RED, M.P. (CIBER)",
+     "CIBER CENTRO DE INVESTIGACION BIOMEDICA EN RED",
      34411565.85
     ],
     [
      "G66210345",
-     "FUNDACIÓ EURECAT FUNDACIÓ EURECAT",
+     "FUNDACIÓ EURECAT",
      34407023.05
     ],
     [
      "A50002567",
-     "SA INDUSTRIAS CELULOSA ARAGONESA",
+     "S.A. INDUSTRIAS CELULOSA ARAGONESA",
      34317683.69
     ],
     [
      "Q0801209H",
-     "CONS.C.EQUIP.EX.LAB.LLUM SINCROTRÓ",
+     "CONSORCI PER A LA CONSTRUCCIO, EQUIPAMENT I EXPLOTACIO DEL LABORATORI DE LLUM DE SINCROTO",
      34239607.31
     ],
     [
      "A61351540",
-     "GRUPO INVERSOR HESPERIA S.A",
+     "GRUPO INVERSOR HESPERIA SA",
      34099521.95
     ],
     [
      "Q4818001B",
-     "UNIVERSIDAD DEL PAIS VASCO",
+     "UNIVERSIDAD DEL PAÍS VASCO",
      33879805.36
     ],
     [
@@ -16840,7 +16850,7 @@
     ],
     [
      "B35236355",
-     "AQUANARIA SL",
+     "AQUANARIA S.L.",
      33355012.81
     ]
    ],
@@ -16848,17 +16858,17 @@
     "fichero": "subvenciones-motivos-2022.json",
     "beneficiarios": 999,
     "puestos": 1000,
-    "importe": 21710970014.78,
+    "importe": 21713557770.19,
     "cobertura": 0.593,
     "por_finalidad": {
-     "Industria y Energía": 4088084794.31,
+     "Industria y Energía": 4088010784.01,
      "Otras actuaciones de carácter económico": 3492743319.74,
-     "Investigación, desarrollo e innovación": 2836779420.69,
+     "Investigación, desarrollo e innovación": 2836779570.69,
      "Servicios Sociales y Promoción Social": 1660906357.95,
      "Educación": 1644691288.14,
      "Subvenciones al transporte": 1314353405.85,
      "Sanidad": 1313390837.16,
-     "Fomento del Empleo": 1000844732.81,
+     "Fomento del Empleo": 1003506348.52,
      "Infraestructuras": 907336645.74,
      "Comercio, Turismo y Pymes": 828622267.14,
      "Acceso a la vivienda y fomento de la edificación": 645124016.44,
@@ -16873,24 +16883,24 @@
      "Defensa": 25066506.21
     },
     "por_instrumento": {
-     "SUBVENCIÓN y ENTREGA DINERARIA SIN CONTRAPRESTACIÓN": 20125627856.21,
+     "SUBVENCIÓN y ENTREGA DINERARIA SIN CONTRAPRESTACIÓN": 20128215611.62,
      "PRÉSTAMO": 1289942600.24,
      "VENTAJA FISCAL": 290821088.4,
      "OTROS INSTRUMENTOS DE AYUDA": 3662329.44,
      "GARANTÍA": 916140.49
     },
     "por_administracion": {
-     "ESTADO": 14700858841.17,
-     "AUTONOMICA": 6054544496.08,
+     "ESTADO": 14700858991.17,
+     "AUTONOMICA": 6057132101.49,
      "LOCAL": 946422687.81,
      "OTROS": 9143989.72
     },
     "por_procedimiento": {
-     "Concesión directa": 14892542475.38,
-     "Concurrencia competitiva": 6704541798.22,
+     "Concesión directa": 14892468465.08,
+     "Concurrencia competitiva": 6707203563.93,
      "Sin clasificar (convocatorias pequeñas)": 113885741.18
     },
-    "mrr": 7810721845.83,
+    "mrr": 7810721995.83,
     "convocatorias": [
      [
       "759155",
@@ -17045,7 +17055,7 @@
      [
       "602408",
       "Orden CIN/1478/2021, de 27 de diciembre, por la que se aprueba la convocatoria 2021 de las ayudas Ramón y Cajal.",
-      136219050.02,
+      136219200.02,
       83
      ],
      [
