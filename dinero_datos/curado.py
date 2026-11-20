@@ -1,8 +1,8 @@
 """Capa curated: las tablas del modelo de datos en Parquet (docs/modelo-de-datos.md).
 
 Lee los JSON de publicado/v1/ (ya transformados, comprobados y sin datos personales) y
-los reparte en una tabla por hecho y por catálogo, con las columnas de sql/esquema.sql.
-Ese fichero es la definición única: aquí solo se dice de dónde sale cada valor.
+los reparte en una tabla por hecho y por catálogo, con las columnas de TABLAS. Sirve para
+descargar y analizar sin servidor: DuckDB, pandas, Polars o R leen Parquet directamente.
 
 Cambios respecto a los JSON, todos mecánicos:
   · importes en euros (las fuentes en millones se multiplican por 10⁶, con dos decimales);
@@ -27,11 +27,6 @@ from . import fuentes as f
 
 log = logging.getLogger("dinero_datos")
 
-ESQUEMA = Path(__file__).resolve().parents[1] / "sql" / "esquema.sql"
-# Tablas del esquema que no salen de los JSON: las llena el paso de carga.
-SOLO_CARGA = {"fuente", "carga"}
-COLUMNAS_CARGA = {"carga_id"}
-
 CENTIMO = Decimal("0.01")
 MILLON = Decimal(1_000_000)
 
@@ -40,25 +35,47 @@ NUTS_DE = {nombre: nuts for nuts, nombre in con.NUTS2.items()} | {"España": ESP
 
 
 # --------------------------------------------------------------------------- #
-# Esquema
+# Tablas: columnas y tipos de cada Parquet (tipos de pyarrow en _tipo_arrow)
 # --------------------------------------------------------------------------- #
-def esquema(ruta: Path = ESQUEMA) -> dict[str, list[tuple[str, str]]]:
-    """{tabla: [(columna, tipo)]} leído de sql/esquema.sql (una columna por línea)."""
-    tablas, actual = {}, None
-    for linea in ruta.read_text("utf-8").splitlines():
-        linea = linea.split("--")[0].strip()
-        if m := re.match(r"CREATE TABLE (\w+) \($", linea):
-            actual = tablas.setdefault(m[1], [])
-        elif actual is not None and linea.startswith(")"):
-            actual = None
-        elif actual is not None and linea and not re.match(r"(PRIMARY|UNIQUE|FOREIGN|CHECK|CONSTRAINT)\b", linea):
-            nombre, tipo = re.match(r"(\w+) (\w+(?:\(\d+,\d+\))?)", linea).groups()
-            actual.append((nombre, tipo))
-    return tablas
+# Importes en euros con dos decimales; territorios por código NUTS; personas físicas
+# con nif vacío. Es el formato de descarga para análisis (DuckDB, pandas…), no el de la
+# base de datos de la plataforma, que es documental (MongoDB).
+TABLAS: dict[str, list[tuple[str, str]]] = {
+    "territorio": [("codigo", "text"), ("nombre", "text"), ("nivel", "text"), ("codigo_sgcief", "text"), ("foral", "boolean")],
+    "codigo_lista": [("lista", "text"), ("codigo", "text"), ("nombre", "text")],
+    "politica": [("codigo", "text"), ("nombre", "text"), ("area", "text")],
+    "programa": [("codigo", "text"), ("nombre", "text"), ("politica", "text")],
+    "economica": [("codigo", "text"), ("nombre", "text"), ("capitulo", "smallint")],
+    "cofog_division": [("codigo", "text"), ("nombre", "text")],
+    "entidad": [("nif", "text"), ("tipo_nif", "text"), ("nombre", "text"), ("es_publica", "boolean")],
+    "entidad_nombre": [("nif", "text"), ("nombre", "text"), ("fuente_id", "text"), ("primer_anio", "smallint"), ("ultimo_anio", "smallint")],
+    "organo": [("id", "text"), ("fuente_id", "text"), ("nombre", "text"), ("nif", "text"), ("administracion", "text"), ("superior", "text")],
+    "subvencion_anual": [("anio", "smallint"), ("puesto", "integer"), ("nif", "text"), ("nombre", "text"), ("importe_equivalente", "numeric(16,2)")],
+    "convocatoria": [("codigo", "text"), ("titulo", "text"), ("finalidad", "text"), ("organo_id", "text"), ("procedimiento", "text"), ("mrr", "boolean"), ("detalle", "boolean")],
+    "subvencion_concesion": [("anio", "smallint"), ("nif", "text"), ("convocatoria", "text"), ("instrumento", "text"), ("importe", "numeric(16,2)"), ("concesiones", "integer")],
+    "subvencion_partido": [("anio", "smallint"), ("nif", "text"), ("nombre", "text"), ("importe", "numeric(16,2)"), ("concesiones", "integer")],
+    "subvencion_partido_organo": [("anio", "smallint"), ("organo_id", "text"), ("importe", "numeric(16,2)")],
+    "licitacion": [("id", "bigint"), ("fuente_id", "text"), ("enlace", "text"), ("organo_id", "text"), ("expediente", "text"), ("objeto", "text"), ("tipo", "text"), ("procedimiento", "text"), ("sistema", "text"), ("cpv", "text"), ("territorio", "text"), ("fondos_ue", "boolean")],
+    "adjudicacion": [("licitacion_id", "bigint"), ("lote", "text"), ("nif", "text"), ("nombre", "text"), ("objeto", "text"), ("fecha", "date"), ("importe_sin_iva", "numeric(16,2)"), ("importe_con_iva", "numeric(16,2)"), ("ofertas", "integer"), ("pyme", "boolean"), ("es_valor_maximo", "boolean"), ("importe_compartido", "boolean")],
+    "presupuesto_estado": [("columna", "text"), ("ejercicio", "smallint"), ("prorrogado", "boolean"), ("base", "smallint"), ("programa", "text"), ("credito_inicial", "numeric(16,2)")],
+    "presupuesto_ccaa": [("anio", "smallint"), ("territorio", "text"), ("politica", "text"), ("capitulo", "smallint"), ("credito_inicial", "numeric(16,2)")],
+    "presupuesto_ccaa_economica": [("anio", "smallint"), ("territorio", "text"), ("economica", "text"), ("credito_inicial", "numeric(16,2)")],
+    "presupuesto_ccaa_prorroga": [("anio", "smallint"), ("territorio", "text"), ("base", "smallint"), ("politicas_iguales", "integer"), ("politicas", "integer"), ("mismo_total", "boolean")],
+    "entrega_a_cuenta": [("anio", "smallint"), ("territorio", "text"), ("concepto", "text"), ("importe", "numeric(16,2)"), ("norma", "text")],
+    "gasto_cofog": [("anio", "smallint"), ("subsector", "text"), ("territorio", "text"), ("division", "text"), ("importe", "numeric(16,2)"), ("provisional", "boolean")],
+    "gasto_cofog_total": [("anio", "smallint"), ("subsector", "text"), ("territorio", "text"), ("total", "numeric(16,2)"), ("transferencias_aapp", "numeric(16,2)"), ("provisional", "boolean")],
+    "ejecucion_estado": [("anio", "smallint"), ("mes", "smallint"), ("orden", "smallint"), ("bloque", "text"), ("nivel", "smallint"), ("codigo", "text"), ("concepto", "text"), ("importe_acumulado", "numeric(16,2)"), ("provisional", "boolean")],
+    "pib": [("anio", "smallint"), ("importe", "numeric(16,2)")],
+    "poblacion": [("anio", "smallint"), ("territorio", "text"), ("habitantes", "integer"), ("provisional", "boolean")],
+}
+
+
+def esquema() -> dict[str, list[tuple[str, str]]]:
+    return TABLAS
 
 
 def columnas(tabla: str, esq: dict | None = None) -> list[str]:
-    return [c for c, _ in (esq or esquema())[tabla] if c not in COLUMNAS_CARGA]
+    return [c for c, _ in (esq or TABLAS)[tabla]]
 
 
 # --------------------------------------------------------------------------- #
@@ -359,7 +376,7 @@ def exportar(origen: Path, destino: Path) -> dict[str, int]:
     destino.mkdir(parents=True, exist_ok=True)
     resumen = {}
     for tabla, filas in sorted(t.filas.items()):
-        cols = [(c, ty) for c, ty in esq[tabla] if c not in COLUMNAS_CARGA]
+        cols = esq[tabla]
         datos = {}
         for n, (c, ty) in enumerate(cols):
             valores = [r[n] for r in filas]

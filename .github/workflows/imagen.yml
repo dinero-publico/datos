@@ -5,7 +5,7 @@ name: Imagen del contenedor
 on:
   push:
     branches: [main]
-    paths: ["dinero_datos/**", "sql/**", "tests/**", "requirements*.txt", "Dockerfile", ".dockerignore", ".github/workflows/imagen.yml"]
+    paths: ["dinero_datos/**", "tests/**", "requirements*.txt", "Dockerfile", ".dockerignore", ".github/workflows/imagen.yml"]
   workflow_dispatch: {}
 
 permissions:

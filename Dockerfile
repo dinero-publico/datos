@@ -20,7 +20,6 @@ COPY requirements.txt requirements-plataforma.txt ./
 RUN pip install -r requirements.txt -r requirements-plataforma.txt
 
 COPY dinero_datos/ dinero_datos/
-COPY sql/ sql/
 COPY tests/ tests/
 
 # Usuario sin privilegios; uid fijo para que los permisos de los volúmenes sean previsibles.

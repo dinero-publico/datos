@@ -1,4 +1,4 @@
-"""Capa curated: las tablas salen con las columnas de sql/esquema.sql y sin retocar los datos."""
+"""Capa curated: las tablas en Parquet salen con las columnas de TABLAS y sin retocar los datos."""
 import json
 from decimal import Decimal
 
@@ -64,10 +64,8 @@ def tablas(tmp_path):
     return {tabla: [dict(zip(cols[tabla], r)) for r in filas] for tabla, filas in t.filas.items()}
 
 
-def test_todas_las_tablas_del_esquema(tablas):
-    esq = curado.esquema()
-    assert set(tablas) == set(esq) - curado.SOLO_CARGA
-    assert all("carga_id" not in curado.columnas(t) for t in tablas)
+def test_todas_las_tablas(tablas):
+    assert set(tablas) == set(curado.TABLAS)
 
 
 def test_millones_a_euros_y_territorios_nuts(tablas):

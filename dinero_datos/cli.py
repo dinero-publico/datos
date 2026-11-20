@@ -6,7 +6,8 @@ Pasos:
   analizar    Añade los datos derivados (prórrogas, años de cada ejercicio) y comprueba
               la coherencia de cada fuente (informe.json).
   publicar    Escribe el catálogo (catalogo.json e index.html) de lo publicado.
-  curar       Reparte lo publicado en las tablas del modelo de datos, en Parquet (curated/).
+  curar       Reparte lo publicado en tablas Parquet para análisis (curated/).
+  avisar      Avisa al cargador de la plataforma (DINERO_CARGADOR) del hash de cada fuente.
   todo        descargar + analizar + publicar (lo que hace el workflow cada día).
 
 Ejemplos:
@@ -16,8 +17,7 @@ Ejemplos:
 
 Los JSON se escriben en publicado/v1/ y los Parquet en curated/. Las carpetas se pueden
 cambiar con DINERO_RAW, DINERO_PUBLICADO y DINERO_CURATED (así se usan en el contenedor).
-Cada fuente se procesa por separado: si una
-falla, se conserva su último JSON válido y el error queda anotado en meta.json.
+Cada fuente se procesa por separado: si una falla, se conserva su último JSON válido y el error queda anotado en meta.json.
 """
 from __future__ import annotations
 
@@ -223,6 +223,22 @@ def publicar() -> int:
     return 0
 
 
+# --------------------------------------------------------------------------- #
+# Aviso a la plataforma: el cargador compara los hashes y carga solo lo que cambió
+# --------------------------------------------------------------------------- #
+def avisar(url: str | None) -> int:
+    if not url:
+        log.error("Falta la URL del cargador (--cargador o DINERO_CARGADOR)")
+        return 2
+    meta = (leer("meta.json") or {}).get("fuentes", {})
+    cuerpo = {"fuentes": {k: {"hash": v.get("hash"), "fichero": v.get("fichero"), "descargado": v.get("descargado")}
+                          for k, v in meta.items() if v.get("hash")}}
+    import requests
+    r = requests.post(url.rstrip("/") + "/cargas", json=cuerpo, timeout=30)
+    log.info("Cargador: %s %s", r.status_code, r.text[:200])
+    return 0 if r.ok else 1
+
+
 PLANTILLA = """<!doctype html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Datos · Dinero Público</title>
@@ -246,12 +262,14 @@ th{{color:var(--muted);font-weight:500}}code{{font-size:.9em}}
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="python -m dinero_datos", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("paso", choices=["descargar", "transformar", "analizar", "publicar", "curar", "todo"])
+    ap.add_argument("paso", choices=["descargar", "transformar", "analizar", "publicar", "curar", "avisar", "todo"])
     ap.add_argument("--only", choices=list(FUENTES), action="append", help="procesar solo estas fuentes (descargar/transformar/todo)")
     ap.add_argument("--year", type=int, default=dt.date.today().year, help="año de referencia (por defecto, el actual)")
     ap.add_argument("--delay", type=float, default=1.0, help="segundos de espera entre peticiones")
     ap.add_argument("--max-peticiones", type=int, default=f.BDNS_MAX_PETICIONES,
                     help="consultas a la BDNS por ejecución para los motivos de las subvenciones")
+    ap.add_argument("--cargador", default=os.environ.get("DINERO_CARGADOR"),
+                    help="URL del cargador para «avisar» (por defecto, DINERO_CARGADOR)")
     ap.add_argument("--raw", type=Path, default=f.RAW_DIR, help="carpeta de originales para «transformar» (por defecto raw/)")
     a = ap.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(message)s")
@@ -263,6 +281,8 @@ def main(argv: list[str] | None = None) -> int:
         return analizar()
     if a.paso == "publicar":
         return publicar()
+    if a.paso == "avisar":
+        return avisar(a.cargador)
     if a.paso == "curar":
         from . import curado
         curado.exportar(SALIDA, CURATED)
