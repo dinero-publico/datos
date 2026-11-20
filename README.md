@@ -21,6 +21,7 @@ Hacienda / INE ──► descargar ──► transformar ──► analizar ─�
 | `analizar` | Añade datos derivados y comprueba la coherencia de cada fuente. Deja el resultado en `informe.json`. |
 | `publicar` | Escribe `catalogo.json` (ficheros, tamaño, sha256, fecha) y la página `index.html`. |
 | `todo` | `descargar` + `analizar` + `publicar`: lo que hace el workflow cada día. |
+| `curar` | Reparte lo publicado en las tablas del [modelo de datos](docs/modelo-de-datos.md), un Parquet por tabla en `curated/` (necesita `requirements-plataforma.txt`). |
 
 ```bash
 python -m venv .venv && source .venv/bin/activate
@@ -94,6 +95,24 @@ git add publicado && git commit -m "Contratos actualizados" && git push
 ```
 
 El modelo de datos al que se llevarán todas las fuentes está en [docs/modelo-de-datos.md](docs/modelo-de-datos.md).
+
+## Tablas del modelo y contenedor
+
+`sql/esquema.sql` define las tablas del modelo para PostgreSQL y es la definición única de sus columnas. `python -m dinero_datos curar` genera un Parquet por tabla en `curated/` con esas mismas columnas: importes en euros con dos decimales, territorios por código NUTS y una fila por año, territorio y concepto. Los tests comprueban que coinciden con el esquema. Las tablas salen de los JSON de `publicado/v1/`, así que no hay personas físicas con nombre. Generarlas lleva unos segundos y 1 GB de memoria.
+
+La imagen `ghcr.io/dinero-publico/datos` (Dockerfile; la construye `.github/workflows/imagen.yml` y pasa los tests dentro) es la misma herramienta en un contenedor, para los CronJobs de k3s ([plan](https://github.com/dinero-publico/datos/issues/4)). Las carpetas se cambian con variables de entorno, que en la imagen apuntan a `/datos`:
+
+| Variable | Por defecto | En la imagen |
+|---|---|---|
+| `DINERO_RAW` | `raw/` | `/datos/raw` |
+| `DINERO_PUBLICADO` | `publicado/` | `/datos/publicado` |
+| `DINERO_CURATED` | `curated/` | `/datos/curated` |
+
+```bash
+docker build -t dinero-datos .
+docker run --rm -v "$PWD/raw:/datos/raw" -v "$PWD/publicado:/datos/publicado" -v "$PWD/curated:/datos/curated" \
+  dinero-datos descargar --only entregas
+```
 
 ## Puesta en marcha y actualización
 

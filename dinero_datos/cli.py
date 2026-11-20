@@ -6,6 +6,7 @@ Pasos:
   analizar    Añade los datos derivados (prórrogas, años de cada ejercicio) y comprueba
               la coherencia de cada fuente (informe.json).
   publicar    Escribe el catálogo (catalogo.json e index.html) de lo publicado.
+  curar       Reparte lo publicado en las tablas del modelo de datos, en Parquet (curated/).
   todo        descargar + analizar + publicar (lo que hace el workflow cada día).
 
 Ejemplos:
@@ -13,7 +14,9 @@ Ejemplos:
   python -m dinero_datos descargar --only entregas
   python -m dinero_datos transformar && python -m dinero_datos analizar
 
-Los JSON se escriben en publicado/v1/. Cada fuente se procesa por separado: si una
+Los JSON se escriben en publicado/v1/ y los Parquet en curated/. Las carpetas se pueden
+cambiar con DINERO_RAW, DINERO_PUBLICADO y DINERO_CURATED (así se usan en el contenedor).
+Cada fuente se procesa por separado: si una
 falla, se conserva su último JSON válido y el error queda anotado en meta.json.
 """
 from __future__ import annotations
@@ -24,6 +27,7 @@ import hashlib
 import html
 import json
 import logging
+import os
 import sys
 from pathlib import Path
 
@@ -32,7 +36,9 @@ from . import contratos
 from . import fuentes as f
 
 ROOT = Path(__file__).resolve().parents[1]
-PUBLICADO = ROOT / "publicado"
+# Carpetas configurables con variables de entorno (en el contenedor apuntan a sus volúmenes).
+PUBLICADO = Path(os.environ.get("DINERO_PUBLICADO") or ROOT / "publicado")
+CURATED = Path(os.environ.get("DINERO_CURATED") or ROOT / "curated")
 SALIDA = PUBLICADO / "v1"  # versión del formato: cambia si cambia la estructura de los JSON
 URL_PUBLICA = "https://dinero-publico.github.io/datos/v1/"
 
@@ -240,7 +246,7 @@ th{{color:var(--muted);font-weight:500}}code{{font-size:.9em}}
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="python -m dinero_datos", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("paso", choices=["descargar", "transformar", "analizar", "publicar", "todo"])
+    ap.add_argument("paso", choices=["descargar", "transformar", "analizar", "publicar", "curar", "todo"])
     ap.add_argument("--only", choices=list(FUENTES), action="append", help="procesar solo estas fuentes (descargar/transformar/todo)")
     ap.add_argument("--year", type=int, default=dt.date.today().year, help="año de referencia (por defecto, el actual)")
     ap.add_argument("--delay", type=float, default=1.0, help="segundos de espera entre peticiones")
@@ -257,6 +263,10 @@ def main(argv: list[str] | None = None) -> int:
         return analizar()
     if a.paso == "publicar":
         return publicar()
+    if a.paso == "curar":
+        from . import curado
+        curado.exportar(SALIDA, CURATED)
+        return 0
     rc = descargar(a.only, None, a.year, a.delay, a.max_peticiones)
     analizar()
     publicar()

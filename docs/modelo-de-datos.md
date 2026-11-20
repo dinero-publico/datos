@@ -2,6 +2,8 @@
 
 Propuesta del modelo sobre el que se cargan todas las fuentes en la plataforma de datos (issue #4). Sirve igual para PostgreSQL, para los Parquet de `curated/` y para generar los JSON de `/datos/v1/`, que siguen siendo compatibles.
 
+Las tablas están definidas en [`sql/esquema.sql`](../sql/esquema.sql), y `python -m dinero_datos curar` ya las genera en Parquet a partir de `/datos/v1/`. Respecto a lo de aquí abajo, tienen pequeñas diferencias de nombre y algunas tablas más: `presupuesto_ccaa_economica`, `presupuesto_ccaa_prorroga`, `gasto_cofog_total`, `pib`, `subvencion_partido_organo` y `codigo_lista`.
+
 ## Ideas que lo guían
 
 1. **Cuatro capas, cada una se rehace desde la anterior.**

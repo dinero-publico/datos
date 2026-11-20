@@ -20,6 +20,7 @@ from __future__ import annotations
 import io
 import json
 import logging
+import os
 import re
 import time
 from html.parser import HTMLParser
@@ -30,7 +31,8 @@ import openpyxl
 import requests
 
 ROOT = Path(__file__).resolve().parents[1]
-RAW_DIR = ROOT / "raw"
+# Carpetas de trabajo: por defecto dentro del repositorio; en un contenedor, en sus volúmenes.
+RAW_DIR = Path(os.environ.get("DINERO_RAW") or ROOT / "raw")
 
 USER_AGENT = (
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -255,7 +257,7 @@ class Downloader:
                 f"{url} no devolvió un Excel (HTTP {r.status_code}, {r.headers.get('content-type')})"
             )
         if self.save_raw:
-            RAW_DIR.mkdir(exist_ok=True)
+            RAW_DIR.mkdir(parents=True, exist_ok=True)
             (RAW_DIR / raw_name).write_bytes(r.content)
         return r.content
 
