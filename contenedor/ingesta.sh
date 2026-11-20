@@ -3,20 +3,27 @@
 #
 #   ingesta.sh entregas            (una o varias fuentes; «todas» para el proceso completo)
 #
-# Clona el repo de datos en /trabajo, así publicado/ siempre parte de lo último de main.
+# Clona el repo de datos en /trabajo (es público, sin credenciales), así publicado/ siempre
+# parte de lo último de main. Para el push pide un token de la GitHub App de la organización
+# justo antes (dura una hora y la descarga de contratos puede tardar más).
 # Los originales se guardan en $DINERO_RAW (PVC). Si el push choca con otro commit (el
 # workflow diario de GitHub), descarta el suyo, rehace los ficheros desde raw/ sin red y
 # reintenta. Al final copia publicado/ a /datos/publicado y avisa al cargador si hay URL.
 set -eu
 
-REPO="${DINERO_REPO:-git@github.com:dinero-publico/datos.git}"
+REPO="${DINERO_REPO:-https://github.com/dinero-publico/datos.git}"
 TRABAJO="${TRABAJO:-/trabajo}/datos"
-export GIT_SSH_COMMAND="ssh -i /secretos/git/clave -o IdentitiesOnly=yes -o UserKnownHostsFile=/secretos/git/known_hosts"
 export GIT_AUTHOR_NAME="cronos" GIT_AUTHOR_EMAIL="cronos@dinero-publico.invalid"
 export GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME" GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 
 ONLY=""
 for f in "$@"; do [ "$f" = "todas" ] || ONLY="$ONLY --only $f"; done
+
+push() {  # con el token de la App en una cabecera, para que no quede en URLs ni en logs
+    token=$(python -m dinero_datos.github_app) || { echo "Sin token de la GitHub App." >&2; exit 1; }
+    auth=$(printf "x-access-token:%s" "$token" | base64 -w0)
+    git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $auth" push --quiet origin HEAD:main
+}
 
 generar() {  # $1: descargar | transformar
     python -m dinero_datos "$1" $ONLY
@@ -37,7 +44,7 @@ for intento in 1 2 3; do
         break
     fi
     git commit --quiet -m "Datos actualizados $(date -u +%Y-%m-%d) desde cronos: $*"
-    if git push --quiet origin HEAD:main; then
+    if push; then
         echo "Publicado (intento $intento)."
         break
     fi

@@ -17,9 +17,9 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONPATH=/app \
     PYTHONSAFEPATH=1
 
-# git y ssh para la ingesta en cronos (contenedor/ingesta.sh hace push de publicado/).
+# git y openssl para la ingesta en cronos (push de publicado/ con el token de la GitHub App).
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends git openssh-client \
+    && apt-get install -y --no-install-recommends git openssl ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
