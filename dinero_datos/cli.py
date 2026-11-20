@@ -28,6 +28,7 @@ import sys
 from pathlib import Path
 
 from . import analisis
+from . import contratos
 from . import fuentes as f
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -45,11 +46,20 @@ FUENTES = {
     "cofog": ("cofog.json", "Gasto ejecutado por función (COFOG) de cada administración y comunidad (IGAE)"),
     "poblacion": ("poblacion.json", "Población residente a 1 de enero por comunidad (INE)"),
     "subvenciones": ("subvenciones.json", "Grandes beneficiarios de subvenciones y ayudas (100.000 € o más en el año) y subvenciones a partidos políticos (BDNS, IGAE)"),
+    "contratos": ("contratos.json", "Adjudicaciones de contratos públicos de la Plataforma de Contratación del Sector Público: resúmenes por año"),
 }
+# Fuentes que no se procesan salvo que se pidan con --only: la Plataforma de Contratación
+# limita mucho la velocidad de descarga y sus ficheros ocupan varios GB, así que se
+# actualiza desde un ordenador local (ver README).
+SOLO_A_PETICION = {"contratos"}
 # Fuentes que se publican en varios ficheros: el principal más «<nombre>-<parte>.json».
 LISTAS = {"subvenciones": lambda parte: (
     f"Concesiones de los mayores beneficiarios de {parte.split('-')[-1]}, agrupadas por convocatoria, con su finalidad (BDNS, IGAE)"
-    if parte.startswith("motivos-") else f"Lista completa de grandes beneficiarios de {parte} (BDNS, IGAE)")}
+    if parte.startswith("motivos-") else f"Lista completa de grandes beneficiarios de {parte} (BDNS, IGAE)"),
+    "contratos": lambda parte: (
+        f"Lo adjudicado a cada adjudicatario (NIF) en {parte.split('-')[-1]}: número de adjudicaciones e importe sin IVA"
+        if parte.startswith("adjudicatarios-") else f"Cada adjudicación de contratos de {parte} (año-mes de adjudicación; Plataforma de Contratación del Sector Público)"),
+}
 
 
 def digest(obj) -> str:
@@ -63,7 +73,7 @@ def leer(nombre: str) -> dict | None:
 
 def escribir(nombre: str, obj) -> None:
     SALIDA.mkdir(parents=True, exist_ok=True)
-    if isinstance(obj, dict) and nombre.startswith("subvenciones-"):
+    if isinstance(obj, dict) and nombre.startswith(("subvenciones-", "contratos-")):
         # Ficheros largos: un elemento por línea (diffs legibles y ficheros pequeños).
         d = lambda x: json.dumps(x, ensure_ascii=False)
         partes = []
@@ -103,12 +113,13 @@ def descargar(only: list[str] | None, offline: Path | None, year: int, delay: fl
         "cofog": lambda: f.fetch_cofog(dl, desde=year - f.YEARS_BACK - 2),
         "poblacion": lambda: f.fetch_poblacion(dl, desde=year - f.YEARS_BACK - 2),
         "subvenciones": lambda: f.fetch_subvenciones(dl, f.unir_subvenciones(leer("subvenciones.json"), leer), year, max_peticiones),
+        "contratos": lambda: contratos.fetch_contratos(offline=offline is not None),
     }
     meta = leer("meta.json") or {}
     meta.setdefault("fuentes", {})
     fatal = False
     for clave, trabajo in trabajos.items():
-        if only and clave not in only:
+        if (only and clave not in only) or (not only and clave in SOLO_A_PETICION):
             continue
         nombre = FUENTES[clave][0]
         log.info("▶ %s", clave)
@@ -116,7 +127,7 @@ def descargar(only: list[str] | None, offline: Path | None, year: int, delay: fl
         try:
             obj = trabajo()
             h = digest(obj)
-            salidas = f.partir_subvenciones(obj) if clave == "subvenciones" else {nombre: obj}
+            salidas = (f.partir_subvenciones(obj) if clave == "subvenciones" else obj if clave == "contratos" else {nombre: obj})
             if h != info.get("hash") or any(not (SALIDA / n).exists() for n in salidas):
                 # Se conservan los datos derivados del análisis anterior hasta que se vuelva a analizar.
                 for n, o in salidas.items():

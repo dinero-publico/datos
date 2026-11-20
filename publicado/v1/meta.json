@@ -36,6 +36,11 @@
    "descargado": "2026-11-19T16:54:10+00:00",
    "hash": "4b18bc556c93fe22",
    "fichero": "subvenciones.json"
+  },
+  "contratos": {
+   "descargado": "2026-11-20T14:27:25+00:00",
+   "hash": "334b79544d5adda7",
+   "fichero": "contratos.json"
   }
  }
 }

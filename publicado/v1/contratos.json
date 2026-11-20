@@ -1,0 +1,3128 @@
+{
+ "fuente": "https://www.hacienda.gob.es/es-ES/GobiernoAbierto/Datos%20Abiertos/Paginas/LicitacionesContratante.aspx",
+ "origen": "Plataforma de Contratación del Sector Público (Ministerio de Hacienda)",
+ "cobertura": {
+  "desde": "2025-01-01",
+  "meses": [
+   "202501",
+   "202502",
+   "202503",
+   "202504",
+   "202505",
+   "202506",
+   "202507",
+   "202508",
+   "202509",
+   "202510",
+   "202511",
+   "202512",
+   "202601",
+   "202602",
+   "202603",
+   "202604",
+   "202605",
+   "202606",
+   "202607",
+   "202608",
+   "202609",
+   "202610",
+   "202611"
+  ],
+  "hasta": "2026-11-17"
+ },
+ "ambito": "Licitaciones de los perfiles del contratante alojados en la Plataforma de Contratación del Sector Público. No incluye las plataformas autonómicas agregadas (Cataluña, Madrid, Andalucía, País Vasco, Galicia, Navarra, La Rioja…) ni los contratos menores.",
+ "disociacion": "Dinero Público no publica el nombre ni el NIF de los adjudicatarios que son personas físicas: figuran como «Persona física (nombre no publicado)» y solo cuentan en los totales.",
+ "unidad": "euros; importe de adjudicación sin IVA salvo que se indique",
+ "valor_maximo": "Los acuerdos marco y sistemas dinámicos de adquisición no suman al importe adjudicado: su importe es un máximo para varios años y empresas. Van aparte en «valor_maximo».",
+ "en_curso": [
+  "2026"
+ ],
+ "tipos": {
+  "1": "Suministros",
+  "2": "Servicios",
+  "3": "Obras",
+  "21": "Gestión de servicios públicos",
+  "22": "Concesión de servicios",
+  "31": "Concesión de obras públicas",
+  "32": "Concesión de obras",
+  "40": "Colaboración público-privada",
+  "7": "Administrativo especial",
+  "8": "Privado",
+  "50": "Patrimonial",
+  "999": "Otros"
+ },
+ "procedimientos": {
+  "1": "Abierto",
+  "2": "Restringido",
+  "3": "Negociado sin publicidad",
+  "4": "Negociado con publicidad",
+  "5": "Diálogo competitivo",
+  "6": "Contrato menor",
+  "7": "Derivado de acuerdo marco",
+  "8": "Concurso de proyectos",
+  "9": "Abierto simplificado",
+  "10": "Asociación para la innovación",
+  "11": "Derivado de asociación para la innovación",
+  "12": "Basado en sistema dinámico de adquisición",
+  "13": "Licitación con negociación",
+  "100": "Normas internas",
+  "999": "Otros"
+ },
+ "sistemas": {
+  "0": "Contrato",
+  "1": "Acuerdo marco",
+  "2": "Sistema dinámico de adquisición",
+  "3": "Basado en acuerdo marco",
+  "4": "Basado en sistema dinámico de adquisición"
+ },
+ "nif_tipos": {
+  "A": "Sociedades anónimas",
+  "B": "Sociedades limitadas",
+  "C": "Sociedades colectivas",
+  "D": "Sociedades comanditarias",
+  "E": "Comunidades de bienes",
+  "F": "Cooperativas",
+  "G": "Asociaciones y fundaciones",
+  "H": "Comunidades de propietarios",
+  "J": "Sociedades civiles",
+  "N": "Entidades extranjeras",
+  "P": "Ayuntamientos y entidades locales",
+  "Q": "Organismos públicos",
+  "R": "Entidades religiosas",
+  "S": "Órganos de la Administración",
+  "U": "Uniones temporales de empresas",
+  "V": "Otras entidades",
+  "W": "Establecimientos de no residentes",
+  "fisica": "Personas físicas",
+  "otro": "Otros identificadores (sobre todo extranjeros)"
+ },
+ "comunidades": {
+  "ES11": "Galicia",
+  "ES12": "Asturias",
+  "ES13": "Cantabria",
+  "ES21": "País Vasco",
+  "ES22": "Navarra",
+  "ES23": "La Rioja",
+  "ES24": "Aragón",
+  "ES30": "Madrid",
+  "ES41": "Castilla y León",
+  "ES42": "Castilla-La Mancha",
+  "ES43": "Extremadura",
+  "ES51": "Cataluña",
+  "ES52": "C. Valenciana",
+  "ES53": "Illes Balears",
+  "ES61": "Andalucía",
+  "ES62": "Murcia",
+  "ES63": "Ceuta",
+  "ES64": "Melilla",
+  "ES70": "Canarias"
+ },
+ "administraciones": [
+  "Estado",
+  "Comunidades autónomas",
+  "Entidades locales",
+  "Universidades",
+  "Otras entidades"
+ ],
+ "anios": {
+  "2026": {
+   "ficheros": [
+    "contratos-2026-01.json",
+    "contratos-2026-02.json",
+    "contratos-2026-03.json",
+    "contratos-2026-04.json",
+    "contratos-2026-05.json",
+    "contratos-2026-06.json",
+    "contratos-2026-07.json",
+    "contratos-2026-08.json",
+    "contratos-2026-09.json",
+    "contratos-2026-10.json",
+    "contratos-2026-11.json"
+   ],
+   "fichero_adjudicatarios": "contratos-adjudicatarios-2026.json",
+   "adjudicaciones": 150865,
+   "importe": 41059869166.16,
+   "con_iva": 49522324469.43,
+   "adjudicatarios": 52489,
+   "organos": 7212,
+   "valor_maximo": [
+    8095,
+    2588052972.03
+   ],
+   "una_oferta": [
+    68561,
+    13718461814.12
+   ],
+   "pyme": [
+    93650,
+    12070735924.76
+   ],
+   "fondos_ue": [
+    10966,
+    4733978888.61
+   ],
+   "por_tipo": {
+    "Servicios": [
+     58039,
+     16873148845.36
+    ],
+    "Obras": [
+     21247,
+     11778362718.15
+    ],
+    "Suministros": [
+     62855,
+     11092663652.7
+    ],
+    "Concesión de servicios": [
+     1129,
+     493495627.39
+    ],
+    "Patrimonial": [
+     2782,
+     410435700.73
+    ],
+    "Privado": [
+     4409,
+     332865806.55
+    ],
+    "Gestión de servicios públicos": [
+     4,
+     55690330.34
+    ],
+    "Administrativo especial": [
+     394,
+     22865432.92
+    ],
+    "Concesión de obras": [
+     5,
+     259152.02
+    ],
+    "Concesión de obras públicas": [
+     1,
+     81900.0
+    ]
+   },
+   "por_procedimiento": {
+    "Abierto": [
+     65002,
+     29264323191.57
+    ],
+    "Negociado sin publicidad": [
+     14119,
+     4375263664.17
+    ],
+    "Abierto simplificado": [
+     46814,
+     3303700059.52
+    ],
+    "Restringido": [
+     10161,
+     1430829308.54
+    ],
+    "Normas internas": [
+     8495,
+     824142000.83
+    ],
+    "Derivado de acuerdo marco": [
+     5202,
+     593232353.57
+    ],
+    "Negociado con publicidad": [
+     427,
+     423652932.39
+    ],
+    "Licitación con negociación": [
+     378,
+     390647204.1
+    ],
+    "Diálogo competitivo": [
+     6,
+     356715464.39
+    ],
+    "Otros": [
+     172,
+     90461771.53
+    ],
+    "Concurso de proyectos": [
+     77,
+     5928673.4
+    ],
+    "Asociación para la innovación": [
+     12,
+     972542.15
+    ]
+   },
+   "por_sistema": {
+    "Contrato": [
+     113510,
+     35148975389.4
+    ],
+    "Basado en acuerdo marco": [
+     28111,
+     4662361648.7
+    ],
+    "Basado en sistema dinámico de adquisición": [
+     9244,
+     1248532128.06
+    ]
+   },
+   "por_administracion": {
+    "Estado": [
+     46289,
+     17846439218.14
+    ],
+    "Entidades locales": [
+     69856,
+     13958331570.56
+    ],
+    "Comunidades autónomas": [
+     26166,
+     7853557862.71
+    ],
+    "Otras entidades": [
+     5768,
+     850825032.79
+    ],
+    "Universidades": [
+     2786,
+     550715481.96
+    ]
+   },
+   "por_comunidad": {
+    "Madrid": [
+     29267,
+     12003041302.38
+    ],
+    "Andalucía": [
+     26910,
+     5162336381.63
+    ],
+    "Varias o sin especificar": [
+     9649,
+     3745654551.99
+    ],
+    "C. Valenciana": [
+     15961,
+     3639973445.78
+    ],
+    "Canarias": [
+     11384,
+     2891802546.83
+    ],
+    "Castilla y León": [
+     10204,
+     2241964523.57
+    ],
+    "Castilla-La Mancha": [
+     6809,
+     1906048394.03
+    ],
+    "Illes Balears": [
+     4957,
+     1454104320.28
+    ],
+    "Galicia": [
+     5311,
+     1431268196.3
+    ],
+    "Aragón": [
+     6024,
+     1347683340.18
+    ],
+    "Extremadura": [
+     5762,
+     1075278633.96
+    ],
+    "Murcia": [
+     4406,
+     1062184215.67
+    ],
+    "Cataluña": [
+     2557,
+     988876261.51
+    ],
+    "Asturias": [
+     4131,
+     785825076.15
+    ],
+    "Cantabria": [
+     3547,
+     617621603.22
+    ],
+    "Melilla": [
+     801,
+     180117223.85
+    ],
+    "Ceuta": [
+     900,
+     177261102.21
+    ],
+    "País Vasco": [
+     981,
+     176529839.24
+    ],
+    "La Rioja": [
+     1030,
+     150709488.64
+    ],
+    "Navarra": [
+     274,
+     21588718.74
+    ]
+   },
+   "por_mes": {
+    "2026-01": [
+     9042,
+     2171599958.83
+    ],
+    "2026-02": [
+     12568,
+     3387252315.09
+    ],
+    "2026-03": [
+     15275,
+     3983659935.46
+    ],
+    "2026-04": [
+     14574,
+     3786590427.44
+    ],
+    "2026-05": [
+     15848,
+     4366242953.04
+    ],
+    "2026-06": [
+     17467,
+     4168041235.74
+    ],
+    "2026-07": [
+     17161,
+     5015958725.33
+    ],
+    "2026-08": [
+     11991,
+     2946210854.68
+    ],
+    "2026-09": [
+     14442,
+     4191364221.78
+    ],
+    "2026-10": [
+     15587,
+     5541616820.52
+    ],
+    "2026-11": [
+     6910,
+     1501331718.25
+    ]
+   },
+   "mayores": [
+    [
+     "B87971677",
+     "SIEMENS MOBILITY, SLU",
+     1218333836.18,
+     2
+    ],
+    [
+     "A80241789",
+     "SERVEO SERVICIOS, S.A.U.",
+     421939420.14,
+     167
+    ],
+    [
+     "A28541639",
+     "FCC MEDIO AMBIENTE, S.A.U.",
+     335980259.4,
+     55
+    ],
+    [
+     "A83052407",
+     "SOCIEDAD ESTATAL CORREOS Y TELÉGRAFOS, S.A., S.M.E.",
+     308265140.24,
+     6
+    ],
+    [
+     "A28506038",
+     "MITIE FACILITIES SERVICES SAU (INTERSERVE FACILITIES SERVICES SA-EMPRESA EXTINGUIDA)",
+     288020045.97,
+     12
+    ],
+    [
+     "A78923125",
+     "TELEFÓNICA MÓVILES DE ESPAÑA S.A.U",
+     271221074.39,
+     1
+    ],
+    [
+     "A00000000",
+     "DRAGADOS, S.A.-HELIOPOL, S.A.U-MAGTEL OPERACIONES, S.L.U.",
+     230185285.16,
+     1
+    ],
+    [
+     "A09376989",
+     "Emergencias Sanitarias SA",
+     226427914.0,
+     2
+    ],
+    [
+     "338574",
+     "UTE Ohl-sando-altuna Y Uria-chm",
+     199734168.0,
+     1
+    ],
+    [
+     "B22183370",
+     "ARQUISOCIAL",
+     192027795.79,
+     13
+    ],
+    [
+     "331411",
+     "SACYR CONSTRUCCIÓN, SA-CAVOSA OBRAS Y PROYECTOS, SA-AMC CNES. Y CONTRATAS 2014, SL-LOPESAN ASFALTOS Y CNES., SAU",
+     181012088.65,
+     1
+    ],
+    [
+     "B80399660",
+     "ACCIONA SERVICIOS URBANOS, S.R.L.",
+     174314394.27,
+     1
+    ],
+    [
+     "A26019992",
+     "FCC Aqualia S.A.",
+     165887839.61,
+     12
+    ],
+    [
+     "A28760692",
+     "VALORIZA SERVICIOS MEDIOAMBIENTALES, S.A.",
+     165767957.8,
+     30
+    ],
+    [
+     "332888",
+     "OBRASCON HUARTE LAIN S.A - Construcciones Sán.chez Dominguez-SANDO, S.A.U. - INNOVACIONES TÉCNICAS Y RECURSOS CONSTRUCTIVOS S.A.",
+     163400806.16,
+     1
+    ],
+    [
+     "A81948077",
+     "ENDESA ENERGÍA, S.A.U",
+     163336470.42,
+     30
+    ],
+    [
+     "A95758389",
+     "Iberdrola Clientes Sau",
+     158369504.67,
+     93
+    ],
+    [
+     "A28599033",
+     "INDRA SISTEMAS SA",
+     143301896.68,
+     82
+    ],
+    [
+     "U26998526",
+     "UTE SA de Obras y Servicios, Copasa, SA y Setec Building SL, Unión Temporal de Empresas, Ley 18/1982 de 26 de mayo",
+     138390135.5,
+     1
+    ],
+    [
+     "A78053147",
+     "Telefonica Soluciones De Informatica Y Comunicaciones De España S.A.U.",
+     137417318.99,
+     70
+    ],
+    [
+     "A79524054",
+     "URBASER, S.A.",
+     132237302.51,
+     19
+    ],
+    [
+     "B82765611",
+     "UTE SSG-DIGAMAR",
+     128663032.85,
+     1
+    ],
+    [
+     "A15000193",
+     "CASTROMIL, S.A",
+     119086536.7,
+     3
+    ],
+    [
+     "B08923963",
+     "UTE IVEMON CLM (Ivemon Ambulancias Egara, S.L. / Ivemon Servicios Sanitarios, S.L.)",
+     117085381.08,
+     1
+    ],
+    [
+     "U93837136",
+     "UTE Valle De Las Navas",
+     112952366.74,
+     1
+    ],
+    [
+     "339564",
+     "UTE CENTRO OPERACIONES LA ELIPA",
+     112119303.91,
+     1
+    ],
+    [
+     "332312",
+     "SACYR CONSTRUCCIÓN, S.A.-PAPSA INFRAESTRUCTURAS, S.A.",
+     111827525.49,
+     1
+    ],
+    [
+     "335124",
+     "FCCCO/COMSA",
+     111538000.0,
+     1
+    ],
+    [
+     "A73998346",
+     "ASCH INFRAESTRUCTURAS Y SERVICIOS, S.A.",
+     105287976.81,
+     17
+    ],
+    [
+     "A38453809",
+     "DISA RED DE SERVICIOS PETROLÍFEROS, S.A.U.",
+     103823149.75,
+     32
+    ],
+    [
+     "A84076397",
+     "NAVANTIA SA SME",
+     103416639.85,
+     37
+    ],
+    [
+     "324585",
+     "UTE COPASA - SETEC",
+     102640733.8,
+     1
+    ],
+    [
+     "A28019206",
+     "FERROVIAL CONSTRUCCIÓN, S.A.",
+     99696164.07,
+     42
+    ],
+    [
+     "A81948077",
+     "Endesa Energía S.A.U.",
+     94509847.46,
+     43
+    ],
+    [
+     "A78053147",
+     "TELEFONICA SOLUCIONES DE INFORMATICA Y COMUNICACIONES DE ESPAÑA S.A.U.",
+     93355502.98,
+     29
+    ],
+    [
+     "B88018098",
+     "INDRA SOLUCIONES TECNOLOGIAS DE LA INFORMACION SL",
+     93122183.39,
+     11
+    ],
+    [
+     "A46041711",
+     "BECSA, S.A.",
+     87694257.91,
+     69
+    ],
+    [
+     "A85290799",
+     "Irvia Mantenimiento Ferroviario, S.A.",
+     86935600.5,
+     3
+    ],
+    [
+     "U93925832",
+     "UTE EYSA - SETEX",
+     86415597.32,
+     2
+    ],
+    [
+     "A80907397",
+     "Vodafone España, S.A.U.",
+     84729849.02,
+     147
+    ],
+    [
+     "A15139314",
+     "Dragados-CHM-Rubau Tarres",
+     84333534.72,
+     1
+    ],
+    [
+     "330120",
+     "UTE INDIGO PARK ESPAÑA, S.A.U. - VALORIZA SERVICIOS MEDIOAMBIENTALES, S.A.",
+     81384814.0,
+     1
+    ],
+    [
+     "A95758389",
+     "IBERDROLA CLIENTES S.A.U.",
+     81347782.38,
+     111
+    ],
+    [
+     "U93835767",
+     "NTT DATA SPAIN, S.L.U. - NTT DATA SPAIN BPO, S.L.U",
+     80508326.92,
+     1
+    ],
+    [
+     "Q2801668A",
+     "AGENCIA ESTATAL DE METEOROLOGIA",
+     77927646.36,
+     1
+    ],
+    [
+     "A28010791",
+     "International Business Machines, S.A.",
+     77675955.4,
+     9
+    ],
+    [
+     "A81948077",
+     "Endesa Energia",
+     77546462.31,
+     84
+    ],
+    [
+     "A28582013",
+     "CHM OBRAS E INFRAESTRUCTURAS SA",
+     77295356.6,
+     50
+    ],
+    [
+     "A28385458",
+     "ESTAC Y SERVI S.A. - SETEX-APARKI, SA",
+     76685677.0,
+     2
+    ],
+    [
+     "U24930349",
+     "SANIR MOVILIDAD SANITARIA SAU, BERLINAS DE CANARIAS SL",
+     75333257.28,
+     1
+    ],
+    [
+     "A28010478",
+     "IMESAPI, S.A.",
+     74968305.38,
+     30
+    ],
+    [
+     "A95113361",
+     "ACCIONA AGUA, S.A.",
+     74257199.54,
+     13
+    ],
+    [
+     "B15675515",
+     "CITANIAS OBRAS Y SERVICIOS, S.L.U.",
+     71297931.23,
+     46
+    ],
+    [
+     "A78159654",
+     "TALLER DE CONSTRUCCION TMR SA",
+     71101555.38,
+     8
+    ],
+    [
+     "A28854727",
+     "FCC CONSTRUCCION, S.A.",
+     70533422.69,
+     36
+    ],
+    [
+     "331861",
+     "FCC CONSTRUCCIÓN, S.A.-PAVASAL EMPRESA CONSTRUCTORA S.A.U.",
+     69585000.0,
+     1
+    ],
+    [
+     "B30017636",
+     "AVANZA MOVILIDAD LEVANTE, S.L.",
+     67847907.46,
+     1
+    ],
+    [
+     "U27660356",
+     "UTE Cafmagtel Espeluy",
+     67706861.69,
+     1
+    ],
+    [
+     "A83295485",
+     "SAGITAL SA - MULTISERVICIOS AEROPOR SA",
+     67248284.4,
+     1
+    ],
+    [
+     "A36006666",
+     "CONSTRUCTORA SAN JOSE, S.A.",
+     66009056.58,
+     1
+    ],
+    [
+     "A95758389",
+     "IBERDROLA CLIENTES, S.A.U.",
+     65222291.9,
+     60
+    ],
+    [
+     "A08099681",
+     "ABBOTT LABORATORIES, S.A.",
+     64945984.41,
+     25
+    ],
+    [
+     "A82009812",
+     "ORANGE ESPAGNE, S.A.U.",
+     63254462.3,
+     142
+    ],
+    [
+     "A79707345",
+     "Solred, S.A.",
+     63123304.05,
+     28
+    ],
+    [
+     "A78053147",
+     "UTE TSOL-TdE",
+     63062423.3,
+     1
+    ],
+    [
+     "333368",
+     "FCC MEDIO AMBIENTE, S.A.U. - FCC EQUAL CEE CANARIAS, S.L.U. - CAPROSS 2004, S.L.",
+     62880376.2,
+     1
+    ],
+    [
+     "334298",
+     "AQUAMBIENTE-COPASA-PESA",
+     61784295.49,
+     1
+    ],
+    [
+     "A83283861",
+     "GESTIÓN Y EJECUCIÓN DE OBRA CIVIL S.A.U.",
+     60651497.62,
+     5
+    ],
+    [
+     "328858",
+     "Drace Geocisa,S.A.+Global Omnium+Ciclagua",
+     60260799.09,
+     1
+    ],
+    [
+     "A28855260",
+     "Inetum España, S.A.",
+     59717068.58,
+     118
+    ],
+    [
+     "A32032039",
+     "PROYECON GALICIA,S.A.",
+     58577306.83,
+     26
+    ],
+    [
+     "A81046856",
+     "Arcelormittal España SA",
+     58336634.05,
+     20
+    ],
+    [
+     "A28117463",
+     "IQVIA Information, SA",
+     57795001.1,
+     5
+    ],
+    [
+     "331433",
+     "UTE Alstom-intel",
+     57557139.96,
+     1
+    ],
+    [
+     "A86340098",
+     "CLECE SEGURIDAD, S.A.",
+     55721769.85,
+     27
+    ],
+    [
+     "A53223764",
+     "HIDRAQUA GESTIÓN INTEGRAL DE AGUAS DE LEVANTE, S.A.",
+     55685178.79,
+     1
+    ],
+    [
+     "B81927709",
+     "ESCRIBANO MECHANICAL & ENGINEERING S.L.",
+     55308523.13,
+     8
+    ],
+    [
+     "A41050113",
+     "ITURRI SA",
+     54630475.68,
+     48
+    ],
+    [
+     "B49154818",
+     "UTE CEVIAM - INEXO",
+     54559213.03,
+     1
+    ],
+    [
+     "333547",
+     "UTE Alstom-intel",
+     54421985.41,
+     1
+    ],
+    [
+     "331569",
+     "FERROVIAL CONSTRUCCIÓN, S.A. y ASYOTA ASFALTOS Y OBRAS, S.L.",
+     54376618.0,
+     1
+    ],
+    [
+     "331450",
+     "UTE Alstom-inst Tec Elect Asturiana",
+     54297865.8,
+     1
+    ],
+    [
+     "332755",
+     "FERROVIAL CONSTRUCCIÓN, S.A. Y VIAS Y CONSTRUCCIONES, S.A.",
+     54230502.72,
+     1
+    ],
+    [
+     "339719",
+     "UTE Alstom-inst-syneox",
+     53558613.14,
+     1
+    ],
+    [
+     "337443",
+     "VALORIZA SERVICIOS MEDIOAMBIENTALES, S.A. / CONTENUR, S.L.",
+     52991345.56,
+     1
+    ],
+    [
+     "B39866199",
+     "ASCAN SERVICIOS URBANOS SL",
+     51335851.35,
+     14
+    ],
+    [
+     "327331",
+     "UTE ACCIONA MEDIO AMBIENTE-MANTEN",
+     51139607.55,
+     1
+    ],
+    [
+     "B56960206",
+     "GRUPO PROBISER",
+     50531430.86,
+     1
+    ],
+    [
+     "A12000022",
+     "SOCIEDAD DE FOMENTO AGRÍCOLA CASTELLONENSE, S.A.",
+     49505618.44,
+     40
+    ],
+    [
+     "333259",
+     "UTE Elecnor Syneox Electren Tlyc",
+     49493831.09,
+     1
+    ],
+    [
+     "A83052407",
+     "SOCIEDAD ESTATAL CORREOS Y TELEGRAFOS, S.A. S.M.E.",
+     48828910.06,
+     146
+    ],
+    [
+     "A81948077",
+     "ENDESA ENERGIA S.A.U.",
+     48687781.52,
+     21
+    ],
+    [
+     "A28599033",
+     "Indra Sistemas SA",
+     48171546.26,
+     7
+    ],
+    [
+     "A78366382",
+     "SACYR CONSTRUCCIÓN, S.A.",
+     47566423.33,
+     1
+    ],
+    [
+     "A46015129",
+     "PAVASAL EMPRESA CONSTRUCTORA, S.A.U.",
+     47393792.21,
+     55
+    ],
+    [
+     "B61503355",
+     "Roche Diagnostics, S.L.",
+     46781944.06,
+     21
+    ],
+    [
+     "333599",
+     "UTE CONSTRUCCIONES SARRION - CYOPSA SISOCIA - BECSA",
+     46760170.0,
+     1
+    ],
+    [
+     "B30365712",
+     "UTE STV GESTION - ALBAIDA",
+     46728399.22,
+     1
+    ],
+    [
+     "A46027660",
+     "Sociedad de Agricultores de la Vega de Valencia",
+     46277168.28,
+     4
+    ],
+    [
+     "329747",
+     "UTE COBRA INFRAESTRUCTURAS HIDRAULICAS S.A. - CONSTRUPLAN, CONSTRUCCIONES Y PLANIFICACIÓN S.L.U",
+     46221251.94,
+     1
+    ]
+   ],
+   "mayores_organos": [
+    [
+     "Dirección General de Renfe Viajeros Sociedad Mercantil Estatal, S.A.",
+     "Estado",
+     1729039434.15,
+     592
+    ],
+    [
+     "Dirección General de Racionalización y Centralización de la Contratación-Junta de Contratación Centralizada",
+     "Estado",
+     1543162204.08,
+     3668
+    ],
+    [
+     "Aena. Consejo de Administración",
+     "Estado",
+     1390545108.6,
+     188
+    ],
+    [
+     "ADIF -Consejo de Administración",
+     "Estado",
+     1018086684.29,
+     160
+    ],
+    [
+     "ADIF Alta Velocidad - Consejo de Administración",
+     "Estado",
+     747954877.9,
+     72
+    ],
+    [
+     "Dirección General de Carreteras",
+     "Estado",
+     727379986.35,
+     138
+    ],
+    [
+     "Secretaria General del Servicio de Salud de Castilla-La Mancha",
+     "Comunidades autónomas",
+     726438684.23,
+     73
+    ],
+    [
+     "Jefatura de Asuntos Económicos del Mando de Apoyo Logístico",
+     "Estado",
+     581333119.99,
+     723
+    ],
+    [
+     "Empresa de Transformación Agraria S.A.,S.M.E., M.P., (TRAGSA)",
+     "Estado",
+     558275381.51,
+     5555
+    ],
+    [
+     "ADIF - Presidencia",
+     "Estado",
+     426929001.55,
+     624
+    ],
+    [
+     "Dirección Económico Financiero de la Dirección General de Infraestructura. MDE",
+     "Estado",
+     401320022.92,
+     113
+    ],
+    [
+     "Subdirección General de Planificacion y Gestion de Infraestructuras y Medios para la Seguridad",
+     "Estado",
+     384679652.96,
+     90
+    ],
+    [
+     "Dirección de Gestión Económica de la Jefatura de Apoyo Logístico de la Armada",
+     "Estado",
+     364845020.3,
+     373
+    ],
+    [
+     "Empresa Municipal de Transportes de Madrid, S.A.",
+     "Entidades locales",
+     349361121.42,
+     433
+    ],
+    [
+     "Dirección General de Gestión Económica, Contratación e Infraestructuras de la Conselleria de Sanidad",
+     "Comunidades autónomas",
+     312950078.3,
+     191
+    ],
+    [
+     "Dirección Económico-Financiera de ENAIRE",
+     "Estado",
+     293242994.44,
+     162
+    ],
+    [
+     "Gerencia Regional de Salud de Castilla y León",
+     "Comunidades autónomas",
+     280766175.68,
+     88
+    ],
+    [
+     "Servicio de Salud de las Illes Balears",
+     "Comunidades autónomas",
+     264949322.02,
+     423
+    ],
+    [
+     "Consejería de Obras Públicas, Vivienda y Movilidad del Gobierno de Canarias",
+     "Comunidades autónomas",
+     264383465.76,
+     11
+    ],
+    [
+     "Dirección General de Planificación Económica",
+     "Comunidades autónomas",
+     262606757.32,
+     320
+    ],
+    [
+     "Dirección General de Renfe Ingeniería y Mantenimiento Sociedad Mercantil Estatal, S.A.",
+     "Estado",
+     249990300.73,
+     4049
+    ],
+    [
+     "Sociedad Pública de Infraestructuras y Medio Ambiente de Castilla y León S.A.",
+     "Comunidades autónomas",
+     249652260.5,
+     276
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Almería",
+     "Entidades locales",
+     242455285.69,
+     143
+    ],
+    [
+     "Aena. Presidencia. Consejero Delegado",
+     "Estado",
+     225109160.74,
+     128
+    ],
+    [
+     "Subdirección General de Contratación de Tecnologías de la Información y de las Comunicaciones (TIC)",
+     "Estado",
+     213596287.86,
+     88
+    ],
+    [
+     "Jefatura de Asuntos Económicos de la Guardia Civil",
+     "Estado",
+     209318904.86,
+     186
+    ],
+    [
+     "Dirección de Adquisiciones del Mando de Apoyo Logístico del Ejército del Aire y del Espacio",
+     "Estado",
+     207062168.7,
+     119
+    ],
+    [
+     "Presidencia del Consejo de Administración de la Autoridad Portuaria de Barcelona (PORT DE BARCELONA)",
+     "Estado",
+     188337846.46,
+     324
+    ],
+    [
+     "Consejo de Administración de Transportes Interurbanos de Tenerife S.A.U.",
+     "Entidades locales",
+     181681190.02,
+     29
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Granada",
+     "Entidades locales",
+     180815681.19,
+     133
+    ],
+    [
+     "Área de Gobierno de Urbanismo, Medio Ambiente y Movilidad del Ayuntamiento de Madrid",
+     "Entidades locales",
+     175576102.96,
+     343
+    ],
+    [
+     "Paradores de Turismo de España, S.M.E., S.A.",
+     "Estado",
+     172467286.62,
+     2131
+    ],
+    [
+     "Gobierno de Zaragoza",
+     "Entidades locales",
+     170156518.81,
+     98
+    ],
+    [
+     "Agencia Balear del Agua y de la Calidad Ambiental",
+     "Comunidades autónomas",
+     169925260.02,
+     67
+    ],
+    [
+     "Dirección General de la Sociedad Española para la Transformación Tecnológica, E.P.E.",
+     "Estado",
+     168938366.83,
+     22
+    ],
+    [
+     "ADIF Alta Velocidad - Presidencia",
+     "Estado",
+     167121041.41,
+     167
+    ],
+    [
+     "Consejo de Administración-Comité de Inversiones de la Sociedad Estatal Correos y Telégrafos S.A",
+     "Estado",
+     166739526.01,
+     406
+    ],
+    [
+     "Consejería de Sanidad del Gobierno de Canarias",
+     "Comunidades autónomas",
+     166407022.4,
+     78
+    ],
+    [
+     "Junta de la Mancomunidad de Municipios de la Comarca del Campo de Gibraltar",
+     "Entidades locales",
+     160404751.01,
+     1
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Ourense",
+     "Entidades locales",
+     155029106.56,
+     29
+    ],
+    [
+     "Xunta de Goberno do Concello de Santiago de Compostela",
+     "Entidades locales",
+     151978797.31,
+     60
+    ],
+    [
+     "Banco de España",
+     "Otras entidades",
+     150335319.93,
+     233
+    ],
+    [
+     "Área de Gobierno de Obras y Equipamientos",
+     "Entidades locales",
+     145504574.37,
+     275
+    ],
+    [
+     "Área de Gobierno de Vicealcaldía, Portavoz, Seguridad y Emergencias del Ayuntamiento de Madrid",
+     "Entidades locales",
+     136104133.91,
+     393
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Huelva",
+     "Entidades locales",
+     135572271.55,
+     64
+    ],
+    [
+     "Aena. Dirección de Contratación",
+     "Estado",
+     131176214.84,
+     317
+    ],
+    [
+     "Consejo de Administración de Sociedad Mercantil Estatal Aguas de las Cuencas de España, S.A. (ACUAES)",
+     "Estado",
+     130763256.54,
+     54
+    ],
+    [
+     "Dirección Gerencia Hospital Universitario de Gran Canaria Doctor Negrín",
+     "Comunidades autónomas",
+     129486920.79,
+     616
+    ],
+    [
+     "Junta de Gobierno Local del Ayuntamiento de Ferrol",
+     "Entidades locales",
+     125518067.65,
+     80
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Palma de Mallorca",
+     "Entidades locales",
+     116053350.19,
+     102
+    ],
+    [
+     "Secretaría General de la Agencia Estatal Consejo Superior de Investigaciones Científicas",
+     "Estado",
+     114443662.17,
+     362
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Marbella",
+     "Entidades locales",
+     114179564.21,
+     545
+    ],
+    [
+     "Director Gerente de FREMAP",
+     "Otras entidades",
+     113293567.9,
+     335
+    ],
+    [
+     "Dirección General del Agua",
+     "Estado",
+     112745519.53,
+     62
+    ],
+    [
+     "Servicio Murciano de Salud - Junta de Compras",
+     "Comunidades autónomas",
+     112732443.83,
+     220
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Sevilla",
+     "Entidades locales",
+     109685723.63,
+     293
+    ],
+    [
+     "Vicepresidencia del Consejo de Administración de la Entidad Pública de Saneamiento de Aguas Residuales de la Comunidad Valenciana",
+     "Comunidades autónomas",
+     108583949.62,
+     58
+    ],
+    [
+     "Servicio Cántabro de Salud",
+     "Comunidades autónomas",
+     108503972.18,
+     1350
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Torrevieja",
+     "Entidades locales",
+     107671806.0,
+     79
+    ],
+    [
+     "Consejo de Administración de la Sociedad de Gestión de Activos procedentes de la Reestructuración Bancaria, S.A",
+     "Otras entidades",
+     107600652.73,
+     326
+    ],
+    [
+     "Vicepresidente Tercero y Conseller de Medio Ambiente, Infraestructuras, Territorio y de la Recuperación",
+     "Comunidades autónomas",
+     106630447.15,
+     60
+    ],
+    [
+     "Comité Ejecutivo de la Mancomunidad de los Canales del Taibilla",
+     "Estado",
+     105589889.93,
+     129
+    ],
+    [
+     "Junta de Gobierno de la Diputación Provincial de Almería",
+     "Entidades locales",
+     104614487.87,
+     305
+    ],
+    [
+     "Comité Central de Compras de Navantia S.A., S.M.E.",
+     "Estado",
+     102179964.18,
+     501
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Vigo",
+     "Entidades locales",
+     102142952.22,
+     135
+    ],
+    [
+     "Área de Gobierno de Políticas Sociales, Familia e Igualdad del Ayuntamiento de Madrid",
+     "Entidades locales",
+     101168775.45,
+     150
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento Las Rozas",
+     "Entidades locales",
+     97813554.29,
+     77
+    ],
+    [
+     "Pleno del Ayuntamiento de San Fernando de Henares",
+     "Entidades locales",
+     94963283.68,
+     4
+    ],
+    [
+     "Junta de Gobierno del Ajuntament de València",
+     "Entidades locales",
+     93404467.3,
+     153
+    ],
+    [
+     "Consejo de Gobierno Insular del Cabildo Insular de Tenerife",
+     "Entidades locales",
+     90686388.84,
+     66
+    ],
+    [
+     "Pleno del Ayuntamiento de Boadilla del Monte",
+     "Entidades locales",
+     88137014.0,
+     1
+    ],
+    [
+     "Consejo Rector del Instituto de Atención Social y Sociosanitaria del Cabildo Insular de Gran Canaria",
+     "Entidades locales",
+     87454120.02,
+     8
+    ],
+    [
+     "Gerencia Sector Sanitario de Zaragoza 2",
+     "Comunidades autónomas",
+     86973914.96,
+     418
+    ],
+    [
+     "Consejo de Administración del Centro Intermodal de Logística S.A., S.M.E.",
+     "Estado",
+     86662350.64,
+     25
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Leganés",
+     "Entidades locales",
+     86083561.45,
+     124
+    ],
+    [
+     "Compras de la Corporación de Radio y Televisión Española S.A.",
+     "Estado",
+     83011810.38,
+     416
+    ],
+    [
+     "Consejería de Hacienda de la Ciudad Autónoma de Melilla",
+     "Comunidades autónomas",
+     82269578.11,
+     291
+    ],
+    [
+     "Dirección de Asuntos Económicos del Ejército",
+     "Estado",
+     81988375.13,
+     115
+    ],
+    [
+     "Entidad Regional de Saneamiento y Depuración de Aguas Residuales (ESAMUR)",
+     "Comunidades autónomas",
+     80864594.54,
+     26
+    ],
+    [
+     "Presidencia del Consejo de Administración de la Sociedad Estatal de Infraestructuras del Transporte Terrestre, S.M.E., S.A.",
+     "Estado",
+     80216383.65,
+     60
+    ],
+    [
+     "Intendente de Rota",
+     "Estado",
+     79503393.28,
+     465
+    ],
+    [
+     "Gerencia de la Entidad Estatal de Derecho Público Trabajo Penitenciario y Formación para el Empleo, M.P.",
+     "Estado",
+     79354301.81,
+     455
+    ],
+    [
+     "Órgano de Contratación de la Ciudad Autónoma de Ceuta",
+     "Comunidades autónomas",
+     77745228.57,
+     135
+    ],
+    [
+     "Dirección General de Tráfico",
+     "Estado",
+     76574992.64,
+     155
+    ],
+    [
+     "Dirección General de Recursos Económicos del Servicio Canario de la Salud",
+     "Comunidades autónomas",
+     76340298.5,
+     86
+    ],
+    [
+     "Dirección Gerente del Hospital Universitario Nuestra Señora de Candelaria",
+     "Comunidades autónomas",
+     76177700.38,
+     388
+    ],
+    [
+     "Consejería de Movilidad, Transformación Digital e Inteligencia Artificial de la Junta de Castilla y León",
+     "Comunidades autónomas",
+     74595908.38,
+     44
+    ],
+    [
+     "Junta de Contratación de la Secretaría de Estado de Justicia",
+     "Estado",
+     74560093.11,
+     63
+    ],
+    [
+     "Comisión Ejecutiva de la Gerencia de Urbanismo de Sevilla",
+     "Entidades locales",
+     73626970.79,
+     77
+    ],
+    [
+     "Empresa Nacional de Residuos Radiactivos, S.A., S.M.E. (ENRESA)",
+     "Estado",
+     73234230.2,
+     114
+    ],
+    [
+     "Consejería de Educación de la Junta de Castilla y León",
+     "Comunidades autónomas",
+     73185277.65,
+     67
+    ],
+    [
+     "Gerencia de Informática de la Seguridad Social",
+     "Estado",
+     73021509.61,
+     25
+    ],
+    [
+     "Consejería Delegada de la Empresa Metropolitana de Abastecimiento y Saneamiento de Aguas de Sevilla S.A. (EMASESA)",
+     "Entidades locales",
+     72227366.16,
+     278
+    ],
+    [
+     "Junta de Gobierno Local del Ayuntamiento de Alicante",
+     "Entidades locales",
+     71880103.96,
+     95
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Fuengirola",
+     "Entidades locales",
+     71854488.64,
+     312
+    ],
+    [
+     "Consejería de Salud y Servicios Sociales",
+     "Comunidades autónomas",
+     70285145.59,
+     45
+    ],
+    [
+     "Secretaría General de la Consejería de Hacienda, Administraciones Públicas y Transformación Digital de la Junta de Comunidades de Castilla-La Mancha",
+     "Comunidades autónomas",
+     69776862.51,
+     70
+    ],
+    [
+     "Gerencia de Ferrocarrils de la Generalitat Valenciana",
+     "Comunidades autónomas",
+     69697843.17,
+     102
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Murcia",
+     "Entidades locales",
+     69661786.55,
+     168
+    ],
+    [
+     "Consejo de Administración de la Empresa Municipal de Transportes de Valencia, S.A.U.",
+     "Entidades locales",
+     68566433.18,
+     95
+    ]
+   ]
+  },
+  "2025": {
+   "ficheros": [
+    "contratos-2025-01.json",
+    "contratos-2025-02.json",
+    "contratos-2025-03.json",
+    "contratos-2025-04.json",
+    "contratos-2025-05.json",
+    "contratos-2025-06.json",
+    "contratos-2025-07.json",
+    "contratos-2025-08.json",
+    "contratos-2025-09.json",
+    "contratos-2025-10.json",
+    "contratos-2025-11.json",
+    "contratos-2025-12.json"
+   ],
+   "fichero_adjudicatarios": "contratos-adjudicatarios-2025.json",
+   "adjudicaciones": 182208,
+   "importe": 74702682543.32,
+   "con_iva": 286039755104.46,
+   "adjudicatarios": 54630,
+   "organos": 7901,
+   "valor_maximo": [
+    11951,
+    9450978485.77
+   ],
+   "una_oferta": [
+    83592,
+    37281659905.06
+   ],
+   "pyme": [
+    109749,
+    16301069752.72
+   ],
+   "fondos_ue": [
+    18622,
+    8476667723.5
+   ],
+   "por_tipo": {
+    "Suministros": [
+     76196,
+     32861187140.97
+    ],
+    "Servicios": [
+     70678,
+     21881815971.83
+    ],
+    "Obras": [
+     24600,
+     13655871348.4
+    ],
+    "Concesión de servicios": [
+     1423,
+     4968176044.47
+    ],
+    "Patrimonial": [
+     3526,
+     663375694.54
+    ],
+    "Privado": [
+     5222,
+     616655041.6
+    ],
+    "Administrativo especial": [
+     538,
+     35179540.82
+    ],
+    "Concesión de obras": [
+     12,
+     19709217.21
+    ],
+    "Colaboración público-privada": [
+     8,
+     411198.3
+    ],
+    "Gestión de servicios públicos": [
+     3,
+     201010.47
+    ],
+    "Concesión de obras públicas": [
+     2,
+     100334.71
+    ]
+   },
+   "por_procedimiento": {
+    "Abierto": [
+     80073,
+     39390084374.67
+    ],
+    "Negociado sin publicidad": [
+     17814,
+     25378014616.3
+    ],
+    "Abierto simplificado": [
+     57773,
+     3984027170.66
+    ],
+    "Licitación con negociación": [
+     863,
+     2280135842.88
+    ],
+    "Restringido": [
+     10632,
+     1653265166.73
+    ],
+    "Derivado de acuerdo marco": [
+     6453,
+     903854200.2
+    ],
+    "Normas internas": [
+     7690,
+     575964237.84
+    ],
+    "Negociado con publicidad": [
+     607,
+     484577564.24
+    ],
+    "Otros": [
+     239,
+     42744896.44
+    ],
+    "Concurso de proyectos": [
+     60,
+     8330823.36
+    ],
+    "Asociación para la innovación": [
+     4,
+     1683650.0
+    ]
+   },
+   "por_sistema": {
+    "Contrato": [
+     137935,
+     67840154679.92
+    ],
+    "Basado en acuerdo marco": [
+     34650,
+     5576884077.57
+    ],
+    "Basado en sistema dinámico de adquisición": [
+     9623,
+     1285643785.83
+    ]
+   },
+   "por_administracion": {
+    "Estado": [
+     53045,
+     45632368783.21
+    ],
+    "Entidades locales": [
+     84696,
+     17224377642.37
+    ],
+    "Comunidades autónomas": [
+     34536,
+     10239163021.75
+    ],
+    "Otras entidades": [
+     6532,
+     882429775.09
+    ],
+    "Universidades": [
+     3399,
+     724343320.9
+    ]
+   },
+   "por_comunidad": {
+    "Madrid": [
+     33805,
+     36114422822.56
+    ],
+    "C. Valenciana": [
+     19282,
+     6359227832.52
+    ],
+    "Varias o sin especificar": [
+     10491,
+     6229152706.4
+    ],
+    "Andalucía": [
+     32160,
+     5428801382.53
+    ],
+    "Canarias": [
+     14132,
+     3235222275.89
+    ],
+    "Castilla y León": [
+     12768,
+     3192742649.32
+    ],
+    "Extremadura": [
+     7503,
+     1903602588.87
+    ],
+    "Aragón": [
+     7577,
+     1808768122.34
+    ],
+    "Castilla-La Mancha": [
+     8752,
+     1736063598.52
+    ],
+    "Illes Balears": [
+     6449,
+     1551581368.13
+    ],
+    "Murcia": [
+     5398,
+     1426386475.57
+    ],
+    "Galicia": [
+     6240,
+     1387623722.68
+    ],
+    "Asturias": [
+     4920,
+     1223888683.38
+    ],
+    "Cantabria": [
+     4952,
+     1065485133.57
+    ],
+    "Cataluña": [
+     2911,
+     1027848653.53
+    ],
+    "País Vasco": [
+     1302,
+     284318245.2
+    ],
+    "Melilla": [
+     819,
+     269816895.14
+    ],
+    "Ceuta": [
+     944,
+     209396954.96
+    ],
+    "La Rioja": [
+     1431,
+     191063045.69
+    ],
+    "Navarra": [
+     372,
+     57269386.52
+    ]
+   },
+   "por_mes": {
+    "2025-01": [
+     9756,
+     2371734127.66
+    ],
+    "2025-02": [
+     12232,
+     3301967748.21
+    ],
+    "2025-03": [
+     13944,
+     3304068598.27
+    ],
+    "2025-04": [
+     13882,
+     7720770544.79
+    ],
+    "2025-05": [
+     15885,
+     4145731080.59
+    ],
+    "2025-06": [
+     17042,
+     3722185735.35
+    ],
+    "2025-07": [
+     18005,
+     5711084727.52
+    ],
+    "2025-08": [
+     12883,
+     3199110742.83
+    ],
+    "2025-09": [
+     16076,
+     4652646663.05
+    ],
+    "2025-10": [
+     17986,
+     6338716344.93
+    ],
+    "2025-11": [
+     17548,
+     4689213713.47
+    ],
+    "2025-12": [
+     16969,
+     25545452516.65
+    ]
+   },
+   "mayores": [
+    [
+     "U23991599",
+     "UTE ATP CADENAS",
+     3763635950.4,
+     1
+    ],
+    [
+     "A28599033",
+     "INDRA SISTEMAS ,S.A.",
+     3186193059.7,
+     4
+    ],
+    [
+     "A28006104",
+     "UTE ITS-C",
+     2599998972.0,
+     1
+    ],
+    [
+     "A28011864",
+     "Segurcaixa Adeslas S.A. de Seguros y Reaseguros",
+     2366116063.26,
+     2
+    ],
+    [
+     "U23991920",
+     "UTE ATP RUEDAS",
+     2219834297.5,
+     1
+    ],
+    [
+     "A78648110",
+     "Airbus Helicopters España S.A.U.",
+     1975000000.0,
+     1
+    ],
+    [
+     "A08169294",
+     "ASISA, ASISTENCIA SANITARIA INTERPROVINCIAL DE SEGUROS S.A.U.",
+     1943690915.02,
+     17
+    ],
+    [
+     "A78648110",
+     "AIRBUS HELICOPTERS ESPAÑA S.A.U",
+     1940439142.2,
+     3
+    ],
+    [
+     "A95758389",
+     "Iberdrola Clientes SA",
+     1393119071.64,
+     20
+    ],
+    [
+     "A28006104",
+     "AIRBUS DEFENCE AND SPACE SA",
+     1209863000.0,
+     2
+    ],
+    [
+     "A28599033",
+     "INDRA SISTEMAS, S.A.",
+     1099681131.31,
+     20
+    ],
+    [
+     "U23990922",
+     "UTE PEM-MC3",
+     785123966.94,
+     1
+    ],
+    [
+     "A28541639",
+     "FCC MEDIO AMBIENTE, S.A.U.",
+     439566706.12,
+     46
+    ],
+    [
+     "A79524054",
+     "URBASER, S.A.",
+     396567267.68,
+     26
+    ],
+    [
+     "B19455682",
+     "AERTEC Defence and Aerial Systems S.L.",
+     364115000.0,
+     1
+    ],
+    [
+     "A96488887",
+     "TECNICAS Y TRATAMIENTOS MEDIOAMBIENTALES, S.A.",
+     338698194.9,
+     1
+    ],
+    [
+     "324546",
+     "UTE Ferrovial-fcc-convensa",
+     323053000.0,
+     1
+    ],
+    [
+     "A82741067",
+     "PREZERO ESPAÑA, S.A.",
+     321297226.32,
+     19
+    ],
+    [
+     "U23999956",
+     "UTE VACIM (Indra Sistemas S.A - EM&E)",
+     306232055.39,
+     1
+    ],
+    [
+     "A62802152",
+     "Nertus Mantenimiento Ferroviario y Servicios, S.A.",
+     302051207.71,
+     5
+    ],
+    [
+     "B82765611",
+     "UTE AMBUVITAL Y SSG",
+     285720936.0,
+     1
+    ],
+    [
+     "A15047863",
+     "URO VEHICULOS ESPECIALES S.A.",
+     265632919.45,
+     1
+    ],
+    [
+     "A78648110",
+     "AIRBUS HELICOPTERS ESPAÑA S.A.",
+     237000000.0,
+     1
+    ],
+    [
+     "U23999147",
+     "UTE Salar",
+     234121871.2,
+     1
+    ],
+    [
+     "308473",
+     "ACCIONA AGUA, S.A. (A95113361) - BECSA, S.A. ( A46041711) - CICLAGUA, S.A. (A12284220)",
+     232403536.91,
+     1
+    ],
+    [
+     "315974",
+     "UTE ACCIONA - OXITAL",
+     230765365.11,
+     1
+    ],
+    [
+     "A28093524",
+     "Santa Barbara Sistemas S.A.U.",
+     218181522.36,
+     1
+    ],
+    [
+     "B85621159",
+     "SERVEO SOCIAL, S.L.",
+     216504355.96,
+     8
+    ],
+    [
+     "U22858658",
+     "UTE Remodelacion Estac Campo Grande",
+     178364580.0,
+     1
+    ],
+    [
+     "A80106842",
+     "QUAVITAE SERVICIOS ASISTENCIALES SAU",
+     172937635.46,
+     6
+    ],
+    [
+     "A95758389",
+     "IBERDROLA CLIENTES, S.A.U.",
+     172566200.63,
+     112
+    ],
+    [
+     "G28702504",
+     "ASISPA",
+     163066084.99,
+     9
+    ],
+    [
+     "326018",
+     "FCC MEDIO AMBIENTE, S.A.U. - URBASER, S.A.; U.T.E.",
+     160744802.22,
+     1
+    ],
+    [
+     "U22732440",
+     "ATENDE SERVICIOS INTEGRADOS, S.L.U. y SENIOR SERVICIOS INTEGRALES, S.A., UNIÓN TEMPORAL DE EMPRESAS, LEY 18/1982, DE 26 DE MAYO",
+     160444477.0,
+     1
+    ],
+    [
+     "U23927544",
+     "UTE PEM FCAS-ESP",
+     160000000.0,
+     1
+    ],
+    [
+     "U22987671",
+     "UTE CIPHERBIT, S.L.U. - EPICOM",
+     158639555.39,
+     1
+    ],
+    [
+     "A78366382",
+     "SACYR CONSTRUCCIÓN, S.A.-GEVORA CONSTRUCCIONES, S.A.",
+     156024740.42,
+     1
+    ],
+    [
+     "B73727349",
+     "ACTUA, SERVICIOS Y MEDIO AMBIENTE S.L.",
+     152632172.31,
+     21
+    ],
+    [
+     "A28760692",
+     "VALORIZA SERVICIOS MEDIOAMBIENTALES, S.A.",
+     149288165.93,
+     33
+    ],
+    [
+     "F45003993",
+     "EUROCAJA RURAL SOCIEDAD COOPERATIVA DE CREDITO",
+     146692370.25,
+     18
+    ],
+    [
+     "A03125010",
+     "Avincis Aviation España S.A.U.",
+     140292519.68,
+     6
+    ],
+    [
+     "A46041711",
+     "BECSA, S.A.",
+     140080118.73,
+     80
+    ],
+    [
+     "309627",
+     "OBRASCON HUARTE LAIN, S.A., ALTUNA Y URIA, S.A. y OHLA SERVICIOS INGESAN, S.A. en UTE",
+     124532884.36,
+     1
+    ],
+    [
+     "B31737422",
+     "ACCIONA GREEN ENERGY S.L.U",
+     123372564.11,
+     4
+    ],
+    [
+     "A82009812",
+     "ORANGE ESPAGNE, S.A.U.",
+     123334418.25,
+     135
+    ],
+    [
+     "A78053147",
+     "Telefonica Soluciones De Informatica Y Comunicaciones De España S.A.U.",
+     122689645.5,
+     114
+    ],
+    [
+     "B09636473",
+     "PLAZA PREMIUM LOUNGE SPAIN S L U",
+     121827504.79,
+     1
+    ],
+    [
+     "A28599033",
+     "Indra Sistemas, S.A.",
+     116555906.07,
+     20
+    ],
+    [
+     "U24764938",
+     "UTE TELEFÓNICA DE ESPAÑA S.A.U., TELEFÓNICA MÓVILES ESPAÑA S.A.U. Y TELEFÓNICA SOLUCIONES DE INFORMÁTICA Y COMUNICACIONES DE ESPAÑA S.A.U.",
+     107575537.38,
+     4
+    ],
+    [
+     "U21708870",
+     "UTE Syneox-rover R-rover I",
+     106979325.71,
+     1
+    ],
+    [
+     "A28925899",
+     "JANSSEN-CILAG, S.A.",
+     106384158.43,
+     82
+    ],
+    [
+     "316011",
+     "UTE San Jose-acsa-trade",
+     106096545.77,
+     1
+    ],
+    [
+     "A80241789",
+     "SERVEO SERVICIOS, S.A.U.",
+     105036776.74,
+     174
+    ],
+    [
+     "A28855260",
+     "INETUM ESPAÑA, S.A",
+     99954012.36,
+     38
+    ],
+    [
+     "A28019206",
+     "FERROVIAL CONSTRUCCIÓN, S.A.",
+     99718746.7,
+     64
+    ],
+    [
+     "328687",
+     "UTE Hitachi-sistem Talayuela-plasen",
+     97778129.56,
+     1
+    ],
+    [
+     "A81948077",
+     "Endesa Energia",
+     97016431.48,
+     88
+    ],
+    [
+     "307202",
+     "AZVI SAU-MARTIN CASILLAS SLU",
+     96163121.06,
+     2
+    ],
+    [
+     "B50819507",
+     "MULTIANAU SL",
+     93214586.87,
+     52
+    ],
+    [
+     "A80448194",
+     "EVOLUTIO CLOUD ENABLER S.A.",
+     90807612.57,
+     35
+    ],
+    [
+     "W0017646A",
+     "FRAIKIN ASSETS SAS, SUCURSAL EN ESPAÑA",
+     90328490.04,
+     14
+    ],
+    [
+     "A82018474",
+     "UTE TdE - TSOL",
+     90246590.78,
+     1
+    ],
+    [
+     "A95758389",
+     "Iberdrola Clientes Sau",
+     89612747.68,
+     123
+    ],
+    [
+     "A84857903",
+     "ACTREN, MANTENIMIENTO FERROVIARIO,S.A.",
+     89578193.99,
+     8
+    ],
+    [
+     "A28599033",
+     "Indra Sistemas S.A.",
+     84241685.39,
+     11
+    ],
+    [
+     "310183",
+     "FERROVIAL CONSTRUCCIÓN, S.A., GESTION Y EJECUCIÓN DE OBRA CIVIL, S.A.U. y LICUAS, S.A.",
+     81281754.36,
+     1
+    ],
+    [
+     "A28855260",
+     "Inetum España, S.A.",
+     81176567.05,
+     167
+    ],
+    [
+     "A36858389",
+     "ASTILLEROS ARMON VIGO, S.A.",
+     79980000.0,
+     1
+    ],
+    [
+     "A79054748",
+     "Técnicos Asociados Informática, Sau",
+     78199991.12,
+     73
+    ],
+    [
+     "B15675515",
+     "CITANIAS OBRAS Y SERVICIOS, S.L.U.",
+     77675639.62,
+     53
+    ],
+    [
+     "A32032039",
+     "PROYECON GALICIA,S.A.",
+     77131247.99,
+     30
+    ],
+    [
+     "B98751472",
+     "ATENDE SERVICIOS INTEGRADOS SL",
+     76441851.53,
+     3
+    ],
+    [
+     "A08011074",
+     "NOVARTIS FARMACEUTICA, S.A.",
+     76434051.85,
+     126
+    ],
+    [
+     "A84076397",
+     "NAVANTIA SA SME",
+     76136265.25,
+     44
+    ],
+    [
+     "V86444965",
+     "NUEVA MUTUA SANITARIA",
+     76020964.36,
+     9
+    ],
+    [
+     "A46015129",
+     "PAVASAL EMPRESA CONSTRUCTORA, S.A.U.",
+     74968730.68,
+     76
+    ],
+    [
+     "313021",
+     "Global Omnium Medioambiente. S.L.- CICLAGUA, S.A. - Sociedad Anonima Agricultoresde la Vega de Valencia",
+     74033146.35,
+     1
+    ],
+    [
+     "A28517308",
+     "EULEN, S.A.",
+     72705579.94,
+     201
+    ],
+    [
+     "A19001205",
+     "ORTIZ CONSTRUCCIONES Y PROYECTOS SA",
+     72412930.42,
+     157
+    ],
+    [
+     "316737",
+     "SACYR CONSTRUCCIÓN, SA en compromiso de UTE con JOSÉ ANTONIO ROMERO POLO, SAU",
+     72359045.87,
+     1
+    ],
+    [
+     "U23985054",
+     "UTE Elecnor Syneox Electren Comsa",
+     71517676.82,
+     1
+    ],
+    [
+     "A84408954",
+     "ACEINSA MOVILIDAD, S.A.",
+     70657020.01,
+     27
+    ],
+    [
+     "A78917465",
+     "Ilunion Seguridad SA",
+     70143129.48,
+     2
+    ],
+    [
+     "A28019206",
+     "FERROVIAL CONSTRUCCIÓN, S.A. y HELIOPOL, S.A.U.",
+     69958918.0,
+     1
+    ],
+    [
+     "A73998346",
+     "ASCH INFRAESTRUCTURAS Y SERVICIOS, S.A.",
+     69034852.2,
+     23
+    ],
+    [
+     "A79486833",
+     "ELECNOR SERVICIOS Y PROYECTOS SAU",
+     68730359.11,
+     109
+    ],
+    [
+     "A84916287",
+     "Erion Mantenimiento Ferroviario, S.A.",
+     68404445.73,
+     1
+    ],
+    [
+     "A81948077",
+     "Endesa Energía S.A.U.",
+     67346573.59,
+     17
+    ],
+    [
+     "A27178789",
+     "OHL SERVICIOS - INGESAN",
+     67227731.03,
+     42
+    ],
+    [
+     "A33014218",
+     "Contratas Y Ventas SA",
+     66773450.0,
+     6
+    ],
+    [
+     "A28599033",
+     "INDRA SISTEMAS SA",
+     66340526.3,
+     76
+    ],
+    [
+     "A87045407",
+     "SENIOR SERVICIOS INTEGRALES S.A.",
+     66009044.0,
+     6
+    ],
+    [
+     "A41017161",
+     "PEGASUS AVIACION S.A.",
+     65916237.6,
+     14
+    ],
+    [
+     "A82018474",
+     "TELEFÓNICA DE ESPAÑA S.A.U.",
+     65136822.99,
+     51
+    ],
+    [
+     "B22804041",
+     "ALVESTON ITG S.L.",
+     64906707.2,
+     1
+    ],
+    [
+     "U22893812",
+     "UTE Miv Noreste L3 2025",
+     63563000.0,
+     1
+    ],
+    [
+     "F23322472",
+     "MACROSAD SCA",
+     63449005.07,
+     4
+    ],
+    [
+     "U22821714",
+     "UTE Mantenimiento Lote1 2025",
+     63368000.0,
+     1
+    ],
+    [
+     "A79486833",
+     "Elecnor Servicios y Proyectos, S.A.U.",
+     62130073.97,
+     85
+    ],
+    [
+     "A28855260",
+     "INETUM ESPAÑA, S.A.",
+     61367155.2,
+     113
+    ]
+   ],
+   "mayores_organos": [
+    [
+     "Subdirección General de Adquisiciones de Armamento y Material DGAM",
+     "Estado",
+     20707821286.46,
+     80
+    ],
+    [
+     "Dirección General de la Mutualidad de Funcionarios Civiles del Estado (MUFACE)",
+     "Estado",
+     4373630521.29,
+     3
+    ],
+    [
+     "ADIF Alta Velocidad - Consejo de Administración",
+     "Estado",
+     2881382752.51,
+     106
+    ],
+    [
+     "ADIF -Consejo de Administración",
+     "Estado",
+     1943675879.33,
+     340
+    ],
+    [
+     "Dirección General de Racionalización y Centralización de la Contratación-Junta de Contratación Centralizada",
+     "Estado",
+     1421475667.76,
+     4594
+    ],
+    [
+     "Dirección General de Carreteras",
+     "Estado",
+     1107313292.12,
+     297
+    ],
+    [
+     "Empresa de Transformación Agraria S.A.,S.M.E., M.P., (TRAGSA)",
+     "Estado",
+     862035459.61,
+     7580
+    ],
+    [
+     "Dirección General de Planificación Económica",
+     "Comunidades autónomas",
+     776667004.42,
+     413
+    ],
+    [
+     "Área de Gobierno de Políticas Sociales, Familia e Igualdad del Ayuntamiento de Madrid",
+     "Entidades locales",
+     718390933.24,
+     144
+    ],
+    [
+     "Jefatura de Asuntos Económicos del Mando de Apoyo Logístico",
+     "Estado",
+     677300796.05,
+     768
+    ],
+    [
+     "ADIF - Presidencia",
+     "Estado",
+     597538739.15,
+     801
+    ],
+    [
+     "Dirección General de Renfe Viajeros Sociedad Mercantil Estatal, S.A.",
+     "Estado",
+     564699959.39,
+     587
+    ],
+    [
+     "Dirección General de Gestión Económica, Contratación e Infraestructuras de la Conselleria de Sanidad",
+     "Comunidades autónomas",
+     500357545.78,
+     388
+    ],
+    [
+     "Aena. Consejo de Administración",
+     "Estado",
+     495363752.65,
+     268
+    ],
+    [
+     "Junta de Gobierno del Ajuntament de València",
+     "Entidades locales",
+     456979669.06,
+     251
+    ],
+    [
+     "Dirección General de Renfe Ingeniería y Mantenimiento Sociedad Mercantil Estatal, S.A.",
+     "Estado",
+     445454329.59,
+     3429
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Castellón de la Plana",
+     "Entidades locales",
+     385099536.03,
+     127
+    ],
+    [
+     "Área de Gobierno de Obras y Equipamientos",
+     "Entidades locales",
+     359465597.1,
+     349
+    ],
+    [
+     "Aena. Presidencia. Consejero Delegado",
+     "Estado",
+     316773929.14,
+     148
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Oviedo",
+     "Entidades locales",
+     299941444.61,
+     130
+    ],
+    [
+     "Gerencia Regional de Salud de Castilla y León",
+     "Comunidades autónomas",
+     282635355.78,
+     105
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Santander",
+     "Entidades locales",
+     271805967.82,
+     75
+    ],
+    [
+     "Dirección Económico Financiero de la Dirección General de Infraestructura. MDE",
+     "Estado",
+     260086627.87,
+     170
+    ],
+    [
+     "Paradores de Turismo de España, S.M.E., S.A.",
+     "Estado",
+     256277327.92,
+     2521
+    ],
+    [
+     "Servicio Cántabro de Salud",
+     "Comunidades autónomas",
+     249109644.0,
+     1928
+    ],
+    [
+     "Secretaría de Estado de Función Pública",
+     "Estado",
+     234980031.2,
+     4
+    ],
+    [
+     "Dirección de Gestión Económica de la Jefatura de Apoyo Logístico de la Armada",
+     "Estado",
+     229015585.87,
+     444
+    ],
+    [
+     "Junta de Gobierno Local del Ayuntamiento de Pontevedra",
+     "Entidades locales",
+     228783942.13,
+     82
+    ],
+    [
+     "División Económica y Técnica (Cuerpo Nacional de Policía)",
+     "Estado",
+     219455865.6,
+     253
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Almería",
+     "Entidades locales",
+     216840931.8,
+     188
+    ],
+    [
+     "Conseller de Medio Ambiente, Infraestructuras y Territorio de la Generalitat Valenciana",
+     "Comunidades autónomas",
+     213459115.1,
+     82
+    ],
+    [
+     "Banco de España",
+     "Otras entidades",
+     210915350.83,
+     285
+    ],
+    [
+     "Presidencia del Consejo de Administración de la Autoridad Portuaria de Barcelona (PORT DE BARCELONA)",
+     "Estado",
+     207887571.62,
+     370
+    ],
+    [
+     "Dirección General de Tecnologías de la Información y las Comunicaciones",
+     "Comunidades autónomas",
+     206240217.27,
+     82
+    ],
+    [
+     "Área de Gobierno de Urbanismo, Medio Ambiente y Movilidad del Ayuntamiento de Madrid",
+     "Entidades locales",
+     205144246.11,
+     289
+    ],
+    [
+     "Servicio de Salud de las Illes Balears",
+     "Comunidades autónomas",
+     201314479.22,
+     693
+    ],
+    [
+     "Dirección General de Biodiversidad, Bosques y Desertificación",
+     "Estado",
+     196720182.46,
+     79
+    ],
+    [
+     "Consejo de Administración-Comité de Inversiones de la Sociedad Estatal Correos y Telégrafos S.A",
+     "Estado",
+     195748811.4,
+     792
+    ],
+    [
+     "Gerencia de Servicios Sanitarios del Área de Salud de Lanzarote",
+     "Comunidades autónomas",
+     190752581.19,
+     454
+    ],
+    [
+     "Dirección Económico-Financiera de ENAIRE",
+     "Estado",
+     190571610.88,
+     161
+    ],
+    [
+     "Consejería de Hacienda de la Ciudad Autónoma de Melilla",
+     "Comunidades autónomas",
+     185134670.66,
+     322
+    ],
+    [
+     "Organismo Autónomo Informática del Ayuntamiento de Madrid",
+     "Entidades locales",
+     185029033.44,
+     48
+    ],
+    [
+     "ADIF Alta Velocidad - Presidencia",
+     "Estado",
+     179068987.83,
+     209
+    ],
+    [
+     "Sociedad Pública de Infraestructuras y Medio Ambiente de Castilla y León S.A.",
+     "Comunidades autónomas",
+     174068580.63,
+     216
+    ],
+    [
+     "Gobierno de Zaragoza",
+     "Entidades locales",
+     173465003.17,
+     76
+    ],
+    [
+     "Subdirección General de Planificacion y Gestion de Infraestructuras y Medios para la Seguridad",
+     "Estado",
+     169203710.05,
+     121
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Parla",
+     "Entidades locales",
+     167695413.85,
+     43
+    ],
+    [
+     "Servicio Murciano de Salud - Junta de Compras",
+     "Comunidades autónomas",
+     165713087.04,
+     304
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Torrevieja",
+     "Entidades locales",
+     164781796.49,
+     92
+    ],
+    [
+     "Consejo de Administración de Aguas de las Cuencas Mediterráneas, S.M.E., S.A. (ACUAMED)",
+     "Estado",
+     164045817.52,
+     57
+    ],
+    [
+     "Dirección de Compras de la Corporación de Radio y Televisión Española S.A.",
+     "Estado",
+     159879547.39,
+     764
+    ],
+    [
+     "Dirección Gerencia del Complejo Hospitalario Universitario Insular Materno Infantil",
+     "Comunidades autónomas",
+     159315425.96,
+     787
+    ],
+    [
+     "Director Gerente de FREMAP",
+     "Otras entidades",
+     158435193.57,
+     355
+    ],
+    [
+     "Secretaría de Estado de Medio Ambiente",
+     "Estado",
+     158392502.68,
+     92
+    ],
+    [
+     "Gerencia de Informática de la Seguridad Social",
+     "Estado",
+     154494413.62,
+     53
+    ],
+    [
+     "Consejería Delegada de la Empresa Metropolitana de Abastecimiento y Saneamiento de Aguas de Sevilla S.A. (EMASESA)",
+     "Entidades locales",
+     154052940.17,
+     369
+    ],
+    [
+     "Vicepresidencia del Consejo de Administración de la Entidad Pública de Saneamiento de Aguas Residuales de la Comunidad Valenciana",
+     "Comunidades autónomas",
+     147753639.85,
+     33
+    ],
+    [
+     "Empresa Municipal de Transportes de Madrid, S.A.",
+     "Entidades locales",
+     146688432.01,
+     572
+    ],
+    [
+     "Jefatura de Asuntos Económicos de la Guardia Civil",
+     "Estado",
+     141379308.8,
+     213
+    ],
+    [
+     "Consejería de Sanidad del Gobierno de Canarias",
+     "Comunidades autónomas",
+     140626514.67,
+     88
+    ],
+    [
+     "Aena. Dirección de Contratación",
+     "Estado",
+     138924338.45,
+     432
+    ],
+    [
+     "Consell Executiu del Consell Insular d'Eivissa",
+     "Entidades locales",
+     136849094.77,
+     101
+    ],
+    [
+     "Nueva Romareda S.L.",
+     "Entidades locales",
+     130241009.91,
+     16
+    ],
+    [
+     "Conselleria de Educación, Cultura, Universidades y Empleo de la Generalitat Valenciana",
+     "Comunidades autónomas",
+     129934349.18,
+     278
+    ],
+    [
+     "Gerencia Sector Sanitario de Zaragoza 3",
+     "Comunidades autónomas",
+     129672145.92,
+     285
+    ],
+    [
+     "Dirección Gerencia del Complejo Hospitalario Universitario de Canarias",
+     "Comunidades autónomas",
+     128988697.31,
+     565
+    ],
+    [
+     "Órgano de Contratación de la Ciudad Autónoma de Ceuta",
+     "Comunidades autónomas",
+     128215699.76,
+     96
+    ],
+    [
+     "Jefatura de Asuntos Económicos del Estado Mayor de la Defensa",
+     "Estado",
+     125980215.4,
+     155
+    ],
+    [
+     "Pleno de la Diputación Provincial de Valencia",
+     "Entidades locales",
+     123489138.65,
+     9
+    ],
+    [
+     "Vicepresidencia Primera y Conselleria de Servicios Sociales, Igualdad y Vivienda de la Generalitat Valenciana",
+     "Comunidades autónomas",
+     121962163.74,
+     154
+    ],
+    [
+     "Sociedad Mercantil Estatal de Infraestructuras Agrarias, S.A. (SEIASA)",
+     "Estado",
+     119983559.8,
+     88
+    ],
+    [
+     "Consejo de Administración de la Empresa Municipal de Transportes de Valencia, S.A.U.",
+     "Entidades locales",
+     118441474.76,
+     98
+    ],
+    [
+     "Secretaria General del Servicio de Salud de Castilla-La Mancha",
+     "Comunidades autónomas",
+     118399971.26,
+     88
+    ],
+    [
+     "Comité Central de Compras de Navantia S.A., S.M.E.",
+     "Estado",
+     115425103.41,
+     500
+    ],
+    [
+     "Secretaría General de la Consejería de Bienestar Social de la Junta de Comunidades de Castilla-La Mancha",
+     "Comunidades autónomas",
+     112373336.43,
+     37
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Leganés",
+     "Entidades locales",
+     111018018.41,
+     107
+    ],
+    [
+     "Consejo de Gobierno Insular del Cabildo de Gran Canaria",
+     "Entidades locales",
+     109338385.27,
+     8
+    ],
+    [
+     "Dirección de Adquisiciones del Mando de Apoyo Logístico del Ejército del Aire y del Espacio",
+     "Estado",
+     108460910.46,
+     138
+    ],
+    [
+     "Rectorado de la Universitat de València",
+     "Universidades",
+     106175650.43,
+     125
+    ],
+    [
+     "Presidencia de la Sociedad de Salvamento y Seguridad Marítima",
+     "Estado",
+     105672117.33,
+     15
+    ],
+    [
+     "Dirección Gerente del Hospital Universitario Nuestra Señora de Candelaria",
+     "Comunidades autónomas",
+     105294547.41,
+     400
+    ],
+    [
+     "Dirección General de Infraestructuras Educativas",
+     "Comunidades autónomas",
+     103875119.02,
+     72
+    ],
+    [
+     "Agencia Balear del Agua y de la Calidad Ambiental",
+     "Comunidades autónomas",
+     103359682.41,
+     56
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Vigo",
+     "Entidades locales",
+     103045582.56,
+     166
+    ],
+    [
+     "Consejo de Administración de Sociedad Mercantil Estatal Aguas de las Cuencas de España, S.A. (ACUAES)",
+     "Estado",
+     102309937.13,
+     40
+    ],
+    [
+     "Dirección General del Instituto de Mayores y Servicios Sociales",
+     "Estado",
+     99792773.59,
+     39
+    ],
+    [
+     "Empresa Nacional de Residuos Radiactivos, S.A., S.M.E. (ENRESA)",
+     "Estado",
+     98495464.27,
+     166
+    ],
+    [
+     "Secretaría General de la Consejería de Educación, Cultura y Deportes de la Junta de Comunidades de Castilla-La Mancha",
+     "Comunidades autónomas",
+     97547845.71,
+     151
+    ],
+    [
+     "Gerencia de Ferrocarrils de la Generalitat Valenciana",
+     "Comunidades autónomas",
+     95609508.94,
+     126
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de A Coruña",
+     "Entidades locales",
+     93969836.02,
+     219
+    ],
+    [
+     "Presidencia de la Diputación Provincial de Valencia",
+     "Entidades locales",
+     91049476.55,
+     120
+    ],
+    [
+     "Dirección General de Tráfico",
+     "Estado",
+     90825073.14,
+     121
+    ],
+    [
+     "Gerencia de Servicios Sociales de la Junta de Castilla y León",
+     "Comunidades autónomas",
+     90327440.08,
+     148
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Marbella",
+     "Entidades locales",
+     88896578.43,
+     522
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Las Palmas de Gran Canaria",
+     "Entidades locales",
+     87934403.87,
+     10
+    ],
+    [
+     "Junta de Gobierno del Ayuntamiento de Sevilla",
+     "Entidades locales",
+     86434512.77,
+     359
+    ],
+    [
+     "Televisión Autonómica de Aragón, S.A.U.",
+     "Comunidades autónomas",
+     84828846.5,
+     22
+    ],
+    [
+     "Presidencia de la Gerencia de Infraestructuras y Equipamientos de Cultura O.A",
+     "Estado",
+     84547689.65,
+     9
+    ],
+    [
+     "Consejería de Movilidad y Transformación Digital",
+     "Comunidades autónomas",
+     84070194.12,
+     90
+    ],
+    [
+     "Consejería de Infraestructuras, Transporte y Vivienda",
+     "Comunidades autónomas",
+     81642325.64,
+     168
+    ]
+   ]
+  }
+ }
+}

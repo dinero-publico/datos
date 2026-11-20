@@ -260,11 +260,30 @@ def comprobar_subvenciones(d: dict, inf: Informe):
         inf.prueba("subvenciones", "Los motivos (finalidad, instrumento, administración, procedimiento) suman lo consultado", fallos, n)
 
 
+def comprobar_contratos(d: dict, inf: Informe):
+    fallos = []
+    for a, x in d["anios"].items():
+        for k in ("por_tipo", "por_procedimiento", "por_administracion", "por_comunidad", "por_mes"):
+            n = sum(v[0] for v in x[k].values())
+            s = sum(v[1] for v in x[k].values())
+            if n != x["adjudicaciones"] or not _casi(s, x["importe"], 1.0):
+                fallos.append(f"{a}: {k} suma {n} / {s:.0f} € ≠ {x['adjudicaciones']} / {x['importe']:.0f} €")
+    inf.prueba("contratos", "Las adjudicaciones por tipo, procedimiento, administración, comunidad y mes suman el total", fallos, len(d["anios"]))
+    fallos = []
+    for a in d["anios"]:
+        meses_a = [m for m in d["cobertura"]["meses"] if m.startswith(a)]
+        if a >= d["cobertura"]["desde"][:4] and not meses_a:
+            fallos.append(f"{a}: no se ha descargado ningún mes")
+    inf.prueba("contratos", "Hay meses descargados para cada año publicado", fallos, len(d["anios"]))
+
+
 COMPROBACIONES = {
     "estado.json": comprobar_estado, "pge.json": comprobar_pge, "entregas.json": comprobar_entregas,
     "ccaa.json": comprobar_ccaa, "cofog.json": comprobar_cofog, "poblacion.json": comprobar_poblacion,
     "subvenciones.json": comprobar_subvenciones,
 }
+# Fuentes que solo se actualizan desde un ordenador local (su ausencia no es un fallo).
+OPCIONALES = {"contratos.json": comprobar_contratos}
 
 
 def informe(datos: dict[str, dict]) -> dict:
@@ -278,6 +297,12 @@ def informe(datos: dict[str, dict]) -> dict:
             fn(datos[nombre], inf)
         except Exception as e:  # un formato inesperado es un fallo de la prueba, no del análisis
             inf.prueba(nombre.removesuffix(".json"), "El fichero tiene el formato esperado", [f"{type(e).__name__}: {e}"])
+    for nombre, fn in OPCIONALES.items():
+        if nombre in datos:
+            try:
+                fn(datos[nombre], inf)
+            except Exception as e:
+                inf.prueba(nombre.removesuffix(".json"), "El fichero tiene el formato esperado", [f"{type(e).__name__}: {e}"])
     ok = sum(p["ok"] for p in inf.pruebas)
     return {
         "generado": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat(),

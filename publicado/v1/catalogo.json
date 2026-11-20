@@ -154,6 +154,240 @@
    "sha256": "2a563f11d520aaa019be1e2f13bcf90cfe7c4329ab140b4e3a2e5f6f81a0bdab",
    "actualizado": "2026-11-19T16:54:10+00:00",
    "ultimo_error": null
+  },
+  "contratos": {
+   "fichero": "contratos.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos.json",
+   "descripcion": "Adjudicaciones de contratos públicos de la Plataforma de Contratación del Sector Público: resúmenes por año",
+   "bytes": 59767,
+   "sha256": "4b681d9781384d8571e717b7d9f4e948623c93a2ea0230a26ef83146808c2ffd",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-adjudicatarios-2026": {
+   "fichero": "contratos-adjudicatarios-2026.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-adjudicatarios-2026.json",
+   "descripcion": "Lo adjudicado a cada adjudicatario (NIF) en 2026: número de adjudicaciones e importe sin IVA",
+   "bytes": 1026781,
+   "sha256": "d166b864ee4bb9ca5518295eb7e875fbc3ed26d9e2ae39e0eeaacc64451f5ade",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-adjudicatarios-2025": {
+   "fichero": "contratos-adjudicatarios-2025.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-adjudicatarios-2025.json",
+   "descripcion": "Lo adjudicado a cada adjudicatario (NIF) en 2025: número de adjudicaciones e importe sin IVA",
+   "bytes": 1034955,
+   "sha256": "98b03451ae59aa44d98d76d3eff0a8dd99fcbc2a7aad6d2bf0849a5718233a03",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2026-11": {
+   "fichero": "contratos-2026-11.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2026-11.json",
+   "descripcion": "Cada adjudicación de contratos de 2026-11 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 2401704,
+   "sha256": "e874480772886eebda1d2de88d2fbc20530139028593ec02dafe25e7950341bd",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2026-10": {
+   "fichero": "contratos-2026-10.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2026-10.json",
+   "descripcion": "Cada adjudicación de contratos de 2026-10 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 5260407,
+   "sha256": "c1776f4a3522cf69925f347f532ced2e579f7fc14b4e99f1eedad592163e7ba4",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2026-09": {
+   "fichero": "contratos-2026-09.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2026-09.json",
+   "descripcion": "Cada adjudicación de contratos de 2026-09 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 4949605,
+   "sha256": "3c61972f9494b7d2dada56a01254a28047a1419477ff4f015b7a3f06a3fb4c30",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2026-08": {
+   "fichero": "contratos-2026-08.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2026-08.json",
+   "descripcion": "Cada adjudicación de contratos de 2026-08 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 4053249,
+   "sha256": "385cfad3ab382b8d6b26c67baa01382c43b9b4f9dcf964d56dd76194f3f3ef78",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2026-07": {
+   "fichero": "contratos-2026-07.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2026-07.json",
+   "descripcion": "Cada adjudicación de contratos de 2026-07 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 6079880,
+   "sha256": "9d7797a624bdbcea10490474f92fbdb21657ba441b1f96848da64796457eb7aa",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2026-06": {
+   "fichero": "contratos-2026-06.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2026-06.json",
+   "descripcion": "Cada adjudicación de contratos de 2026-06 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 6137189,
+   "sha256": "3141fac90e6d4f9dadbf851881c01818dead3a6561bc32728f237a3f94a6938f",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2026-05": {
+   "fichero": "contratos-2026-05.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2026-05.json",
+   "descripcion": "Cada adjudicación de contratos de 2026-05 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 5383989,
+   "sha256": "60cea05bc05ffa5d18d9697181ff9f2c086c8e6779e0bd0e2081fee82fbad91c",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2026-04": {
+   "fichero": "contratos-2026-04.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2026-04.json",
+   "descripcion": "Cada adjudicación de contratos de 2026-04 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 5094050,
+   "sha256": "091540302240990a68655e6cd7ebbd9bf689c4c656573766378825f16b2661b5",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2026-03": {
+   "fichero": "contratos-2026-03.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2026-03.json",
+   "descripcion": "Cada adjudicación de contratos de 2026-03 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 5254792,
+   "sha256": "bf3eac295ec3e350fa565c75c4860f6c165d39679ef835e8d2c4bac44f4be225",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2026-02": {
+   "fichero": "contratos-2026-02.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2026-02.json",
+   "descripcion": "Cada adjudicación de contratos de 2026-02 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 4428172,
+   "sha256": "fbb13ab33d73b71caf81497c7f1654474daa6a1865be9b3197ef5dd0be527f5a",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2026-01": {
+   "fichero": "contratos-2026-01.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2026-01.json",
+   "descripcion": "Cada adjudicación de contratos de 2026-01 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 3347800,
+   "sha256": "151bf286b1015f8f9f255af4cac0300a7d59253c827c5ec795fe878e63885f73",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2025-12": {
+   "fichero": "contratos-2025-12.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2025-12.json",
+   "descripcion": "Cada adjudicación de contratos de 2025-12 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 6010556,
+   "sha256": "61ebcf98d04d2b2dac38b473f624e4b7a83a70b66c353e937a3511e1bc94670f",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2025-11": {
+   "fichero": "contratos-2025-11.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2025-11.json",
+   "descripcion": "Cada adjudicación de contratos de 2025-11 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 5874841,
+   "sha256": "147b094cb21288cf4d1adf72eb6b0f68779ca2b329c53a429a0fe6d35d2f1492",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2025-10": {
+   "fichero": "contratos-2025-10.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2025-10.json",
+   "descripcion": "Cada adjudicación de contratos de 2025-10 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 6081309,
+   "sha256": "ef25fb3ba0bb1040725fecc130b81cd38283ea32fd4f0f63e48d24d525e65d7a",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2025-09": {
+   "fichero": "contratos-2025-09.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2025-09.json",
+   "descripcion": "Cada adjudicación de contratos de 2025-09 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 5715499,
+   "sha256": "d88870c46bdb57c69b9402e4c883be5528525c0d9346b29b62f46faa837c3ef4",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2025-08": {
+   "fichero": "contratos-2025-08.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2025-08.json",
+   "descripcion": "Cada adjudicación de contratos de 2025-08 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 4625180,
+   "sha256": "3306e9d64978fe554defa13949db4ff05873c0c9e660552b7340017950a05cad",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2025-07": {
+   "fichero": "contratos-2025-07.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2025-07.json",
+   "descripcion": "Cada adjudicación de contratos de 2025-07 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 6290255,
+   "sha256": "4712d41a133515321eda1bca510deb100fa62a47f5a05806a440161a57b2c6ad",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2025-06": {
+   "fichero": "contratos-2025-06.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2025-06.json",
+   "descripcion": "Cada adjudicación de contratos de 2025-06 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 5724678,
+   "sha256": "d4a286ad9fe6dbb887ffbc4aab1c529ed7735b85a30b99da04b68da5371a3405",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2025-05": {
+   "fichero": "contratos-2025-05.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2025-05.json",
+   "descripcion": "Cada adjudicación de contratos de 2025-05 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 5514130,
+   "sha256": "6f0b3c1690cbc69b092e9d150bea45646f12387c5337ad5350853501ed89b213",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2025-04": {
+   "fichero": "contratos-2025-04.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2025-04.json",
+   "descripcion": "Cada adjudicación de contratos de 2025-04 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 4955321,
+   "sha256": "a43d3c7b36392f58026ceeb7195c4fad044d70e475efb38d4e8435eb6651a28f",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2025-03": {
+   "fichero": "contratos-2025-03.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2025-03.json",
+   "descripcion": "Cada adjudicación de contratos de 2025-03 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 4873532,
+   "sha256": "9235dcac7bd5d02ab1486aa532fcf7e1a23775b69c43b7dfe5b352b833e9df84",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2025-02": {
+   "fichero": "contratos-2025-02.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2025-02.json",
+   "descripcion": "Cada adjudicación de contratos de 2025-02 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 4317195,
+   "sha256": "e0e1ec757d0142b695362166b571d2f9a3cff53a8fe17d433d7974f3fee68253",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
+  },
+  "contratos-2025-01": {
+   "fichero": "contratos-2025-01.json",
+   "url": "https://dinero-publico.github.io/datos/v1/contratos-2025-01.json",
+   "descripcion": "Cada adjudicación de contratos de 2025-01 (año-mes de adjudicación; Plataforma de Contratación del Sector Público)",
+   "bytes": 3510536,
+   "sha256": "74a597d34f31036eb497c1fa3724e61946b4746c0c24e240c874f20a77d17f40",
+   "actualizado": "2026-11-20T14:27:25+00:00",
+   "ultimo_error": null
   }
  },
  "informe": "https://dinero-publico.github.io/datos/v1/informe.json",

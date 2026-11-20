@@ -54,6 +54,9 @@ Cada fuente se procesa por separado: si una falla, se conserva su último JSON v
 | `subvenciones.json` | Grandes beneficiarios de subvenciones (100.000 € o más en el año) por año: total, reparto por tipo de entidad y los 100 mayores; y subvenciones a partidos y grupos políticos por beneficiario y administración | BDNS (IGAE) |
 | `subvenciones-AAAA.json` | Lista completa de grandes beneficiarios de cada año: `[nif, nombre, euros]` | BDNS (IGAE) |
 | `subvenciones-motivos-AAAA.json` | Para los 1.000 mayores beneficiarios de cada año, sus concesiones agrupadas por convocatoria (`[convocatoria, instrumento, euros, concesiones]`) y el detalle de cada convocatoria: título oficial, finalidad, órgano, procedimiento y si son fondos MRR | BDNS (IGAE) |
+| `contratos.json` | Contratos públicos adjudicados por año: totales por tipo, procedimiento, sistema (contrato o acuerdo marco), administración, comunidad de ejecución y mes; mayores adjudicatarios y órganos; una sola oferta, pymes y fondos UE | Plataforma de Contratación del Sector Público (Hacienda) |
+| `contratos-AAAA-MM.json` | Cada adjudicación del mes (licitación × lote × adjudicatario), por fecha de adjudicación. Las filas usan posiciones en las listas `organos` y `adjudicatarios` del mismo fichero. Uno por mes para que pesen poco (~5 MB) y el historial de git solo crezca con los meses que cambian | Plataforma de Contratación |
+| `contratos-adjudicatarios-AAAA.json` | `{nif: [adjudicaciones, euros sin IVA]}`, para cruzar con otras fuentes por NIF | Plataforma de Contratación |
 | `meta.json` | Fecha en que cambió cada fuente y último error | — |
 | `informe.json` | Resultado de las comprobaciones | — |
 | `catalogo.json` | Lista de ficheros con tamaño, sha256 y fecha | — |
@@ -67,6 +70,30 @@ El historial de git de `publicado/` es también el historial de los datos. El hi
 Origen de los datos de subvenciones: Intervención General de la Administración del Estado (API del [Sistema Nacional de Publicidad de Subvenciones](https://www.infosubvenciones.es/bdnstrans/GE/es/avisolegal)). Su aviso legal solo permite reutilizar datos personales tras disociarlos, así que **la herramienta disocia a las personas físicas**: si el NIF es un DNI o NIE con letra de control válida, un NIF K/L/M o un número de ocho cifras, el beneficiario se publica como «Persona física (nombre no publicado)», sin NIF, y solo cuenta en los totales. La BDNS retira cada concesión a los cuatro años; los años que deja de ofrecer se conservan de la descarga anterior.
 
 **Motivo de las ayudas.** La API no permite sumar concesiones por finalidad (ordenar por importe agota su tiempo de respuesta), así que se consultan una a una las concesiones de los 1.000 mayores beneficiarios de cada año (entre la mitad y algo más de la mitad del importe de todos los grandes beneficiarios) y se pide el detalle de las convocatorias que suman el 98 % de lo que recibió cada uno; las demás quedan como «Sin clasificar (convocatorias pequeñas)», con su título. Solo se repite la consulta de un beneficiario cuando cambia su total, con un máximo de consultas por ejecución (`--max-peticiones`; el workflow usa 800).
+
+### Contratos públicos
+
+Fuente: [datos abiertos de la Plataforma de Contratación del Sector Público](https://www.hacienda.gob.es/es-ES/GobiernoAbierto/Datos%20Abiertos/Paginas/LicitacionesContratante.aspx). Cada mes se publica un ZIP (110–300 MB) con los ATOM en formato CODICE de las licitaciones que **cambiaron** ese mes.
+
+- **Consolidación.** De cada licitación vale su versión más reciente (`<updated>`) en todos los meses, y se descartan las anuladas (`at:deleted-entry`).
+- **Qué cuenta como adjudicación.** Solo los resultados adjudicados o formalizados (`ResultCode` 1, 2, 8 y 9), no los desiertos ni los desistidos. El año es el de la fecha de adjudicación. Solo se publican las adjudicaciones desde el primer mes descargado sin huecos.
+- **Acuerdos marco y sistemas dinámicos de adquisición** (`ContractingSystemCode` 1 y 2). Su importe es un máximo para varios años y empresas, no un gasto, así que no se suma: va aparte en `valor_maximo`. Los contratos basados en ellos (3 y 4) sí cuentan.
+- **Varios adjudicatarios de un mismo lote con el mismo importe.** Se cuenta una sola vez; las demás filas llevan `comparte = 1` e importe vacío.
+- **Personas físicas.** Se disocian como en la BDNS.
+- **Cobertura.** Solo los perfiles alojados en la Plataforma: no incluye las plataformas autonómicas agregadas ni los contratos menores (issue #2).
+
+**Actualización.** El servidor limita mucho la velocidad (de 8 kB/s a 2 MB/s según la hora) y la descarga inicial son varios GB, así que esta fuente **no la procesa el workflow diario**: solo se procesa con `--only contratos`, desde un ordenador en España.
+- Los ZIP se guardan en `raw/contratos/`, junto a una copia ya procesada de cada mes (`*.json.gz`).
+- Solo se vuelven a pedir el mes en curso y el anterior.
+
+```bash
+python -m dinero_datos descargar --only contratos     # meses nuevos (minutos u horas según el servidor)
+python -m dinero_datos transformar --only contratos   # rehacer desde raw/ sin red
+python -m dinero_datos analizar && python -m dinero_datos publicar
+git add publicado && git commit -m "Contratos actualizados" && git push
+```
+
+El modelo de datos al que se llevarán todas las fuentes está en [docs/modelo-de-datos.md](docs/modelo-de-datos.md).
 
 ## Puesta en marcha y actualización
 

@@ -1,8 +1,8 @@
 {
- "generado": "2026-11-18T15:39:07+00:00",
+ "generado": "2026-11-20T14:27:25+00:00",
  "resumen": {
-  "pruebas": 17,
-  "correctas": 17,
+  "pruebas": 19,
+  "correctas": 19,
   "con_fallos": 0
  },
  "pruebas": [
@@ -151,6 +151,22 @@
    "prueba": "Los motivos (finalidad, instrumento, administración, procedimiento) suman lo consultado",
    "ok": true,
    "casos": 5,
+   "fallos": [],
+   "n_fallos": 0
+  },
+  {
+   "fuente": "contratos",
+   "prueba": "Las adjudicaciones por tipo, procedimiento, administración, comunidad y mes suman el total",
+   "ok": true,
+   "casos": 2,
+   "fallos": [],
+   "n_fallos": 0
+  },
+  {
+   "fuente": "contratos",
+   "prueba": "Hay meses descargados para cada año publicado",
+   "ok": true,
+   "casos": 2,
    "fallos": [],
    "n_fallos": 0
   }
