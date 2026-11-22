@@ -118,3 +118,31 @@ def test_poblacion_desde_la_api(monkeypatch):
     assert [(d.cabecera.clave, d.anio, d.valor, d.tipo_dato_id, d.territorio) for d in datos] == [
         ("ECP320:1735686000000", 2025, 49128297.0, 1, "Total Nacional"), ("ECP320:1767222000000", 2026, 49500000.0, 2, "Total Nacional")]
     assert datos[0].cabecera.procedencia.ubicacion.api.peticion == "DATOS_SERIE/ECP320?nult=120"
+
+
+def test_territorio_de_una_serie_autonomica(monkeypatch):
+    nombres = {"ECP320": "Total Nacional. Todas las edades. Total. Población. Número. ",
+               "ECP115487": "Total. Todas las edades. País Vasco. Población. Número. "}
+    tabla = [{"COD": c, "Nombre": n} for c, n in nombres.items()]
+
+    class R:
+        status_code, content = 200, b"{}"
+
+        def __init__(self, d):
+            self._d = d
+
+        def json(self):
+            return self._d
+
+    class DL:
+        def _request(self, metodo, url):
+            if "DATOS_TABLA" in url:
+                return R(tabla)
+            cod = url.split("DATOS_SERIE/")[1].split("?")[0]
+            return R({"COD": cod, "Nombre": nombres[cod], "Data": [{"Fecha": 1, "Anyo": 2026, "Valor": 1.0}]})
+
+    m, carga = carga_memoria("poblacion", "ine_poblacion")
+    with carga:
+        bruto.emitir_poblacion(carga, DL())
+    territorios = {d.serie_codigo: d.territorio for d in mensajes(m, emitir.topic_bruto("poblacion"), poblacion_pb2.DatoPoblacion)}
+    assert territorios == {"ECP320": "Total Nacional", "ECP115487": "País Vasco"}

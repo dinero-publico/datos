@@ -43,7 +43,10 @@ def emitir_poblacion(carga, dl: f.Downloader) -> None:
         anio = max((x.get("Anyo", 0) for x in serie.get("Data", [])), default=0)
         proc = carga.original(crudo, url=url, extension="json", anio=anio)
         nombre = serie.get("Nombre", "")
-        territorio = nombre.split(".")[0].strip()
+        # El territorio, tal como lo escribe el INE: el tramo del nombre que no es «Total»,
+        # «Todas las edades», «Población» ni «Número» (p. ej. «Total Nacional», «País Vasco»).
+        territorio = next((t for t in (x.strip() for x in nombre.split("."))
+                           if t and t not in ("Total", "Todas las edades", "Población", "Número")), "")
         for i, x in enumerate(serie.get("Data", [])):
             if x.get("Valor") is None:
                 continue
