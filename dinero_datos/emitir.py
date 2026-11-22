@@ -140,7 +140,9 @@ class Almacen:
         import boto3
         from botocore.config import Config
         self.bucket = bucket
-        self._s3 = boto3.client("s3", config=Config(s3={"addressing_style": "path"},
+        # boto3 no lee AWS_REGION, y Garage exige firmar con su región («garage»).
+        region = os.environ.get("AWS_REGION") or os.environ.get("AWS_DEFAULT_REGION")
+        self._s3 = boto3.client("s3", region_name=region, config=Config(s3={"addressing_style": "path"},
                                                     request_checksum_calculation="when_required",
                                                     response_checksum_validation="when_required"))
 
