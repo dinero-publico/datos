@@ -27,6 +27,7 @@ COPY requirements.txt requirements-plataforma.txt ./
 RUN pip install -r requirements.txt -r requirements-plataforma.txt
 
 COPY dinero_datos/ dinero_datos/
+COPY dinero_publico/ dinero_publico/
 COPY tests/ tests/
 COPY --chmod=755 contenedor/ingesta.sh /app/ingesta.sh
 

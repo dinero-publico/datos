@@ -8,6 +8,8 @@ Pasos:
   publicar    Escribe el catálogo (catalogo.json e index.html) de lo publicado.
   curar       Reparte lo publicado en tablas Parquet para análisis (curated/).
   avisar      Avisa al cargador de la plataforma (DINERO_CARGADOR) del hash de cada fuente.
+  emitir      Envía una fuente a la plataforma: originales a Garage y registros brutos a Kafka
+              en Protobuf (--fuente poblacion | contratos). Ver dinero_datos/emitir.py.
   todo        descargar + analizar + publicar (lo que hace el workflow cada día).
 
 Ejemplos:
@@ -224,6 +226,24 @@ def publicar() -> int:
 
 
 # --------------------------------------------------------------------------- #
+# Emisión a la plataforma (Kafka + Garage)
+# --------------------------------------------------------------------------- #
+def emitir(fuente: str | None, desde: str | None, delay: float) -> int:
+    if not fuente:
+        log.error("Falta --fuente (poblacion o contratos)")
+        return 2
+    from . import bruto
+    from .emitir import Carga
+    if fuente == "poblacion":
+        with Carga("ine_poblacion", "poblacion") as carga:
+            bruto.emitir_poblacion(carga, f.Downloader(None, delay=delay))
+    else:
+        with Carga("placsp", "contratos") as carga:
+            bruto.emitir_contratos(carga, desde or contratos.DESDE)
+    return 0
+
+
+# --------------------------------------------------------------------------- #
 # Aviso a la plataforma: el cargador compara los hashes y carga solo lo que cambió
 # --------------------------------------------------------------------------- #
 def avisar(url: str | None) -> int:
@@ -262,7 +282,7 @@ th{{color:var(--muted);font-weight:500}}code{{font-size:.9em}}
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="python -m dinero_datos", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("paso", choices=["descargar", "transformar", "analizar", "publicar", "curar", "avisar", "todo"])
+    ap.add_argument("paso", choices=["descargar", "transformar", "analizar", "publicar", "curar", "avisar", "emitir", "todo"])
     ap.add_argument("--only", choices=list(FUENTES), action="append", help="procesar solo estas fuentes (descargar/transformar/todo)")
     ap.add_argument("--year", type=int, default=dt.date.today().year, help="año de referencia (por defecto, el actual)")
     ap.add_argument("--delay", type=float, default=1.0, help="segundos de espera entre peticiones")
@@ -270,6 +290,8 @@ def main(argv: list[str] | None = None) -> int:
                     help="consultas a la BDNS por ejecución para los motivos de las subvenciones")
     ap.add_argument("--cargador", default=os.environ.get("DINERO_CARGADOR"),
                     help="URL del cargador para «avisar» (por defecto, DINERO_CARGADOR)")
+    ap.add_argument("--fuente", choices=["poblacion", "contratos"], help="fuente para «emitir»")
+    ap.add_argument("--desde", default=None, help="primer mes AAAAMM de contratos para «emitir»")
     ap.add_argument("--raw", type=Path, default=f.RAW_DIR, help="carpeta de originales para «transformar» (por defecto raw/)")
     a = ap.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(message)s")
@@ -281,6 +303,8 @@ def main(argv: list[str] | None = None) -> int:
         return analizar()
     if a.paso == "publicar":
         return publicar()
+    if a.paso == "emitir":
+        return emitir(a.fuente, a.desde, a.delay)
     if a.paso == "avisar":
         return avisar(a.cargador)
     if a.paso == "curar":

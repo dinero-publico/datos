@@ -1,1 +1,5 @@
+# Para la plataforma (imagen de cronos): Parquet, Kafka con Protobuf y originales en Garage (S3).
 pyarrow>=17
+confluent-kafka==2.16.1
+protobuf==7.36.2
+boto3>=1.40
