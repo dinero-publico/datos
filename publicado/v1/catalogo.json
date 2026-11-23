@@ -27,7 +27,7 @@
    "bytes": 34094,
    "sha256": "7aa276e7652abce59cd4b61ff0468f82cd88907900d609be8c5cdf35584e3f9a",
    "actualizado": "2026-11-16T21:26:15+00:00",
-   "ultimo_error": "2026-11-22T15:29:03+00:00"
+   "ultimo_error": "2026-11-23T19:20:54+00:00"
   },
   "ccaa": {
    "fichero": "ccaa.json",
@@ -60,18 +60,18 @@
    "fichero": "subvenciones.json",
    "url": "https://dinero-publico.github.io/datos/v1/subvenciones.json",
    "descripcion": "Grandes beneficiarios de subvenciones y ayudas (100.000 € o más en el año) y subvenciones a partidos políticos (BDNS, IGAE)",
-   "bytes": 312026,
-   "sha256": "6c7c9dfc43d12dd166629fb9c92d29da727021db331baaa78155abc47a97a01d",
-   "actualizado": "2026-11-22T15:37:30+00:00",
+   "bytes": 310837,
+   "sha256": "84fcd1a070364d215430cc327830f01f74ca5200ae4c67a98c3f54cb85d9edb3",
+   "actualizado": "2026-11-23T19:29:31+00:00",
    "ultimo_error": null
   },
   "subvenciones-motivos-2026": {
    "fichero": "subvenciones-motivos-2026.json",
    "url": "https://dinero-publico.github.io/datos/v1/subvenciones-motivos-2026.json",
    "descripcion": "Concesiones de los mayores beneficiarios de 2026, agrupadas por convocatoria, con su finalidad (BDNS, IGAE)",
-   "bytes": 2280544,
-   "sha256": "bfbdac4fbfcf4c8bdddd0b8f1686d1846b29a81a54b2bfeeac4237a202717370",
-   "actualizado": "2026-11-22T15:37:30+00:00",
+   "bytes": 2293477,
+   "sha256": "dc53961b71942761cc51e96f55244bc070793b78f93218e42b4fad7550cefb1f",
+   "actualizado": "2026-11-23T19:29:31+00:00",
    "ultimo_error": null
   },
   "subvenciones-motivos-2025": {
@@ -79,17 +79,17 @@
    "url": "https://dinero-publico.github.io/datos/v1/subvenciones-motivos-2025.json",
    "descripcion": "Concesiones de los mayores beneficiarios de 2025, agrupadas por convocatoria, con su finalidad (BDNS, IGAE)",
    "bytes": 3767707,
-   "sha256": "d4532ad9d2721454f66af270ccf8969af75a5da1cb71726fd8290436d0d41b12",
-   "actualizado": "2026-11-22T15:37:30+00:00",
+   "sha256": "17badf3151ba54dfc45fb36e2c07cc5f9676af6e9fc8c47fbd47e76adb3bbfb2",
+   "actualizado": "2026-11-23T19:29:31+00:00",
    "ultimo_error": null
   },
   "subvenciones-motivos-2024": {
    "fichero": "subvenciones-motivos-2024.json",
    "url": "https://dinero-publico.github.io/datos/v1/subvenciones-motivos-2024.json",
    "descripcion": "Concesiones de los mayores beneficiarios de 2024, agrupadas por convocatoria, con su finalidad (BDNS, IGAE)",
-   "bytes": 3702036,
-   "sha256": "124a566c9066a3cd3e31207c77924286b3e9e03f829332fafa5e317b34105b69",
-   "actualizado": "2026-11-22T15:37:30+00:00",
+   "bytes": 3702037,
+   "sha256": "dbf90963e523f5c6c359d3bac94703e9b7af4c130be529c2a39979cc624c27be",
+   "actualizado": "2026-11-23T19:29:31+00:00",
    "ultimo_error": null
   },
   "subvenciones-motivos-2023": {
@@ -98,7 +98,7 @@
    "descripcion": "Concesiones de los mayores beneficiarios de 2023, agrupadas por convocatoria, con su finalidad (BDNS, IGAE)",
    "bytes": 3723622,
    "sha256": "841db52c91f203c8693080b236aaa6ede7b3a117ae9aefe9b5a2ac39fd99ec1e",
-   "actualizado": "2026-11-22T15:37:30+00:00",
+   "actualizado": "2026-11-23T19:29:31+00:00",
    "ultimo_error": null
   },
   "subvenciones-motivos-2022": {
@@ -107,52 +107,52 @@
    "descripcion": "Concesiones de los mayores beneficiarios de 2022, agrupadas por convocatoria, con su finalidad (BDNS, IGAE)",
    "bytes": 4032126,
    "sha256": "3e6e86389fc5cf20092742bdb4e28cc383ee2e83c83721b3e6a4f201e473de7d",
-   "actualizado": "2026-11-22T15:37:30+00:00",
+   "actualizado": "2026-11-23T19:29:31+00:00",
    "ultimo_error": null
   },
   "subvenciones-2026": {
    "fichero": "subvenciones-2026.json",
    "url": "https://dinero-publico.github.io/datos/v1/subvenciones-2026.json",
    "descripcion": "Lista completa de grandes beneficiarios de 2026 (BDNS, IGAE)",
-   "bytes": 1118736,
-   "sha256": "a78e91487f63d8ac7fa3696afd425da3e87ac21a3e8f4cee740959800f3e5d6b",
-   "actualizado": "2026-11-22T15:37:30+00:00",
+   "bytes": 1122449,
+   "sha256": "85b7ad1e3257eb53c900a6eb528a1c770ac33bed3a194556ef23c235076068ec",
+   "actualizado": "2026-11-23T19:29:31+00:00",
    "ultimo_error": null
   },
   "subvenciones-2025": {
    "fichero": "subvenciones-2025.json",
    "url": "https://dinero-publico.github.io/datos/v1/subvenciones-2025.json",
    "descripcion": "Lista completa de grandes beneficiarios de 2025 (BDNS, IGAE)",
-   "bytes": 1973280,
-   "sha256": "1ddcf507d41f512342f4887df06b33659f485dbb55cf70deaf74d417214ee7e7",
-   "actualizado": "2026-11-22T15:37:30+00:00",
+   "bytes": 1973000,
+   "sha256": "2d23eff5a615f52c1f7a421fda63d4957a86c606b4715f8001244206881a803f",
+   "actualizado": "2026-11-23T19:29:31+00:00",
    "ultimo_error": null
   },
   "subvenciones-2024": {
    "fichero": "subvenciones-2024.json",
    "url": "https://dinero-publico.github.io/datos/v1/subvenciones-2024.json",
    "descripcion": "Lista completa de grandes beneficiarios de 2024 (BDNS, IGAE)",
-   "bytes": 1992613,
-   "sha256": "61a6981b3de4e8872e33fc67c48101731592efb6dd965f53b3defb279f6f21bd",
-   "actualizado": "2026-11-22T15:37:30+00:00",
+   "bytes": 1990636,
+   "sha256": "6bb5acbde799d9e2a2a6f06ad80c9e07be51604afeb8f5cb09dda55f7cb6de79",
+   "actualizado": "2026-11-23T19:29:31+00:00",
    "ultimo_error": null
   },
   "subvenciones-2023": {
    "fichero": "subvenciones-2023.json",
    "url": "https://dinero-publico.github.io/datos/v1/subvenciones-2023.json",
    "descripcion": "Lista completa de grandes beneficiarios de 2023 (BDNS, IGAE)",
-   "bytes": 2171978,
-   "sha256": "6d59b6c42c8e13cbfef51ff0539ff4e11bb7f9f54564dd97d009f3f4fe8c18fa",
-   "actualizado": "2026-11-22T15:37:30+00:00",
+   "bytes": 2169782,
+   "sha256": "b856ef79490b2872f66296d07a632bf073a3bf75f507d5dfdcbce3512b5420bf",
+   "actualizado": "2026-11-23T19:29:31+00:00",
    "ultimo_error": null
   },
   "subvenciones-2022": {
    "fichero": "subvenciones-2022.json",
    "url": "https://dinero-publico.github.io/datos/v1/subvenciones-2022.json",
    "descripcion": "Lista completa de grandes beneficiarios de 2022 (BDNS, IGAE)",
-   "bytes": 1806322,
-   "sha256": "0dd415385f644b1d0b597e29c2dfc5e1e4fc32812d73a787f191bfaae3e80081",
-   "actualizado": "2026-11-22T15:37:30+00:00",
+   "bytes": 1804362,
+   "sha256": "15faa9d1dc0b3af86842e2769e13fb898aeef48b801639854cba35b25f8c2368",
+   "actualizado": "2026-11-23T19:29:31+00:00",
    "ultimo_error": null
   },
   "contratos": {
